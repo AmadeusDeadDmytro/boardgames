@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'antd/dist/antd.css'
+import './fonts.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
+
+import LordOfTheRingLCG from './games/LordOfTheRingsLCG'
+import { Menu } from 'antd'
+import React from 'react'
+
+const App = () => {
+    return (
+        <BrowserRouter>
+            <Menu mode="horizontal">
+                <Menu.Item>
+                    <Link to="/lord-of-the-ring-lcg">
+                        Lord of the Rings LCG
+                    </Link>
+                </Menu.Item>
+            </Menu>
+            <Switch>
+                <Route path="/lord-of-the-ring-lcg">
+                    <LordOfTheRingLCG />
+                </Route>
+            </Switch>
+        </BrowserRouter>
+    )
 }
 
-export default App;
+export default App
