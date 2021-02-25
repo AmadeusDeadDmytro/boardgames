@@ -1,5 +1,4 @@
 import 'antd/dist/antd.css'
-import './fonts.css'
 
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
 

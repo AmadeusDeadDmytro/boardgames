@@ -5,16 +5,16 @@ import React from 'react'
 import styled from 'styled-components'
 
 const LordOfTheRingLCG = () => {
-    const renderCard = (card: ICard, type: string) => {
+    const renderCard = (card: ICard) => {
         return (
-            <HeroTemplate name={card.name} tags={card.tags} text={card.text} />
+            <HeroTemplate card={card}/>
         )
     }
 
     return (
         <GameArea>
             {Dealer.map((card, index) => {
-                return <div key={index}>{renderCard(card.card, card.type)}</div>
+                return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
             })}
         </GameArea>
     )
@@ -22,6 +22,12 @@ const LordOfTheRingLCG = () => {
 
 const GameArea = styled.div`
     padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+`
+
+const CardWrapper = styled.div`
+  margin: 0 5px;
 `
 
 export default LordOfTheRingLCG
