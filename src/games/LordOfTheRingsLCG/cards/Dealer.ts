@@ -11,8 +11,9 @@ import Gimli from './heroes/Gimli'
 import BrandSonBain from './heroes/BrandSonBain'
 // EVENTS
 import BehindStrongWalls from './events/BehindStrongWalls'
+import AimedShot from './events/AimedShot'
 
 export const HeroesDeck: Array<ICard> = [Beregond, Hama, Elladan, Boromir, Talin, Legolas, Gimli, BrandSonBain]
-export const EventsDeck: Array<ICard> = [BehindStrongWalls]
+export const EventsDeck: Array<ICard> = [BehindStrongWalls, AimedShot]
 
 
