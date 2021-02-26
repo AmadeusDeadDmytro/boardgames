@@ -22,6 +22,7 @@ export enum CardTypes {
 
 export enum Tags {
     ARMOR = 'Броня',
+    DAIL = 'Дэйл',
     GNOME = 'Гном',
     GONDOR = 'Гондор',
     NOBLE = 'Благородный',

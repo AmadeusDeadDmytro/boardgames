@@ -1,4 +1,4 @@
-import Dealer from './cards/Dealer'
+import { HeroesDeck, EventsDeck } from './cards/Dealer'
 import HeroTemplate from './cards/heroes/template'
 import { ICard } from './types/cards'
 import React from 'react'
@@ -13,7 +13,10 @@ const LordOfTheRingLCG = () => {
 
     return (
         <GameArea>
-            {Dealer.map((card, index) => {
+            {HeroesDeck.map((card, index) => {
+                return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
+            })}
+            {EventsDeck.map((card, index) => {
                 return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
             })}
         </GameArea>

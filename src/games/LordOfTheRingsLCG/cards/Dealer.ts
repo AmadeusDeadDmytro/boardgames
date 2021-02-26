@@ -6,7 +6,10 @@ import Elladan from './heroes/Elladan'
 import Boromir from './heroes/Boromir'
 import Talin from './heroes/Talin'
 import Legolas from './heroes/Legolas'
+import Gimli from './heroes/Gimli'
+import BrandSonBain from './heroes/BrandSonBain'
 
-const Dealer: Array<ICard> = [Beregond, Hama, Elladan, Boromir, Talin, Legolas]
+export const HeroesDeck: Array<ICard> = [Beregond, Hama, Elladan, Boromir, Talin, Legolas, Gimli, BrandSonBain]
+export const EventsDeck: Array<ICard> = []
 
-export default Dealer
+
