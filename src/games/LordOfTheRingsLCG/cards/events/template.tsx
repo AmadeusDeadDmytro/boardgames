@@ -66,6 +66,9 @@ const Template = ({ card }: {card: EventCardType}) => {
             </CardTop>
             <CardBottom>
                 <CardAllTextsBlock>
+                    <CardTagBlock>
+                        {card.tags && card.tags.map((tag) => `${tag}. `)}
+                    </CardTagBlock>
                     <CardTextBlock>
                         {card.text && card.text.map((text, index) => {
                             return <CardText key={index}>{renderText(text)}</CardText>
@@ -137,6 +140,7 @@ const CardNameBlock = styled.div`
 
 const CardTextBlock = styled.div`
   width: 100%;
+  margin-top: 5px;
 `
 
 const CardTypeBlock = styled.div`
@@ -214,5 +218,13 @@ const CardQuoteBlock = styled.div`
   line-height: 12px;
   text-align: right;
   font-style: italic;
+`
+const CardTagBlock = styled.i`
+    display: block;
+    font-weight: bold;
+    user-select: none;
+    font-size: 13px;
+    position: absolute;
+    top: 5px;
 `
 export default Template

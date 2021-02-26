@@ -17,8 +17,10 @@ import HailOfStones from './events/HailOfStones'
 import HiddenFlow from './events/HiddenFlow'
 import KazadKazad from './events/KazadKazad'
 import Fint from './events/Fint'
+import FastLunge from './events/FastLunge'
+import EaglesFly from './events/EaglesFly'
 
 export const HeroesDeck: Array<ICard> = [Beregond, Hama, Elladan, Boromir, Talin, Legolas, Gimli, BrandSonBain]
-export const EventsDeck: Array<ICard> = [BehindStrongWalls, AimedShot, HeavyBlow, HailOfStones, HiddenFlow, KazadKazad, Fint]
+export const EventsDeck: Array<ICard> = [BehindStrongWalls, AimedShot, HeavyBlow, HailOfStones, HiddenFlow, KazadKazad, Fint, FastLunge, EaglesFly]
 
 

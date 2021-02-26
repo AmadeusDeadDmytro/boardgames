@@ -15,6 +15,7 @@ export type HeroCardType = {
 export type EventCardType = {
     type: CardTypes
     name: string
+    tags?: Array<string>
     text?: Array<string>
     image: string
     price: number
@@ -33,6 +34,7 @@ export enum CardTypes {
 export enum Tags {
     ARMOR = 'Броня',
     DAIL = 'Дэйл',
+    EAGLE = 'Орел',
     GNOME = 'Гном',
     GONDOR = 'Гондор',
     NOBLE = 'Благородный',
