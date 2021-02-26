@@ -1,4 +1,4 @@
-import { HeroCardType, Tags, Actions, Icons } from '../../types/cards'
+import { Tags, Actions, Icons, EventCardType } from '../../types/cards'
 
 import React from 'react'
 import styled from 'styled-components'
@@ -13,7 +13,7 @@ import Axes from '../../images/icons/Axes.png'
 import Shield from '../../images/icons/Shield.png'
 import SwordBlack from '../../images/icons/Sword_black.png'
 
-const Template = ({ card }: {card: HeroCardType}) => {
+const Template = ({ card }: {card: EventCardType}) => {
 
     const replaceTextByText = (array: Array<string>, text: string): string => {
         array.forEach(el => {
@@ -25,11 +25,14 @@ const Template = ({ card }: {card: HeroCardType}) => {
     const replaceTextByIcon = (array: Array<string>, text: string): string => {
         const iconTactics = `<img src="${SwordBlack}" style="height: 14px; display: inline;" alt=''/>`
         const iconAttack = `<img src="${Axes}" style="height: 14px; display: inline;" alt=''/>`
+        const iconShield = `<img src="${Shield}" style="height: 14px; display: inline;" alt=''/>`
         array.forEach(el => {
             if (el === 'Tactics') {
                 text = text.replace(el, iconTactics)
             } else if (el === 'Attack') {
                 text = text.replace(el, iconAttack)
+            } else if (el === 'Shield') {
+                text = text.replace(el, iconShield)
             }
         })
         return text
@@ -50,49 +53,28 @@ const Template = ({ card }: {card: HeroCardType}) => {
     return (
         <Card>
             <CardTop back={card.image}>
-                <CharacteristicsBlock>
-                    <HazardLevelBlock>{card.hazardLevel}</HazardLevelBlock>
-                    <StatsBlock>
-                        <StatsCard>
-                            <StatsText>{card.willpower}</StatsText>
-                            <StatsIcon src={Willpower}/>
-                        </StatsCard>
-                        <StatsCard>
-                            <StatsText>{card.attack}</StatsText>
-                            <StatsIcon src={Axes}/>
-                        </StatsCard>
-                        <StatsCard>
-                            <StatsText>{card.defend}</StatsText>
-                            <StatsIcon src={Shield}/>
-                        </StatsCard>
-                    </StatsBlock>
-                    <HealthBlock>{card.health}</HealthBlock>
-                </CharacteristicsBlock>
+                <CardNameBlock>
+                    {card.name}
+                </CardNameBlock>
+                <FillElement1/>
+                <CardIconBlock>
+                    <CardIcon src={Sword}/>
+                </CardIconBlock>
+                <CardPriceBlock>
+                    {card.price}
+                </CardPriceBlock>
             </CardTop>
             <CardBottom>
                 <CardAllTextsBlock>
-                    <CardNameBlock>
-                        <CardName>
-                            {card.name}
-                        </CardName>
-                    </CardNameBlock>
-                    <CardTagBlock>
-                        {card.tags && card.tags.map((tag) => `${tag}. `)}
-                    </CardTagBlock>
                     <CardTextBlock>
                         {card.text && card.text.map((text, index) => {
                             return <CardText key={index}>{renderText(text)}</CardText>
                         })}
                     </CardTextBlock>
-                    <CardQuoteBlock>{card.quote}</CardQuoteBlock>
                 </CardAllTextsBlock>
                 <CardTypeBlock>
                     {card.type}
                 </CardTypeBlock>
-                <FillElement1/>
-                <CardIconBlock>
-                    <CardIcon src={Sword}/>
-                </CardIconBlock>
             </CardBottom>
         </Card>
     )
@@ -115,7 +97,6 @@ const CardTop = styled.div<{back: string}>`
     background-size: cover;
     background-position: 40px -10px;
     width: 100%;
-    border-left: 5px solid ${COLORS.LIGHT_TWO};
     height: 240px;
     margin-top: 10px;
     position: relative;
@@ -129,36 +110,34 @@ const CardBottom = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: 20px 10px 0;
     border: 3px solid ${COLORS.LIGHT_TWO};
     background-image: url(${SwordTransparent});
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90px;
     position: relative;
+    box-shadow: inset 0 0 11px 2px ${COLORS.BLUE_ONE};
 `
 const CardNameBlock = styled.div`
-    width: 80%;
     text-align: center;
-    
+    position: absolute;
+    left: -100px;
+    bottom: 100px;
+    width: 240px;
+    height: 40px;
+    line-height: 34px;
+    background-color: ${COLORS.LIGHT_THREE};
+    transform: rotate(-90deg);
+    font-family: 'Delius', cursive;
+    font-size: 19px;
+    border: 3px solid ${COLORS.LIGHT_TWO};
 `
-const CardTagBlock = styled.i`
-    display: block;
-    margin-top: 5px;
-    font-weight: bold;
-    user-select: none;
-    font-size: 13px;
-    margin-bottom: 5px;
-`
+
 const CardTextBlock = styled.div`
   width: 100%;
 `
-const CardQuoteBlock = styled.div`
-  font-size: 10px;
-  line-height: 12px;
-  text-align: right;
-  font-style: italic;
-`
+
 const CardTypeBlock = styled.div`
   text-transform: lowercase;
   font-family: 'Delius', cursive;
@@ -170,18 +149,6 @@ const CardTypeBlock = styled.div`
   height: 20px;
   line-height: 17px;
   user-select: none;
-`
-const CardName = styled.p`
-    line-height: 25px;
-    margin: 0;
-    font-family: 'Delius', cursive;
-    font-size: 20px;
-    user-select: none;
-    position: relative;
-    border: 3px solid ${COLORS.LIGHT_TWO};
-    border-top: 0;
-    border-radius: 0 0 25px 25px;
-    background: ${COLORS.LIGHT_THREE}
 `
 const CardText = styled.p`
     margin: 0 0 5px 0;
@@ -198,7 +165,7 @@ const CardAllTextsBlock = styled.div`
 const CardIconBlock = styled.div`
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
   background: ${COLORS.DARK_ONE};
   border-radius: 50%;
   width: 40px;
@@ -214,66 +181,30 @@ const CardIcon = styled.img`
 `
 const FillElement1 = styled.div`
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   background: ${COLORS.LIGHT_TWO};
-  width: 20px;
+  width: 40px;
   height: 20px;
   user-select: none;
 `
-const CharacteristicsBlock = styled.div`
+const CardPriceBlock = styled.div`
   position: absolute;
-  left: 5px;
-`
-const HealthBlock = styled.div`
-  font-family: 'Verdana', serif;
-  border-radius: 50%;
-  border: 3px solid ${COLORS.DARK_TWO};
-  width: 50px;
-  height: 50px;
-  color: ${COLORS.RED_ONE};
-  text-align: center;
-  line-height: 44px;
-  font-size: 26px;
-  user-select: none;
-  margin-top: 5px;
-`
-const StatsBlock = styled.div`
+  left: 0;
+  bottom: -20px;
   background: ${COLORS.LIGHT_TWO};
-  width: 50px;
-  height: 120px;
-  padding: 3px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border-radius: 10px;
-`
-const StatsText = styled.span`
-  font-family: 'Verdana', serif;
-  font-style: italic;
-  font-size: 24px;
-  user-select: none;
-`
-const StatsIcon = styled.img`
-  width: 25px;
-`
-const HazardLevelBlock = styled.div`
-  font-family: 'Verdana', serif;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 3px solid ${COLORS.DARK_TWO};
-  width: 50px;
-  height: 50px;
-  color: ${COLORS.BLUE_ONE};
-  text-align: center;
-  line-height: 44px;
-  font-size: 26px;
   user-select: none;
-  margin-bottom: 5px;
-`
-const StatsCard = styled.div`
+  z-index: 2;
+  border: 5px solid ${COLORS.DARK_TWO};
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  color: ${COLORS.LIGHT_ONE};
+  text-align: center;
+  line-height: 34px;
+  font-size: 20px;
 `
-
 export default Template

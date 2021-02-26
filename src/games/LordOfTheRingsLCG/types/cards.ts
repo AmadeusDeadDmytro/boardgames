@@ -1,4 +1,4 @@
-export interface HeroCardType {
+export type HeroCardType = {
     type: CardTypes
     name: string
     hazardLevel: number
@@ -12,12 +12,21 @@ export interface HeroCardType {
     quote?: string
 }
 
-export type ICard = HeroCardType
+export type EventCardType = {
+    type: CardTypes
+    name: string
+    text?: Array<string>
+    image: string
+    price: number
+}
+
+export type ICard = HeroCardType | EventCardType
 
 ////////////////////////////////////////////////////////////////////// ENUMS
 
 export enum CardTypes {
     HERO = 'Герой',
+    EVENT = 'Событие'
 }
 
 export enum Tags {
@@ -41,5 +50,6 @@ export enum Actions {
 
 export enum Icons {
     ATTACK = 'Attack',
+    SHIELD = 'Shield',
     TACTICS = 'Tactics'
 }

@@ -1,5 +1,5 @@
 import { CardTypes, HeroCardType, Tags, Actions } from '../../types/cards'
-import ImageBack from '../../images/cards/gimli.png'
+import ImageBack from '../../images/cards/brandsonbain.png'
 
 const BrandSonBain: HeroCardType = {
     type: CardTypes.HERO,
@@ -9,11 +9,11 @@ const BrandSonBain: HeroCardType = {
         `Дальнобойный`,
         `${Actions.REACTION}: После того как Бранд сын Бэйна атаковал и уничтожил врага в зоне другого игрока, выберите и откройте одного из персонажей этого игрока`
     ],
-    hazardLevel: 11,
+    hazardLevel: 10,
     willpower: 2,
-    attack: 2,
+    attack: 3,
     defend: 2,
-    health: 5,
+    health: 3,
     image: ImageBack
 }
 

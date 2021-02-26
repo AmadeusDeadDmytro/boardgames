@@ -1,14 +1,22 @@
-import { HeroesDeck, EventsDeck } from './cards/Dealer'
+import { EventsDeck, HeroesDeck } from './cards/Dealer'
 import HeroTemplate from './cards/heroes/template'
-import { ICard } from './types/cards'
+import EventTemplate from './cards/events/template'
+import { CardTypes, ICard } from './types/cards'
 import React from 'react'
 import styled from 'styled-components'
 
 const LordOfTheRingLCG = () => {
     const renderCard = (card: ICard) => {
-        return (
-            <HeroTemplate card={card}/>
-        )
+        switch (card.type) {
+            case CardTypes.HERO:
+                // @ts-ignore
+                return <HeroTemplate card={card}/>
+            case CardTypes.EVENT:
+                // @ts-ignore
+                return <EventTemplate card={card}/>
+            default:
+                return null
+        }
     }
 
     return (
