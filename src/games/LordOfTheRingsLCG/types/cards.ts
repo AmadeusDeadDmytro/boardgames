@@ -29,6 +29,7 @@ export enum Tags {
     ROHAN = 'Рохан',
     WARRIOR = 'Воин',
     WEAPON = 'Оружие',
+    WOOD_ELF = 'Лесной эльф'
 }
 
 export enum Actions {

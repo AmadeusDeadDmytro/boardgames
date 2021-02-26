@@ -157,7 +157,9 @@ const CardTagBlock = styled.i`
     font-size: 13px;
     margin-bottom: 5px;
 `
-const CardTextBlock = styled.div``
+const CardTextBlock = styled.div`
+  width: 100%;
+`
 const CardQuoteBlock = styled.div``
 const CardTypeBlock = styled.div`
   text-transform: lowercase;

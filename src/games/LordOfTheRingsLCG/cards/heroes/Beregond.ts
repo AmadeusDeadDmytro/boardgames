@@ -7,7 +7,7 @@ const Beregond: HeroCardType = {
     tags: [Tags.GONDOR, Tags.WARRIOR],
     text: [
         'Защитник',
-        `Уменьшите на 2 стоимость предметов с чертой ${Tags.WEAPON} или ${Tags.ARMOR}, играемых на Берегонда`,
+        `Стоимость предметов с чертой ${Tags.WEAPON} или ${Tags.ARMOR}, играемых на Берегонда, уменьшается на 2`,
     ],
     hazardLevel: 10,
     willpower: 0,

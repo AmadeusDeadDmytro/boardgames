@@ -24,10 +24,11 @@ const GameArea = styled.div`
     padding: 20px;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 `
 
 const CardWrapper = styled.div`
-  margin: 0 5px;
+  margin: 5px;
 `
 
 export default LordOfTheRingLCG
