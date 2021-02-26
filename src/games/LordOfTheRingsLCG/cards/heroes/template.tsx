@@ -83,7 +83,7 @@ const Template = ({ card }: {card: HeroCardType}) => {
                             return <CardText key={index}>{renderText(text)}</CardText>
                         })}
                     </CardTextBlock>
-                    <CardQuoteBlock></CardQuoteBlock>
+                    <CardQuoteBlock>{card.quote}</CardQuoteBlock>
                 </CardAllTextsBlock>
                 <CardTypeBlock>
                     {card.type}
@@ -102,6 +102,7 @@ const COLORS = {
     DARK_TWO: '#644d23',
     LIGHT_ONE: '#ebe6b8',
     LIGHT_TWO: '#966f14',
+    LIGHT_THREE: '#dbd89f',
     BLUE_ONE: '#6b60ef',
     RED_ONE: '#e20000'
 }
@@ -148,6 +149,7 @@ const CardBottom = styled.div`
 const CardNameBlock = styled.div`
     width: 80%;
     text-align: center;
+    
 `
 const CardTagBlock = styled.i`
     display: block;
@@ -160,7 +162,12 @@ const CardTagBlock = styled.i`
 const CardTextBlock = styled.div`
   width: 100%;
 `
-const CardQuoteBlock = styled.div``
+const CardQuoteBlock = styled.div`
+  font-size: 10px;
+  line-height: 12px;
+  text-align: right;
+  font-style: italic;
+`
 const CardTypeBlock = styled.div`
   text-transform: lowercase;
   font-family: 'Delius', cursive;
@@ -183,6 +190,7 @@ const CardName = styled.p`
     border: 3px solid ${COLORS.LIGHT_TWO};
     border-top: 0;
     border-radius: 0 0 25px 25px;
+    background: ${COLORS.LIGHT_THREE}
 `
 const CardText = styled.p`
     margin: 0 0 5px 0;

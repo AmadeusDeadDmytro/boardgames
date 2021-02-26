@@ -9,6 +9,7 @@ export interface HeroCardType {
     image: string
     tags?: Array<Tags>
     text?: Array<string>
+    quote?: string
 }
 
 export type ICard = HeroCardType
