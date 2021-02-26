@@ -22,10 +22,13 @@ const Template = ({ card }: {card: HeroCardType}) => {
     }
 
     const replaceTextByIcon = (array: Array<string>, text: string): string => {
-        const iconTactics = `<img src="${SwordBlack}" style="width: 10px; display: inline-block; margin: 0 2px;" alt=''/>`
+        const iconTactics = `<img src="${SwordBlack}" style="height: 14px; display: inline;" alt=''/>`
+        const iconAttack = `<img src="${Axes}" style="height: 14px; display: inline;" alt=''/>`
         array.forEach(el => {
             if (el === 'Tactics') {
                 text = text.replace(el, iconTactics)
+            } else if (el === 'Attack') {
+                text = text.replace(el, iconAttack)
             }
         })
         return text
@@ -71,10 +74,10 @@ const Template = ({ card }: {card: HeroCardType}) => {
                         <CardName>
                             {card.name}
                         </CardName>
-                        <CardTagBlock>
-                            {card.tags && card.tags.map((tag) => `${tag}. `)}
-                        </CardTagBlock>
                     </CardNameBlock>
+                    <CardTagBlock>
+                        {card.tags && card.tags.map((tag) => `${tag}. `)}
+                    </CardTagBlock>
                     <CardTextBlock>
                         {card.text && card.text.map((text, index) => {
                             return <CardText key={index}>{renderText(text)}</CardText>
@@ -145,7 +148,6 @@ const CardBottom = styled.div`
 const CardNameBlock = styled.div`
     width: 80%;
     text-align: center;
-    margin-bottom: 5px;
 `
 const CardTagBlock = styled.i`
     display: block;
@@ -153,6 +155,7 @@ const CardTagBlock = styled.i`
     font-weight: bold;
     user-select: none;
     font-size: 13px;
+    margin-bottom: 5px;
 `
 const CardTextBlock = styled.div``
 const CardQuoteBlock = styled.div``

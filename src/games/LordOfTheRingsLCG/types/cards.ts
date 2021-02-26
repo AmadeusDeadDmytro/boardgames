@@ -22,6 +22,9 @@ export enum CardTypes {
 export enum Tags {
     ARMOR = 'Броня',
     GONDOR = 'Гондор',
+    NOBLE = 'Благородный',
+    NOLDOR = 'Нолдор',
+    Ranger = 'Рейнджер',
     ROHAN = 'Рохан',
     WARRIOR = 'Воин',
     WEAPON = 'Оружие',
@@ -32,5 +35,6 @@ export enum Actions {
 }
 
 export enum Icons {
+    ATTACK = 'Attack',
     TACTICS = 'Tactics'
 }
