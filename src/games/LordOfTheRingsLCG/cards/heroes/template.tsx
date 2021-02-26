@@ -121,7 +121,7 @@ const CardTop = styled.div<{back: string}>`
     background-image: ${({ back }) => back && `url(${back})`};
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50px -10px;
+    background-position: 40px -10px;
     width: 100%;
     border-left: 5px solid ${COLORS.LIGHT_TWO};
     height: 240px;
