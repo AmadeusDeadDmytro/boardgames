@@ -71,6 +71,7 @@ const Template = ({ card }: {card: EventCardType}) => {
                             return <CardText key={index}>{renderText(text)}</CardText>
                         })}
                     </CardTextBlock>
+                    <CardQuoteBlock>{card.quote}</CardQuoteBlock>
                 </CardAllTextsBlock>
                 <CardTypeBlock>
                     {card.type}
@@ -206,5 +207,12 @@ const CardPriceBlock = styled.div`
   text-align: center;
   line-height: 34px;
   font-size: 20px;
+`
+
+const CardQuoteBlock = styled.div`
+  font-size: 10px;
+  line-height: 12px;
+  text-align: right;
+  font-style: italic;
 `
 export default Template

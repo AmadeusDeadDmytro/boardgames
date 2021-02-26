@@ -18,6 +18,7 @@ export type EventCardType = {
     text?: Array<string>
     image: string
     price: number
+    quote?: string
 }
 
 export type ICard = HeroCardType | EventCardType
@@ -45,7 +46,8 @@ export enum Tags {
 
 export enum Actions {
     REACTION = 'Реакция',
-    ACTION = 'Действие'
+    ACTION = 'Действие',
+    ACTION_IN_BATTLE = 'Боевое действие'
 }
 
 export enum Icons {
