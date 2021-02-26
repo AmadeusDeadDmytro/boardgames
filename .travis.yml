@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "12"
+install:
+  - "npm i"
+before_deploy:
+  - "CI='' npm run build"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: './build'
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
