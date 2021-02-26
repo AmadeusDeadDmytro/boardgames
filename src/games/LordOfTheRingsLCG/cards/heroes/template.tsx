@@ -4,8 +4,8 @@ import React from 'react'
 import styled from 'styled-components'
 import JsxParser from 'react-jsx-parser'
 
-//Icons - 15% transparency
-import SwordTransparent from '../../images/icons/Sword-transparent.png'
+//Icons
+import SwordTransparent from '../../images/icons/Sword-transparent.png' // 15% transparency
 import Sword from '../../images/icons/Sword.png'
 import Willpower from '../../images/icons/Willpower.png'
 import Axes from '../../images/icons/Axes.png'
