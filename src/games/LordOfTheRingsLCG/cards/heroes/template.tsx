@@ -183,7 +183,7 @@ const CardName = styled.p`
     border-radius: 0 0 25px 25px;
 `
 const CardText = styled.p`
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
     line-height: 14px;
     font-size: 12px;
     user-select: none;

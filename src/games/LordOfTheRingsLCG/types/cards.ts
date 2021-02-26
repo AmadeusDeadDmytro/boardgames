@@ -31,7 +31,8 @@ export enum Tags {
 }
 
 export enum Actions {
-    REACTION = 'Реакция'
+    REACTION = 'Реакция',
+    ACTION = 'Действие'
 }
 
 export enum Icons {

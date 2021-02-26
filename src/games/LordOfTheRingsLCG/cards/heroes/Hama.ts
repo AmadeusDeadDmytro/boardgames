@@ -6,7 +6,7 @@ const Hama: HeroCardType = {
     name: 'Хама',
     tags: [Tags.ROHAN, Tags.WARRIOR],
     text: [
-        `${Actions.REACTION}: После того как Хама объявлен атакующим, верните ${Icons.TACTICS} событие из сброса в руку. Затем сбросьте 1 карту с руки.`,
+        `${Actions.REACTION}: После того как Хама объявлен атакующим, верните ${Icons.TACTICS} событие из сброса в руку. Затем сбросьте 1 карту с руки`,
     ],
     hazardLevel: 9,
     willpower: 1,

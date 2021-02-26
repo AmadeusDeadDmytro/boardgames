@@ -6,8 +6,8 @@ const Elladan: HeroCardType = {
     name: 'Элладан',
     tags: [Tags.NOLDOR, Tags.NOBLE, Tags.Ranger],
     text: [
-        `Элладан получит +2 ${Icons.ATTACK} пока Элрохир в игре.`,
-        `${Actions.REACTION}: После того как Элладан объявлен атакующим, заплатите 1 ресурс &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; из его запаса чтобы открыть его`,
+        `Элладан получит +2 ${Icons.ATTACK} пока Элрохир в игре`,
+        `${Actions.REACTION}: После того как Элладан объявлен атакующим, заплатите 1 ресурс из его запаса чтобы открыть его`,
     ],
     hazardLevel: 10,
     willpower: 2,
