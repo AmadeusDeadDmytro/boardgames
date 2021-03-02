@@ -72,6 +72,7 @@ export enum CardTypes {
 export enum Tags {
     ARTIFACT = 'Артефакт',
     ARMOR = 'Броня',
+    BEORNING = 'Беорнинг',
     DAIL = 'Дэйл',
     EAGLE = 'Орел',
     GIFT = 'Дар',
@@ -87,6 +88,7 @@ export enum Tags {
     SCOUT = 'Скаут',
     SONG = 'Песня',
     STATUS = 'Состояние',
+    THING = 'Существо',
     WARRIOR = 'Воин',
     WEAPON = 'Оружие',
     WOOD_ELF = 'Лесной эльф'

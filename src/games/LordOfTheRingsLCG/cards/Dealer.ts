@@ -44,6 +44,8 @@ import TrollHunter from './allies/TrollHunter'
 import EreborWarmaster from './allies/EreborWarmaster'
 import SentryBruinen from './allies/SentryBruinen'
 import VeteranOfNanduhirion from './allies/VeteranOfNanduhirion'
+import Beorn from './allies/Beorn'
+import Landraval from './allies/Landraval'
 
 export const HeroesDeck: Array<ICard> = [
     Beregond,
@@ -94,5 +96,7 @@ export const AllyDeck: Array<ICard> = [
     TrollHunter,
     EreborWarmaster,
     SentryBruinen,
-    VeteranOfNanduhirion
+    VeteranOfNanduhirion,
+    Beorn,
+    Landraval
 ]
