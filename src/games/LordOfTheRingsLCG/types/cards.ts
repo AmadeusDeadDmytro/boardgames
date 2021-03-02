@@ -32,11 +32,26 @@ export type ItemCardType = {
     quote?: string
 }
 
-export type ICard = HeroCardType | EventCardType | ItemCardType
+export type AllyCardType = {
+    type: CardTypes
+    name: string
+    price: number
+    willpower: number
+    attack: number
+    defend: number
+    health: number
+    image: string
+    tags?: Array<Tags>
+    text?: Array<string>
+    quote?: string
+}
+
+export type ICard = HeroCardType | EventCardType | ItemCardType | AllyCardType
 
 ////////////////////////////////////////////////////////////////////// ENUMS
 
 export enum CardTypes {
+    ALLY = 'Союзник',
     HERO = 'Герой',
     EVENT = 'Событие',
     ITEM = 'Предмет'

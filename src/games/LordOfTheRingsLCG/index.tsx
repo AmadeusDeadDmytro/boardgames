@@ -1,7 +1,8 @@
-import { EventsDeck, HeroesDeck, ItemsDeck } from './cards/Dealer'
+import { EventsDeck, HeroesDeck, ItemsDeck, AllyDeck } from './cards/Dealer'
 import HeroTemplate from './cards/heroes/template'
 import EventTemplate from './cards/events/template'
 import ItemTemplate from './cards/items/template'
+import AllyTemplate from './cards/allies/template'
 import { CardTypes, ICard } from './types/cards'
 import React from 'react'
 import styled from 'styled-components'
@@ -9,6 +10,9 @@ import styled from 'styled-components'
 const LordOfTheRingLCG = () => {
     const renderCard = (card: ICard) => {
         switch (card.type) {
+            case CardTypes.ALLY:
+                // @ts-ignore
+                return <AllyTemplate card={card}/>
             case CardTypes.HERO:
                 // @ts-ignore
                 return <HeroTemplate card={card}/>
@@ -34,6 +38,10 @@ const LordOfTheRingLCG = () => {
             })}
             <div style={{width: '100%'}}></div>
             {ItemsDeck.map((card, index) => {
+                return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
+            })}
+            <div style={{width: '100%'}}></div>
+            {AllyDeck.map((card, index) => {
                 return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
             })}
         </GameArea>

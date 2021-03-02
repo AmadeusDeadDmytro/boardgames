@@ -39,6 +39,7 @@ import BladeOfGondolin from './items/BladeOfGondolin'
 import EaglesSupport from './items/EaglesSupport'
 import HornOfGondor from './items/HornOfGondor'
 import CitadelArmor from './items/CitadelArmor'
+import RammasDefender from './allies/RammasDefender'
 
 export const HeroesDeck: Array<ICard> = [
     Beregond,
@@ -82,4 +83,8 @@ export const ItemsDeck: Array<ICard> = [
     EaglesSupport,
     HornOfGondor,
     CitadelArmor
+]
+
+export const AllyDeck: Array<ICard> = [
+    RammasDefender
 ]
