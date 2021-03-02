@@ -1,9 +1,10 @@
-import { Actions, CardTypes, Icons, ItemCardType } from '../../types/cards'
+import { Actions, CardTypes, Icons, ItemCardType, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/spears_of_the_citadel.png'
 
 const CircularDefense: ItemCardType = {
     type: CardTypes.ITEM,
     name: 'Копье Цитадели',
+    tags: [Tags.ITEM, Tags.WEAPON],
     text: [
         `Прикладывается к ${Icons.TACTICS} персонажу. Ограничение`,
         `Не более 1 на персонажа`,

@@ -114,7 +114,7 @@ const CardBottom = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px 0;
+    padding: 25px 10px 0;
     border: 3px solid ${COLORS.LIGHT_TWO};
     background-image: url(${SwordTransparent});
     background-repeat: no-repeat;
@@ -203,7 +203,7 @@ const CardPriceBlock = styled.div`
   border-radius: 50%;
   user-select: none;
   z-index: 2;
-  border: 3px solid ${COLORS.DARK_TWO};
+  border: 3px solid ${COLORS.LIGHT_TWO};
   display: flex;
   justify-content: center;
   align-items: center;

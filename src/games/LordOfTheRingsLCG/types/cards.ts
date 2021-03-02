@@ -48,6 +48,7 @@ export enum Tags {
     EAGLE = 'Орел',
     GNOME = 'Гном',
     GONDOR = 'Гондор',
+    ITEM = 'Предмет',
     NOBLE = 'Благородный',
     NOLDOR = 'Нолдор',
     Ranger = 'Рейнджер',
