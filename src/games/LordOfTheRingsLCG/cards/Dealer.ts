@@ -26,6 +26,7 @@ import QuickBlow from './events/QuickBlow'
 import ToTheEaglesNest from './events/ToTheEaglesNest'
 import SkillWithBlades from './events/SkillWithBlades'
 import CircularDefense from './events/CircularDefense'
+import SpearOfTheCitadel from './items/SpearOfTheCitadel'
 
 export const HeroesDeck: Array<ICard> = [
     Beregond,
@@ -54,4 +55,7 @@ export const EventsDeck: Array<ICard> = [
     ToTheEaglesNest,
     SkillWithBlades,
     CircularDefense
+]
+export const ItemsDeck: Array<ICard> = [
+    SpearOfTheCitadel
 ]

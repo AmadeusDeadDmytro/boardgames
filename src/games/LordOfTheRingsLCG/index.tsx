@@ -1,6 +1,7 @@
-import { EventsDeck, HeroesDeck } from './cards/Dealer'
+import { EventsDeck, HeroesDeck, ItemsDeck } from './cards/Dealer'
 import HeroTemplate from './cards/heroes/template'
 import EventTemplate from './cards/events/template'
+import ItemTemplate from './cards/items/template'
 import { CardTypes, ICard } from './types/cards'
 import React from 'react'
 import styled from 'styled-components'
@@ -14,6 +15,9 @@ const LordOfTheRingLCG = () => {
             case CardTypes.EVENT:
                 // @ts-ignore
                 return <EventTemplate card={card}/>
+            case CardTypes.ITEM:
+                // @ts-ignore
+                return <ItemTemplate card={card}/>
             default:
                 return null
         }
@@ -24,7 +28,12 @@ const LordOfTheRingLCG = () => {
             {HeroesDeck.map((card, index) => {
                 return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
             })}
+            <div style={{width: '100%'}}></div>
             {EventsDeck.map((card, index) => {
+                return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
+            })}
+            <div style={{width: '100%'}}></div>
+            {ItemsDeck.map((card, index) => {
                 return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
             })}
         </GameArea>

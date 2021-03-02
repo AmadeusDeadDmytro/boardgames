@@ -22,13 +22,24 @@ export type EventCardType = {
     quote?: string
 }
 
-export type ICard = HeroCardType | EventCardType
+export type ItemCardType = {
+    type: CardTypes
+    name: string
+    tags?: Array<string>
+    text?: Array<string>
+    image: string
+    price: number
+    quote?: string
+}
+
+export type ICard = HeroCardType | EventCardType | ItemCardType
 
 ////////////////////////////////////////////////////////////////////// ENUMS
 
 export enum CardTypes {
     HERO = 'Герой',
-    EVENT = 'Событие'
+    EVENT = 'Событие',
+    ITEM = 'Предмет'
 }
 
 export enum Tags {
