@@ -31,6 +31,14 @@ import ChainMail from './items/ChainMail'
 import RivendellBow from './items/RivendellBow'
 import RivendellBlade from './items/RivendellBlade'
 import KeepCounting from './items/KeepCounting'
+import DwarrowdelphAx from './items/DwarrowdelphAx'
+import BornInHeaven from './items/BornInHeaven'
+import Teaser from './items/Teaser'
+import GnomishAx from './items/GnomishAx'
+import BladeOfGondolin from './items/BladeOfGondolin'
+import EaglesSupport from './items/EaglesSupport'
+import HornOfGondor from './items/HornOfGondor'
+import CitadelArmor from './items/CitadelArmor'
 
 export const HeroesDeck: Array<ICard> = [
     Beregond,
@@ -65,5 +73,13 @@ export const ItemsDeck: Array<ICard> = [
     ChainMail,
     RivendellBow,
     RivendellBlade,
-    KeepCounting
+    KeepCounting,
+    DwarrowdelphAx,
+    BornInHeaven,
+    Teaser,
+    GnomishAx,
+    BladeOfGondolin,
+    EaglesSupport,
+    HornOfGondor,
+    CitadelArmor
 ]
