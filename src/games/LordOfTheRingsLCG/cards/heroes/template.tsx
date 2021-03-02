@@ -224,23 +224,28 @@ const FillElement1 = styled.div`
 const CharacteristicsBlock = styled.div`
   position: absolute;
   left: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 10px;
 `
 const HealthBlock = styled.div`
   font-family: 'Verdana', serif;
   border-radius: 50%;
   border: 3px solid ${COLORS.DARK_TWO};
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   color: ${COLORS.RED_ONE};
   text-align: center;
-  line-height: 44px;
-  font-size: 26px;
+  line-height: 34px;
+  font-size: 22px;
   user-select: none;
   margin-top: 5px;
 `
 const StatsBlock = styled.div`
   background: ${COLORS.LIGHT_TWO};
-  width: 50px;
+  width: 40px;
   height: 120px;
   padding: 3px;
   display: flex;
@@ -251,22 +256,22 @@ const StatsBlock = styled.div`
 const StatsText = styled.span`
   font-family: 'Verdana', serif;
   font-style: italic;
-  font-size: 24px;
+  font-size: 20px;
   user-select: none;
 `
 const StatsIcon = styled.img`
-  width: 25px;
+  width: 18px;
 `
 const HazardLevelBlock = styled.div`
   font-family: 'Verdana', serif;
   border-radius: 50%;
   border: 3px solid ${COLORS.DARK_TWO};
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   color: ${COLORS.BLUE_ONE};
   text-align: center;
-  line-height: 44px;
-  font-size: 26px;
+  line-height: 34px;
+  font-size: 22px;
   user-select: none;
   margin-bottom: 5px;
 `

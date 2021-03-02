@@ -1,4 +1,4 @@
-import { Actions, CardTypes, ItemCardType, Tags } from '../../types/cards'
+import { CardTypes, ItemCardType, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/citadel_armor.png'
 
 const CitadelArmor: ItemCardType = {
