@@ -99,7 +99,7 @@ const CardTop = styled.div<{back: string}>`
     background-image: ${({ back }) => back && `url(${back})`};
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 40px -10px;
+    background-position: 0px -10px;
     width: 100%;
     height: 240px;
     margin-top: 10px;
@@ -114,7 +114,7 @@ const CardBottom = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 10px 0;
+    padding: 0 10px;
     border: 3px solid ${COLORS.LIGHT_TWO};
     background-image: url(${SwordTransparent});
     background-repeat: no-repeat;
@@ -134,7 +134,6 @@ const CardNameBlock = styled.div`
     font-family: 'Delius', cursive;
     font-size: 19px;
     border: 3px solid ${COLORS.LIGHT_TWO};
-    padding-left: 12px;
     border-radius: 20px;
 `
 
@@ -224,7 +223,5 @@ const CardTagBlock = styled.i`
     font-weight: bold;
     user-select: none;
     font-size: 13px;
-    position: absolute;
-    top: 5px;
 `
 export default Template

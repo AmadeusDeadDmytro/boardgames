@@ -27,6 +27,10 @@ import ToTheEaglesNest from './events/ToTheEaglesNest'
 import SkillWithBlades from './events/SkillWithBlades'
 import CircularDefense from './events/CircularDefense'
 import SpearOfTheCitadel from './items/SpearOfTheCitadel'
+import ChainMail from './items/ChainMail'
+import RivendellBow from './items/RivendellBow'
+import RivendellBlade from './items/RivendellBlade'
+import KeepCounting from './items/KeepCounting'
 
 export const HeroesDeck: Array<ICard> = [
     Beregond,
@@ -57,5 +61,9 @@ export const EventsDeck: Array<ICard> = [
     CircularDefense
 ]
 export const ItemsDeck: Array<ICard> = [
-    SpearOfTheCitadel
+    SpearOfTheCitadel,
+    ChainMail,
+    RivendellBow,
+    RivendellBlade,
+    KeepCounting
 ]

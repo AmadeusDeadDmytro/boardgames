@@ -1,7 +1,7 @@
 import { Actions, CardTypes, Icons, ItemCardType, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/spears_of_the_citadel.png'
 
-const CircularDefense: ItemCardType = {
+const SpearOfTheCitadel: ItemCardType = {
     type: CardTypes.ITEM,
     name: 'Копье Цитадели',
     tags: [Tags.ITEM, Tags.WEAPON],
@@ -14,4 +14,4 @@ const CircularDefense: ItemCardType = {
     image: ImageBack,
 }
 
-export default CircularDefense
+export default SpearOfTheCitadel

@@ -48,6 +48,7 @@ export enum Tags {
     EAGLE = 'Орел',
     GNOME = 'Гном',
     GONDOR = 'Гондор',
+    HOBBIT = 'Хоббит',
     ITEM = 'Предмет',
     NOBLE = 'Благородный',
     NOLDOR = 'Нолдор',
@@ -59,9 +60,10 @@ export enum Tags {
 }
 
 export enum Actions {
-    REACTION = 'Реакция',
     ACTION = 'Действие',
-    ACTION_IN_BATTLE = 'Боевое действие'
+    ACTION_IN_BATTLE = 'Боевое действие',
+    REACTION = 'Реакция',
+    SPECIAL = 'Особое действие'
 }
 
 export enum Icons {
