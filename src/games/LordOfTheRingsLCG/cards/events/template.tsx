@@ -136,6 +136,7 @@ const CardNameBlock = styled.div`
     font-family: 'Delius', cursive;
     font-size: 19px;
     border: 3px solid ${COLORS.LIGHT_TWO};
+    padding-left: 12px;
 `
 
 const CardTextBlock = styled.div`

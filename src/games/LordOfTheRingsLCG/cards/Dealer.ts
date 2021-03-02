@@ -19,8 +19,39 @@ import KazadKazad from './events/KazadKazad'
 import Fint from './events/Fint'
 import FastLunge from './events/FastLunge'
 import EaglesFly from './events/EaglesFly'
+import RainOfArrows from './events/RainOfArrows'
+import ForestOfSpears from './events/ForestOfSpears'
+import MeneldorsFlight from './events/MeneldorsFlight'
+import QuickBlow from './events/QuickBlow'
+import ToTheEaglesNest from './events/ToTheEaglesNest'
+import SkillWithBlades from './events/SkillWithBlades'
+import CircularDefense from './events/CircularDefense'
 
-export const HeroesDeck: Array<ICard> = [Beregond, Hama, Elladan, Boromir, Talin, Legolas, Gimli, BrandSonBain]
-export const EventsDeck: Array<ICard> = [BehindStrongWalls, AimedShot, HeavyBlow, HailOfStones, HiddenFlow, KazadKazad, Fint, FastLunge, EaglesFly]
-
-
+export const HeroesDeck: Array<ICard> = [
+    Beregond,
+    Hama,
+    Elladan,
+    Boromir,
+    Talin,
+    Legolas,
+    Gimli,
+    BrandSonBain,
+]
+export const EventsDeck: Array<ICard> = [
+    BehindStrongWalls,
+    AimedShot,
+    HeavyBlow,
+    HailOfStones,
+    HiddenFlow,
+    KazadKazad,
+    Fint,
+    FastLunge,
+    EaglesFly,
+    RainOfArrows,
+    ForestOfSpears,
+    MeneldorsFlight,
+    QuickBlow,
+    ToTheEaglesNest,
+    SkillWithBlades,
+    CircularDefense
+]
