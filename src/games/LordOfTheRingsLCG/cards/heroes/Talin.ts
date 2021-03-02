@@ -1,8 +1,9 @@
-import { CardTypes, HeroCardType, Tags } from '../../types/cards'
+import { CardTypes, HeroCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/talin.png'
 
 const Talin: HeroCardType = {
     type: CardTypes.HERO,
+    sphere: Spheres.TACTICS,
     name: 'Талин',
     tags: [Tags.GNOME, Tags.WARRIOR],
     text: [

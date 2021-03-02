@@ -1,8 +1,9 @@
-import { Actions, CardTypes, Icons, ItemCardType, Tags } from '../../types/cards'
+import { Actions, CardTypes, Icons, ItemCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/eagles_support.png'
 
 const EaglesSupport: ItemCardType = {
     type: CardTypes.ITEM,
+    sphere: Spheres.TACTICS,
     name: 'Поддержка орлов',
     tags: [Tags.GIFT],
     text: [

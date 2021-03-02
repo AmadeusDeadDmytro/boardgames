@@ -1,8 +1,9 @@
-import { Actions, CardTypes, Icons, ItemCardType, Tags } from '../../types/cards'
+import { Actions, CardTypes, Icons, ItemCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/blade_of_gondolin.png'
 
 const BladeOfGondolin: ItemCardType = {
     type: CardTypes.ITEM,
+    sphere: Spheres.TACTICS,
     name: 'Клинок Гондолина',
     tags: [Tags.ITEM, Tags.WEAPON],
     text: [

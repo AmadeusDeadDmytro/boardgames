@@ -1,8 +1,9 @@
-import { Actions, CardTypes, HeroCardType, Tags } from '../../types/cards'
+import { Actions, CardTypes, HeroCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/boromir.png'
 
 const Boromir: HeroCardType = {
     type: CardTypes.HERO,
+    sphere: Spheres.TACTICS,
     name: 'Боромир',
     tags: [Tags.GONDOR, Tags.NOBLE, Tags.WARRIOR],
     text: [

@@ -1,8 +1,9 @@
-import { Actions, CardTypes, EventCardType, Icons, Tags } from '../../types/cards'
+import { Actions, CardTypes, EventCardType, Icons, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/kazad_kazad.png'
 
 const KazadKazad: EventCardType = {
     type: CardTypes.EVENT,
+    sphere: Spheres.TACTICS,
     name: 'Казад! Казад!',
     text: [
         `${Actions.ACTION}: Выберите персонажа с чертой ${Tags.GNOME}. До конца фазы выбранный персонаж получает +3${Icons.ATTACK}`

@@ -1,5 +1,6 @@
 export type HeroCardType = {
     type: CardTypes
+    sphere: Spheres
     name: string
     hazardLevel: number
     willpower: number
@@ -14,6 +15,7 @@ export type HeroCardType = {
 
 export type EventCardType = {
     type: CardTypes
+    sphere: Spheres
     name: string
     tags?: Array<string>
     text?: Array<string>
@@ -24,6 +26,7 @@ export type EventCardType = {
 
 export type ItemCardType = {
     type: CardTypes
+    sphere: Spheres
     name: string
     tags?: Array<string>
     text?: Array<string>
@@ -34,6 +37,7 @@ export type ItemCardType = {
 
 export type AllyCardType = {
     type: CardTypes
+    sphere: Spheres
     name: string
     price: number
     willpower: number
@@ -49,6 +53,10 @@ export type AllyCardType = {
 export type ICard = HeroCardType | EventCardType | ItemCardType | AllyCardType
 
 ////////////////////////////////////////////////////////////////////// ENUMS
+
+export enum Spheres {
+    TACTICS = 'Tactics',
+}
 
 export enum CardTypes {
     ALLY = 'Союзник',

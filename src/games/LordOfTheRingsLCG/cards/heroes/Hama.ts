@@ -1,8 +1,9 @@
-import { HeroCardType, Tags, CardTypes, Actions, Icons } from '../../types/cards'
+import { HeroCardType, Tags, CardTypes, Actions, Icons, Spheres } from '../../types/cards'
 import ImageBack from '../../images/cards/hama.png'
 
 const Hama: HeroCardType = {
     type: CardTypes.HERO,
+    sphere: Spheres.TACTICS,
     name: 'Хама',
     tags: [Tags.ROHAN, Tags.WARRIOR],
     text: [

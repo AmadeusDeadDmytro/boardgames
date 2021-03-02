@@ -1,8 +1,9 @@
-import { Actions, CardTypes, HeroCardType, Icons, Tags } from '../../types/cards'
+import { Actions, CardTypes, HeroCardType, Icons, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/elladan.png'
 
 const Elladan: HeroCardType = {
     type: CardTypes.HERO,
+    sphere: Spheres.TACTICS,
     name: 'Элладан',
     tags: [Tags.NOLDOR, Tags.NOBLE, Tags.Ranger],
     text: [

@@ -1,8 +1,9 @@
-import { CardTypes, Icons, ItemCardType, Tags } from '../../types/cards'
+import { CardTypes, Icons, ItemCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/riverdells_bow.png'
 
 const RivendellBow: ItemCardType = {
     type: CardTypes.ITEM,
+    sphere: Spheres.TACTICS,
     name: 'Лук из Ривенделла',
     tags: [Tags.ITEM, Tags.WEAPON],
     text: [

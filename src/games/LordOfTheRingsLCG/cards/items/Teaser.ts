@@ -1,8 +1,9 @@
-import { Actions, CardTypes, ItemCardType, Tags } from '../../types/cards'
+import { Actions, CardTypes, ItemCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/teaser.png'
 
 const Teaser: ItemCardType = {
     type: CardTypes.ITEM,
+    sphere: Spheres.TACTICS,
     name: 'Дразнилка',
     tags: [Tags.SONG],
     text: [

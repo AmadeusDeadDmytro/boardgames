@@ -1,8 +1,9 @@
-import { CardTypes, HeroCardType, Tags, Icons } from '../../types/cards'
+import { CardTypes, HeroCardType, Tags, Icons, Spheres } from '../../types/cards'
 import ImageBack from '../../images/cards/gimli.png'
 
 const Gimli: HeroCardType = {
     type: CardTypes.HERO,
+    sphere: Spheres.TACTICS,
     name: 'Гимли',
     tags: [Tags.GNOME, Tags.NOBLE, Tags.WARRIOR],
     text: [

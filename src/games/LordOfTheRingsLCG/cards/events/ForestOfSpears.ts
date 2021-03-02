@@ -1,8 +1,9 @@
-import { Actions, CardTypes, EventCardType } from '../../types/cards'
+import { Actions, CardTypes, EventCardType, Spheres } from '../../types/cards'
 import ImageBack from '../../images/cards/forest_of_spears.png'
 
 const ForestOfSpears: EventCardType = {
     type: CardTypes.EVENT,
+    sphere: Spheres.TACTICS,
     name: 'Лес копий',
     text: [
         `Вы должны использовать ресурсы из запасов 3 различных героев, чтобы сыграть эту карту`,

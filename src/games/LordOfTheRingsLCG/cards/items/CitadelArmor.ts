@@ -1,8 +1,9 @@
-import { CardTypes, ItemCardType, Tags } from '../../types/cards'
+import { CardTypes, ItemCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/citadel_armor.png'
 
 const CitadelArmor: ItemCardType = {
     type: CardTypes.ITEM,
+    sphere: Spheres.TACTICS,
     name: 'Доспех Цитадели',
     tags: [Tags.ITEM, Tags.ARMOR],
     text: [

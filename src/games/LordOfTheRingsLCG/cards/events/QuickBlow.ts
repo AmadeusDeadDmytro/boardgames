@@ -1,8 +1,9 @@
-import { Actions, CardTypes, EventCardType, Tags } from '../../types/cards'
+import { Actions, CardTypes, EventCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/quick_blow.png'
 
 const QuickBlow: EventCardType = {
     type: CardTypes.EVENT,
+    sphere: Spheres.TACTICS,
     name: 'Быстрый удар',
     text: [
         `${Actions.REACTION}: После того как персонаж объявлен защищающимся, нанесите 2 повреждения атакующему противнику`],

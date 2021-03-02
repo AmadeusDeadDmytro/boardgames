@@ -1,8 +1,9 @@
-import { CardTypes, AllyCardType, Tags } from '../../types/cards'
+import { AllyCardType, CardTypes, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/rammas_defender.png'
 
 const RammasDefender: AllyCardType = {
     type: CardTypes.ALLY,
+    sphere: Spheres.TACTICS,
     name: 'Защитник Раммаса',
     tags: [Tags.GONDOR, Tags.WARRIOR],
     price: 2,

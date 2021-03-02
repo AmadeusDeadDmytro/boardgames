@@ -1,8 +1,9 @@
-import { Actions, CardTypes, Icons, ItemCardType } from '../../types/cards'
+import { Actions, CardTypes, Icons, ItemCardType, Spheres } from '../../types/cards'
 import ImageBack from '../../images/cards/keep_countig.png'
 
 const KeepCounting: ItemCardType = {
     type: CardTypes.ITEM,
+    sphere: Spheres.TACTICS,
     name: 'Продолжай считать',
     text: [
         `Прикладывается к герою. Не более 1 копии на героя`,

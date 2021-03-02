@@ -1,8 +1,9 @@
-import { Actions, CardTypes, Icons, ItemCardType, Tags } from '../../types/cards'
+import { Actions, CardTypes, Icons, ItemCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/dwarrowdelph_ax.png'
 
 const DwarrowdelphAx: ItemCardType = {
     type: CardTypes.ITEM,
+    sphere: Spheres.TACTICS,
     name: 'Дварроуделфская секира',
     tags: [Tags.ITEM, Tags.WEAPON],
     text: [

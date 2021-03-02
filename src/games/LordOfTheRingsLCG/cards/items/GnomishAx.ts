@@ -1,8 +1,9 @@
-import { CardTypes, Icons, ItemCardType, Tags } from '../../types/cards'
+import { CardTypes, Icons, ItemCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/gnomish_ax.png'
 
 const GnomishAx: ItemCardType = {
     type: CardTypes.ITEM,
+    sphere: Spheres.TACTICS,
     name: 'Гномий топор',
     tags: [Tags.ITEM, Tags.WEAPON],
     text: [

@@ -1,8 +1,9 @@
-import { CardTypes, HeroCardType, Tags, Actions } from '../../types/cards'
+import { CardTypes, HeroCardType, Tags, Actions, Spheres } from '../../types/cards'
 import ImageBack from '../../images/cards/legolas.png'
 
 const Legolas: HeroCardType = {
     type: CardTypes.HERO,
+    sphere: Spheres.TACTICS,
     name: 'Леголас',
     tags: [Tags.NOBLE, Tags.WOOD_ELF, Tags.WARRIOR],
     text: [

@@ -1,8 +1,9 @@
-import { CardTypes, AllyCardType, Tags, Actions } from '../../types/cards'
+import { CardTypes, AllyCardType, Tags, Actions, Spheres } from '../../types/cards'
 import ImageBack from '../../images/cards/trolls_hunter.png'
 
 const TrollHunter: AllyCardType = {
     type: CardTypes.ALLY,
+    sphere: Spheres.TACTICS,
     name: 'Охотник на троллей',
     tags: [Tags.NOLDOR, Tags.SCOUT],
     text: [

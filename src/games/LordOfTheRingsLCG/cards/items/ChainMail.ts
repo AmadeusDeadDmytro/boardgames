@@ -1,8 +1,9 @@
-import { CardTypes, Icons, ItemCardType, Tags } from '../../types/cards'
+import { CardTypes, Icons, ItemCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/chain_mail.png'
 
 const ChainMail: ItemCardType = {
     type: CardTypes.ITEM,
+    sphere: Spheres.TACTICS,
     name: 'Кольчуга',
     tags: [Tags.ITEM, Tags.ARMOR],
     text: [

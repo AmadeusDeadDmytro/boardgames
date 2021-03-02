@@ -1,8 +1,9 @@
-import { Actions, CardTypes, ItemCardType, Tags } from '../../types/cards'
+import { Actions, CardTypes, ItemCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/born_in_heaven.png'
 
 const BornInHeaven: ItemCardType = {
     type: CardTypes.ITEM,
+    sphere: Spheres.TACTICS,
     name: 'Рожденный в небесах',
     tags: [Tags.STATUS],
     text: [

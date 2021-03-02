@@ -1,8 +1,9 @@
-import { Actions, CardTypes, EventCardType, Tags } from '../../types/cards'
+import { Actions, CardTypes, EventCardType, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/meneldors_flight.png'
 
 const MeneldorsFlight: EventCardType = {
     type: CardTypes.EVENT,
+    sphere: Spheres.TACTICS,
     name: 'Полет Менельдора',
     text: [
         `${Actions.ACTION}: Выберите союзника с чертой ${Tags.EAGLE}. Верните его в руку владельца`],

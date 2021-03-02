@@ -1,8 +1,9 @@
-import { Actions, CardTypes, EventCardType, Icons } from '../../types/cards'
+import { Actions, CardTypes, EventCardType, Icons, Spheres } from '../../types/cards'
 import ImageBack from '../../images/cards/skill_with_blades.png'
 
 const SkillWithBlades: EventCardType = {
     type: CardTypes.EVENT,
+    sphere: Spheres.TACTICS,
     name: 'Мастерство с клинками',
     text: [
         `${Actions.ACTION}: Выберите персонажа. До конца фазы выбранный персонаж получает +1${Icons.ATTACK} и +1${Icons.SHIELD}`],

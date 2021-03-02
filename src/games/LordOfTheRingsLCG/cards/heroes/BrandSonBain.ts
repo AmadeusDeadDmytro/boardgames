@@ -1,8 +1,9 @@
-import { CardTypes, HeroCardType, Tags, Actions } from '../../types/cards'
+import { CardTypes, HeroCardType, Tags, Actions, Spheres } from '../../types/cards'
 import ImageBack from '../../images/cards/brandsonbain.png'
 
 const BrandSonBain: HeroCardType = {
     type: CardTypes.HERO,
+    sphere: Spheres.TACTICS,
     name: 'Бранд сын Бэйна',
     tags: [Tags.DAIL],
     text: [
