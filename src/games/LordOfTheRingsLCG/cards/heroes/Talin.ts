@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/talin.png'
 const Talin: HeroCardType = {
     type: CardTypes.HERO,
     sphere: Spheres.TACTICS,
+    isUnique: true,
     name: 'Талин',
     tags: [Tags.GNOME, Tags.WARRIOR],
     text: [

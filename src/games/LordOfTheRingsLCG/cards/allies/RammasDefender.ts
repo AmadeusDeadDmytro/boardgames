@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/rammas_defender.png'
 const RammasDefender: AllyCardType = {
     type: CardTypes.ALLY,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Защитник Раммаса',
     tags: [Tags.GONDOR, Tags.WARRIOR],
     price: 2,

@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/spears_of_the_citadel.png'
 const SpearOfTheCitadel: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Копье Цитадели',
     tags: [Tags.ITEM, Tags.WEAPON],
     text: [

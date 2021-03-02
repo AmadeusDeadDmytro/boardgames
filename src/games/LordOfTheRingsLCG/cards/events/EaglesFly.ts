@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/eagles_fly.png'
 const EaglesFly: EventCardType = {
     type: CardTypes.EVENT,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Орлы летят!',
     text: [
         `${Actions.ACTION}: Посмотрите 5 верхних карт своей колоды и возьмите из них в руку любое количество карт с чертой ${Tags.EAGLE}. Остальные карты замешайте обратно в колоду`

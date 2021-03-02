@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/sentry_bruinen.png'
 const SentryBruinen: AllyCardType = {
     type: CardTypes.ALLY,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Часовой Бруинена',
     tags: [Tags.NOLDOR, Tags.WARRIOR],
     text: [

@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/circular_defense.png'
 const CircularDefense: EventCardType = {
     type: CardTypes.EVENT,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Круговая оборона',
     text: [
         `${Actions.ACTION}: Выберите игрока. Выбранный игрок может объявить любое количество своих персонажей защищающимися против атакующих его противников`],

@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/trolls_hunter.png'
 const TrollHunter: AllyCardType = {
     type: CardTypes.ALLY,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Охотник на троллей',
     tags: [Tags.NOLDOR, Tags.SCOUT],
     text: [

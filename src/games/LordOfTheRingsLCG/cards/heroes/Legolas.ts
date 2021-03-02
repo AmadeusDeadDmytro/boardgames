@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/legolas.png'
 const Legolas: HeroCardType = {
     type: CardTypes.HERO,
     sphere: Spheres.TACTICS,
+    isUnique: true,
     name: 'Леголас',
     tags: [Tags.NOBLE, Tags.WOOD_ELF, Tags.WARRIOR],
     text: [

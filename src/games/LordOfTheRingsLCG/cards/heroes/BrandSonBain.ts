@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/brandsonbain.png'
 const BrandSonBain: HeroCardType = {
     type: CardTypes.HERO,
     sphere: Spheres.TACTICS,
+    isUnique: true,
     name: 'Бранд сын Бэйна',
     tags: [Tags.DAIL],
     text: [

@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/gimli.png'
 const Gimli: HeroCardType = {
     type: CardTypes.HERO,
     sphere: Spheres.TACTICS,
+    isUnique: true,
     name: 'Гимли',
     tags: [Tags.GNOME, Tags.NOBLE, Tags.WARRIOR],
     text: [

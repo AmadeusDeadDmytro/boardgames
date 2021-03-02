@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/erenbord_warmaster.png'
 const EreborWarmaster: AllyCardType = {
     type: CardTypes.ALLY,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Эреборский мастер',
     tags: [Tags.GNOME, Tags.WARRIOR],
     text: [

@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/riverdells_bow.png'
 const RivendellBow: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Лук из Ривенделла',
     tags: [Tags.ITEM, Tags.WEAPON],
     text: [

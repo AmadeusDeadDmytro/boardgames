@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/elladan.png'
 const Elladan: HeroCardType = {
     type: CardTypes.HERO,
     sphere: Spheres.TACTICS,
+    isUnique: true,
     name: 'Элладан',
     tags: [Tags.NOLDOR, Tags.NOBLE, Tags.Ranger],
     text: [

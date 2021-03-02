@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/boromir.png'
 const Boromir: HeroCardType = {
     type: CardTypes.HERO,
     sphere: Spheres.TACTICS,
+    isUnique: true,
     name: 'Боромир',
     tags: [Tags.GONDOR, Tags.NOBLE, Tags.WARRIOR],
     text: [

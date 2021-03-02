@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/teaser.png'
 const Teaser: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Дразнилка',
     tags: [Tags.SONG],
     text: [

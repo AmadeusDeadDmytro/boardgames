@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/quick_blow.png'
 const QuickBlow: EventCardType = {
     type: CardTypes.EVENT,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Быстрый удар',
     text: [
         `${Actions.REACTION}: После того как персонаж объявлен защищающимся, нанесите 2 повреждения атакующему противнику`],

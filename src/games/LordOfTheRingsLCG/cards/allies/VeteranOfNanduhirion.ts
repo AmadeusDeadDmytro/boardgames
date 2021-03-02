@@ -1,9 +1,10 @@
-import { Actions, AllyCardType, CardTypes, Spheres, Tags } from '../../types/cards'
+import { AllyCardType, CardTypes, Spheres, Tags } from '../../types/cards'
 import ImageBack from '../../images/cards/veteran_of_nanduhirion.png'
 
 const VeteranOfNanduhirion: AllyCardType = {
     type: CardTypes.ALLY,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Ветеран Нандухириона',
     tags: [Tags.GNOME, Tags.WARRIOR],
     text: [

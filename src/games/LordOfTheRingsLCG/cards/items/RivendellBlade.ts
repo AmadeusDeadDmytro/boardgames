@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/rivendells_blade.png'
 const RivendellBlade: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Клинок из Ривенделла',
     tags: [Tags.ITEM, Tags.WEAPON],
     text: [

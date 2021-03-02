@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/blade_of_gondolin.png'
 const BladeOfGondolin: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Клинок Гондолина',
     tags: [Tags.ITEM, Tags.WEAPON],
     text: [

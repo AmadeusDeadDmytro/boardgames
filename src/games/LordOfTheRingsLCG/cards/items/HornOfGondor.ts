@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/horn_of_godor.png'
 const HornOfGondor: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Рог Гондора',
     tags: [Tags.ITEM, Tags.ARTIFACT],
     text: [

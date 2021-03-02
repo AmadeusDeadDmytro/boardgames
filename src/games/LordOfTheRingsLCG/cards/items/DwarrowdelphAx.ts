@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/dwarrowdelph_ax.png'
 const DwarrowdelphAx: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Дварроуделфская секира',
     tags: [Tags.ITEM, Tags.WEAPON],
     text: [

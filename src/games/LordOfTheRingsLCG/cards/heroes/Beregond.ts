@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/beregond.png'
 const Beregond: HeroCardType = {
     type: CardTypes.HERO,
     sphere: Spheres.TACTICS,
+    isUnique: true,
     name: 'Берегонд',
     tags: [Tags.GONDOR, Tags.WARRIOR],
     text: [

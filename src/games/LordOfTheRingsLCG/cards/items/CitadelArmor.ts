@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/citadel_armor.png'
 const CitadelArmor: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Доспех Цитадели',
     tags: [Tags.ITEM, Tags.ARMOR],
     text: [

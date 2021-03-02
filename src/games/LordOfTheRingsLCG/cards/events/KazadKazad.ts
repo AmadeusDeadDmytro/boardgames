@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/kazad_kazad.png'
 const KazadKazad: EventCardType = {
     type: CardTypes.EVENT,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Казад! Казад!',
     text: [
         `${Actions.ACTION}: Выберите персонажа с чертой ${Tags.GNOME}. До конца фазы выбранный персонаж получает +3${Icons.ATTACK}`

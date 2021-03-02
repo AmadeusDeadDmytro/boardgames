@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/chain_mail.png'
 const ChainMail: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Кольчуга',
     tags: [Tags.ITEM, Tags.ARMOR],
     text: [

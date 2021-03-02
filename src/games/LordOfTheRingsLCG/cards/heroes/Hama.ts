@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/hama.png'
 const Hama: HeroCardType = {
     type: CardTypes.HERO,
     sphere: Spheres.TACTICS,
+    isUnique: true,
     name: 'Хама',
     tags: [Tags.ROHAN, Tags.WARRIOR],
     text: [

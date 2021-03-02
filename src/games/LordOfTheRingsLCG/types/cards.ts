@@ -1,6 +1,7 @@
 export type HeroCardType = {
     type: CardTypes
     sphere: Spheres
+    isUnique: boolean
     name: string
     hazardLevel: number
     willpower: number
@@ -16,6 +17,7 @@ export type HeroCardType = {
 export type EventCardType = {
     type: CardTypes
     sphere: Spheres
+    isUnique: boolean
     name: string
     tags?: Array<string>
     text?: Array<string>
@@ -27,6 +29,7 @@ export type EventCardType = {
 export type ItemCardType = {
     type: CardTypes
     sphere: Spheres
+    isUnique: boolean
     name: string
     tags?: Array<string>
     text?: Array<string>
@@ -38,6 +41,7 @@ export type ItemCardType = {
 export type AllyCardType = {
     type: CardTypes
     sphere: Spheres
+    isUnique: boolean
     name: string
     price: number
     willpower: number

@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/meneldors_flight.png'
 const MeneldorsFlight: EventCardType = {
     type: CardTypes.EVENT,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Полет Менельдора',
     text: [
         `${Actions.ACTION}: Выберите союзника с чертой ${Tags.EAGLE}. Верните его в руку владельца`],

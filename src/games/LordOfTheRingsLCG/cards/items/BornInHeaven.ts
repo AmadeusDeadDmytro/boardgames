@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/born_in_heaven.png'
 const BornInHeaven: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Рожденный в небесах',
     tags: [Tags.STATUS],
     text: [

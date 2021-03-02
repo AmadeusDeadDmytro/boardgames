@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/gnomish_ax.png'
 const GnomishAx: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Гномий топор',
     tags: [Tags.ITEM, Tags.WEAPON],
     text: [

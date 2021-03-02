@@ -12,6 +12,7 @@ import Willpower from '../../images/icons/Willpower.png'
 import Axes from '../../images/icons/Axes.png'
 import Shield from '../../images/icons/Shield.png'
 import SwordBlack from '../../images/icons/Sword_black.png'
+import Unique from '../../images/icons/Unique.png'
 
 const Template = ({ card }: {card: AllyCardType}) => {
 
@@ -46,6 +47,7 @@ const Template = ({ card }: {card: AllyCardType}) => {
                 <CardAllTextsBlock>
                     <CardNameBlock>
                         <CardName>
+                            {card.isUnique &&  <UniqueImage src={Unique}/>}
                             {card.name}
                         </CardName>
                     </CardNameBlock>
@@ -248,6 +250,14 @@ const StatsCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`
+
+
+const UniqueImage = styled.img`
+  display: inline;
+  width: 15px;
+  height: 15px;
+  margin: -5px 3px 0 0;
 `
 
 export default Template

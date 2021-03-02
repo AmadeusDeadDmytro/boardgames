@@ -4,6 +4,7 @@ import ImageBack from '../../images/cards/eagles_support.png'
 const EaglesSupport: ItemCardType = {
     type: CardTypes.ITEM,
     sphere: Spheres.TACTICS,
+    isUnique: false,
     name: 'Поддержка орлов',
     tags: [Tags.GIFT],
     text: [
