@@ -41,6 +41,9 @@ import HornOfGondor from './items/HornOfGondor'
 import CitadelArmor from './items/CitadelArmor'
 import RammasDefender from './allies/RammasDefender'
 import TrollHunter from './allies/TrollHunter'
+import EreborWarmaster from './allies/EreborWarmaster'
+import SentryBruinen from './allies/SentryBruinen'
+import VeteranOfNanduhirion from './allies/VeteranOfNanduhirion'
 
 export const HeroesDeck: Array<ICard> = [
     Beregond,
@@ -88,5 +91,8 @@ export const ItemsDeck: Array<ICard> = [
 
 export const AllyDeck: Array<ICard> = [
     RammasDefender,
-    TrollHunter
+    TrollHunter,
+    EreborWarmaster,
+    SentryBruinen,
+    VeteranOfNanduhirion
 ]
