@@ -72,6 +72,7 @@ export enum Tags {
     ORC = 'Орк',
     Ranger = 'Рейнджер',
     ROHAN = 'Рохан',
+    SCOUT = 'Скаут',
     SONG = 'Песня',
     STATUS = 'Состояние',
     WARRIOR = 'Воин',
@@ -83,7 +84,7 @@ export enum Actions {
     ACTION = 'Действие',
     ACTION_IN_BATTLE = 'Боевое действие',
     REACTION = 'Реакция',
-    SPECIAL = 'Особое действие'
+    SPECIAL = 'Особый эффект'
 }
 
 export enum Icons {

@@ -171,7 +171,7 @@ const CardTypeBlock = styled.div`
   user-select: none;
 `
 const CardName = styled.p`
-    line-height: 25px;
+    line-height: 22px;
     margin: 0;
     font-family: 'Delius', cursive;
     font-size: 18px;
@@ -217,7 +217,7 @@ const FillElement1 = styled.div`
   right: 0;
   bottom: 0;
   background: ${COLORS.LIGHT_TWO};
-  width: 20px;
+  width: 40px;
   height: 20px;
   user-select: none;
 `
