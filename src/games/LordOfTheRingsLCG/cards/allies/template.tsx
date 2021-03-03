@@ -11,7 +11,6 @@ import Sword from '../../images/icons/Sword.png'
 import Willpower from '../../images/icons/Willpower.png'
 import Axes from '../../images/icons/Axes.png'
 import Shield from '../../images/icons/Shield.png'
-import SwordBlack from '../../images/icons/Sword_black.png'
 import Unique from '../../images/icons/Unique.png'
 
 const Template = ({ card }: {card: AllyCardType}) => {

@@ -70,6 +70,7 @@ export enum CardTypes {
 }
 
 export enum Tags {
+    ARCHER = 'Лучник',
     ARTIFACT = 'Артефакт',
     ARMOR = 'Броня',
     BEORNING = 'Беорнинг',

@@ -46,6 +46,14 @@ import SentryBruinen from './allies/SentryBruinen'
 import VeteranOfNanduhirion from './allies/VeteranOfNanduhirion'
 import Beorn from './allies/Beorn'
 import Landraval from './allies/Landraval'
+import SwordFightingVeteran from './allies/SwordFightingVeteran'
+import GondorianSpearman from './allies/GondorianSpearman'
+import HorseArcher from './allies/HorseArcher'
+import WingedGuardian from './allies/WingedGuardian'
+import EaglesOfTheMistyMountains from './allies/EaglesOfTheMistyMountains'
+import DescendantOfThorondor from './allies/DescendantOfThorondor'
+import BeorningBeekeeper from './allies/BeorningBeekeeper'
+import FiledByTheLordOfTheWind from './allies/FiledByTheLordOfTheWind'
 
 export const HeroesDeck: Array<ICard> = [
     Beregond,
@@ -98,5 +106,13 @@ export const AllyDeck: Array<ICard> = [
     SentryBruinen,
     VeteranOfNanduhirion,
     Beorn,
-    Landraval
+    Landraval,
+    SwordFightingVeteran,
+    GondorianSpearman,
+    HorseArcher,
+    WingedGuardian,
+    EaglesOfTheMistyMountains,
+    DescendantOfThorondor,
+    BeorningBeekeeper,
+    FiledByTheLordOfTheWind
 ]
