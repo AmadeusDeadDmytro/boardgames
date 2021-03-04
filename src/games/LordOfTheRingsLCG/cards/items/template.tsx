@@ -84,7 +84,7 @@ const CardBottom = styled.div`
     background-image: url(${SwordTransparent});
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 90px;
+    background-size: 75px;
     position: relative;
 `
 const CardNameBlock = styled.div`

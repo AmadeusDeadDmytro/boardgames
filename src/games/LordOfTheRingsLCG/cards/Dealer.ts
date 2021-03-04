@@ -26,6 +26,7 @@ import QuickBlow from './events/QuickBlow'
 import ToTheEaglesNest from './events/ToTheEaglesNest'
 import SkillWithBlades from './events/SkillWithBlades'
 import CircularDefense from './events/CircularDefense'
+// ITEMS
 import SpearOfTheCitadel from './items/SpearOfTheCitadel'
 import ChainMail from './items/ChainMail'
 import RivendellBow from './items/RivendellBow'
@@ -39,6 +40,7 @@ import BladeOfGondolin from './items/BladeOfGondolin'
 import EaglesSupport from './items/EaglesSupport'
 import HornOfGondor from './items/HornOfGondor'
 import CitadelArmor from './items/CitadelArmor'
+// ALLIES
 import RammasDefender from './allies/RammasDefender'
 import TrollHunter from './allies/TrollHunter'
 import EreborWarmaster from './allies/EreborWarmaster'
@@ -54,8 +56,9 @@ import EaglesOfTheMistyMountains from './allies/EaglesOfTheMistyMountains'
 import DescendantOfThorondor from './allies/DescendantOfThorondor'
 import BeorningBeekeeper from './allies/BeorningBeekeeper'
 import FiledByTheLordOfTheWind from './allies/FiledByTheLordOfTheWind'
+import BoromirLeadership from './heroes/Boromir_leadership'
 
-export const HeroesDeck: Array<ICard> = [
+export const TacticHeroesDeck: Array<ICard> = [
     Beregond,
     Hama,
     Elladan,
@@ -65,7 +68,7 @@ export const HeroesDeck: Array<ICard> = [
     Gimli,
     BrandSonBain,
 ]
-export const EventsDeck: Array<ICard> = [
+export const TacticEventsDeck: Array<ICard> = [
     BehindStrongWalls,
     AimedShot,
     HeavyBlow,
@@ -83,7 +86,7 @@ export const EventsDeck: Array<ICard> = [
     SkillWithBlades,
     CircularDefense
 ]
-export const ItemsDeck: Array<ICard> = [
+export const TacticItemsDeck: Array<ICard> = [
     SpearOfTheCitadel,
     ChainMail,
     RivendellBow,
@@ -99,7 +102,7 @@ export const ItemsDeck: Array<ICard> = [
     CitadelArmor
 ]
 
-export const AllyDeck: Array<ICard> = [
+export const TacticAllyDeck: Array<ICard> = [
     RammasDefender,
     TrollHunter,
     EreborWarmaster,
@@ -115,4 +118,8 @@ export const AllyDeck: Array<ICard> = [
     DescendantOfThorondor,
     BeorningBeekeeper,
     FiledByTheLordOfTheWind
+]
+
+export const LeadershipHeroDeck: Array<ICard> = [
+    BoromirLeadership
 ]

@@ -59,6 +59,7 @@ export type ICard = HeroCardType | EventCardType | ItemCardType | AllyCardType
 ////////////////////////////////////////////////////////////////////// ENUMS
 
 export enum Spheres {
+    LEADERSHIP = 'Лидерство',
     TACTICS = 'Tactics',
 }
 

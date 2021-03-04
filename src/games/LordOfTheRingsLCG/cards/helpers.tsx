@@ -2,8 +2,12 @@ import React from 'react'
 import SwordBlack from '../images/icons/Sword_black.png'
 import Axes from '../images/icons/Axes.png'
 import Shield from '../images/icons/Shield.png'
-import { Actions, Icons, Tags } from '../types/cards'
+import { Actions, Icons, Spheres, Tags } from '../types/cards'
 import JsxParser from 'react-jsx-parser'
+import TacticsIcon from '../images/icons/Sword.png'
+import TacticsIconTransparent from '../images/icons/Sword-transparent.png'
+import LeadershipIcon from '../images/icons/Leadership.png'
+import LeadershipIconTransparent from '../images/icons/Leadership_transparent.png'
 
 export const replaceTextByText = (array: Array<string>, text: string): string => {
     array.forEach(el => {
@@ -38,4 +42,14 @@ export const renderText = (text: string): JSX.Element => {
     text = replaceTextByIcon(spheresArr, text)
 
     return <JsxParser jsx={text}/>
+}
+
+export const getSphereIcon = (text: string): Array<string> => {
+    switch (text) {
+        case Spheres.TACTICS:
+            return [TacticsIcon, TacticsIconTransparent]
+        case Spheres.LEADERSHIP:
+            return [LeadershipIcon, LeadershipIconTransparent]
+    }
+    return []
 }

@@ -1,4 +1,4 @@
-import { EventsDeck, HeroesDeck, ItemsDeck, AllyDeck } from './cards/Dealer'
+import { TacticEventsDeck, TacticHeroesDeck, TacticItemsDeck, TacticAllyDeck, LeadershipHeroDeck } from './cards/Dealer'
 import HeroTemplate from './cards/heroes/template'
 import EventTemplate from './cards/events/template'
 import ItemTemplate from './cards/items/template'
@@ -29,19 +29,22 @@ const LordOfTheRingLCG = () => {
 
     return (
         <GameArea>
-            {HeroesDeck.map((card, index) => {
+            {TacticHeroesDeck.map((card, index) => {
+                return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
+            })}
+            {LeadershipHeroDeck.map((card, index) => {
                 return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
             })}
             <div style={{width: '100%'}}></div>
-            {EventsDeck.map((card, index) => {
+            {TacticEventsDeck.map((card, index) => {
                 return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
             })}
             <div style={{width: '100%'}}></div>
-            {ItemsDeck.map((card, index) => {
+            {TacticItemsDeck.map((card, index) => {
                 return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
             })}
             <div style={{width: '100%'}}></div>
-            {AllyDeck.map((card, index) => {
+            {TacticAllyDeck.map((card, index) => {
                 return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
             })}
         </GameArea>
