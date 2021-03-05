@@ -1,5 +1,5 @@
-import { HeroCardType, Tags, CardTypes, Spheres, Actions, Icons } from '../../types/cards'
-import ImageBack from '../../images/cards/prince_imrahil.png'
+import { HeroCardType, Tags, CardTypes, Spheres, Icons } from '../../types/cards'
+import ImageBack from '../../images/cards/dain_iron_heel.png'
 
 const DainIronHeel: HeroCardType = {
     type: CardTypes.HERO,
