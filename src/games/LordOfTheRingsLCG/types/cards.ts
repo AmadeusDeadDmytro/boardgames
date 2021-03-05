@@ -76,6 +76,7 @@ export enum Tags {
     ARMOR = 'Броня',
     BEORNING = 'Беорнинг',
     DAIL = 'Дэйл',
+    DUNADAN = 'Дунадан',
     EAGLE = 'Орел',
     GIFT = 'Дар',
     GNOME = 'Гном',
@@ -85,7 +86,7 @@ export enum Tags {
     NOBLE = 'Благородный',
     NOLDOR = 'Нолдор',
     ORC = 'Орк',
-    Ranger = 'Рейнджер',
+    RANGER = 'Рейнджер',
     ROHAN = 'Рохан',
     SCOUT = 'Скаут',
     SONG = 'Песня',
@@ -106,5 +107,6 @@ export enum Actions {
 export enum Icons {
     ATTACK = 'Attack',
     SHIELD = 'Shield',
-    TACTICS = 'Tactics'
+    TACTICS = 'Tactics',
+    WILLPOWER = 'Willpower'
 }

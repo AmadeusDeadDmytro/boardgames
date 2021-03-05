@@ -6,7 +6,7 @@ const Elladan: HeroCardType = {
     sphere: Spheres.TACTICS,
     isUnique: true,
     name: 'Элладан',
-    tags: [Tags.NOLDOR, Tags.NOBLE, Tags.Ranger],
+    tags: [Tags.NOLDOR, Tags.NOBLE, Tags.RANGER],
     text: [
         `Элладан получит +2 ${Icons.ATTACK} пока Элрохир в игре`,
         `${Actions.REACTION}: После того как Элладан объявлен атакующим, потратьте 1 ресурс из его запаса чтобы открыть его`,

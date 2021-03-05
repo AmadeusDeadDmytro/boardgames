@@ -107,7 +107,7 @@ const CardBottom = styled.div<{ background: string }>`
     position: relative;
 `
 const CardNameBlock = styled.div`
-    width: 80%;
+    width: 86%;
     text-align: center;
     
 `

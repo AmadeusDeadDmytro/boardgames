@@ -57,6 +57,12 @@ import DescendantOfThorondor from './allies/DescendantOfThorondor'
 import BeorningBeekeeper from './allies/BeorningBeekeeper'
 import FiledByTheLordOfTheWind from './allies/FiledByTheLordOfTheWind'
 import BoromirLeadership from './heroes/Boromir_leadership'
+import Elrohir from './heroes/Elrohir'
+import Gloin from './heroes/Gloin'
+import Teodred from './heroes/Teodred'
+import Aragorn from './heroes/Aragorn'
+import PrinceImrahil from './heroes/PrinceImrahil'
+import DainIronHeel from './heroes/DainIronHeel'
 
 export const TacticHeroesDeck: Array<ICard> = [
     Beregond,
@@ -121,5 +127,11 @@ export const TacticAllyDeck: Array<ICard> = [
 ]
 
 export const LeadershipHeroDeck: Array<ICard> = [
-    BoromirLeadership
+    BoromirLeadership,
+    Elrohir,
+    Gloin,
+    Teodred,
+    Aragorn,
+    PrinceImrahil,
+    DainIronHeel
 ]

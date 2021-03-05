@@ -2,6 +2,7 @@ import React from 'react'
 import SwordBlack from '../images/icons/Sword_black.png'
 import Axes from '../images/icons/Axes.png'
 import Shield from '../images/icons/Shield.png'
+import Willpower from '../images/icons/Willpower.png'
 import { Actions, Icons, Spheres, Tags } from '../types/cards'
 import JsxParser from 'react-jsx-parser'
 import TacticsIcon from '../images/icons/Sword.png'
@@ -20,6 +21,7 @@ export const replaceTextByIcon = (array: Array<string>, text: string): string =>
     const iconTactics = `<img src="${SwordBlack}" style="height: 14px; display: inline;" alt=''/>`
     const iconAttack = `<img src="${Axes}" style="height: 14px; display: inline;" alt=''/>`
     const iconShield = `<img src="${Shield}" style="height: 14px; display: inline;" alt=''/>`
+    const iconWillpower = `<img src="${Willpower}" style="height: 14px; display: inline;" alt=''/>`
     array.forEach(el => {
         if (el === 'Tactics') {
             text = text.replace(el, iconTactics)
@@ -27,6 +29,8 @@ export const replaceTextByIcon = (array: Array<string>, text: string): string =>
             text = text.replace(el, iconAttack)
         } else if (el === 'Shield') {
             text = text.replace(el, iconShield)
+        } else if (el === 'Willpower') {
+            text = text.replace(el, iconWillpower)
         }
     })
     return text
