@@ -9,6 +9,13 @@ import Talin from './heroes/Talin'
 import Legolas from './heroes/Legolas'
 import Gimli from './heroes/Gimli'
 import BrandSonBain from './heroes/BrandSonBain'
+import BoromirLeadership from './heroes/Boromir_leadership'
+import Elrohir from './heroes/Elrohir'
+import Gloin from './heroes/Gloin'
+import Teodred from './heroes/Teodred'
+import Aragorn from './heroes/Aragorn'
+import PrinceImrahil from './heroes/PrinceImrahil'
+import DainIronHeel from './heroes/DainIronHeel'
 // EVENTS
 import BehindStrongWalls from './events/BehindStrongWalls'
 import AimedShot from './events/AimedShot'
@@ -56,13 +63,16 @@ import EaglesOfTheMistyMountains from './allies/EaglesOfTheMistyMountains'
 import DescendantOfThorondor from './allies/DescendantOfThorondor'
 import BeorningBeekeeper from './allies/BeorningBeekeeper'
 import FiledByTheLordOfTheWind from './allies/FiledByTheLordOfTheWind'
-import BoromirLeadership from './heroes/Boromir_leadership'
-import Elrohir from './heroes/Elrohir'
-import Gloin from './heroes/Gloin'
-import Teodred from './heroes/Teodred'
-import Aragorn from './heroes/Aragorn'
-import PrinceImrahil from './heroes/PrinceImrahil'
-import DainIronHeel from './heroes/DainIronHeel'
+import MutuallyBeneficialUnion from './events/MutuallyBeneficialUnion'
+import RichesOfGondor from './events/RichesOfGondor'
+import Teamwork from './events/Teamwork'
+import FreshFootprints from './events/FreshFootprints'
+import GraveMadeOfStones from './events/GraveMadeOfStones'
+import ReachTheEnd from './events/ReachTheEnd'
+import TakeTheInitiative from './events/TakeTheInitiative'
+import TimelyAssistance from './events/TimelyAssistance'
+import DurinSong from './events/DurinSong'
+
 
 export const TacticHeroesDeck: Array<ICard> = [
     Beregond,
@@ -134,4 +144,16 @@ export const LeadershipHeroDeck: Array<ICard> = [
     Aragorn,
     PrinceImrahil,
     DainIronHeel
+]
+
+export const LeadershipEventDeck: Array<ICard> = [
+    MutuallyBeneficialUnion,
+    RichesOfGondor,
+    Teamwork,
+    FreshFootprints,
+    GraveMadeOfStones,
+    ReachTheEnd,
+    TakeTheInitiative,
+    TimelyAssistance,
+    DurinSong
 ]

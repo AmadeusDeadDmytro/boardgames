@@ -12,28 +12,22 @@ import LeadershipIconTransparent from '../images/icons/Leadership_transparent.pn
 
 export const replaceTextByText = (array: Array<string>, text: string): string => {
     array.forEach(el => {
-        text = text.replace(el, `<b><i>${el}</i></b>`)
+        text = text.replaceAll(el, `<b><i>${el}</i></b>`)
     })
     return text
 }
 
-export const replaceTextByIcon = (array: Array<string>, text: string): string => {
+export const replaceTextByIcon = (text: string): string => {
     const iconTactics = `<img src="${SwordBlack}" style="height: 14px; display: inline;" alt=''/>`
     const iconAttack = `<img src="${Axes}" style="height: 14px; display: inline;" alt=''/>`
     const iconShield = `<img src="${Shield}" style="height: 14px; display: inline;" alt=''/>`
     const iconWillpower = `<img src="${Willpower}" style="height: 14px; display: inline;" alt=''/>`
-    array.forEach(el => {
-        if (el === 'Tactics') {
-            text = text.replace(el, iconTactics)
-        } else if (el === 'Attack') {
-            text = text.replace(el, iconAttack)
-        } else if (el === 'Shield') {
-            text = text.replace(el, iconShield)
-        } else if (el === 'Willpower') {
-            text = text.replace(el, iconWillpower)
-        }
-    })
+
     return text
+        .replaceAll('Tactics', iconTactics)
+        .replaceAll('Attack', iconAttack)
+        .replaceAll('Shield', iconShield)
+        .replaceAll('Willpower', iconWillpower)
 }
 
 export const renderText = (text: string): JSX.Element => {
@@ -43,7 +37,7 @@ export const renderText = (text: string): JSX.Element => {
 
     text = replaceTextByText(tagsArr, text)
     text = replaceTextByText(actionsArr, text)
-    text = replaceTextByIcon(spheresArr, text)
+    text = replaceTextByIcon(text)
 
     return <JsxParser jsx={text}/>
 }
