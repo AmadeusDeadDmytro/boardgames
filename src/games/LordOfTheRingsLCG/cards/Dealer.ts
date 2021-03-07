@@ -72,6 +72,10 @@ import ReachTheEnd from './events/ReachTheEnd'
 import TakeTheInitiative from './events/TakeTheInitiative'
 import TimelyAssistance from './events/TimelyAssistance'
 import DurinSong from './events/DurinSong'
+import OnlyForward from './events/OnlyForward'
+import Rearguard from './events/Rearguard'
+import PartingGifts from './events/PartingGIfts'
+import CaughtTheDawn from './events/CaughtTheDawn'
 
 
 export const TacticHeroesDeck: Array<ICard> = [
@@ -155,5 +159,9 @@ export const LeadershipEventDeck: Array<ICard> = [
     ReachTheEnd,
     TakeTheInitiative,
     TimelyAssistance,
-    DurinSong
+    DurinSong,
+    OnlyForward,
+    Rearguard,
+    PartingGifts,
+    CaughtTheDawn
 ]

@@ -106,6 +106,7 @@ export enum Actions {
 
 export enum Icons {
     ATTACK = 'Attack',
+    LEADERSHIP = 'Leadership',
     SHIELD = 'Shield',
     TACTICS = 'Tactics',
     WILLPOWER = 'Willpower'
