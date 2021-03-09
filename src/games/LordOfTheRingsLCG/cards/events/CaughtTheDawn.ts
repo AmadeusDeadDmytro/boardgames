@@ -1,5 +1,5 @@
 import { Actions, CardTypes, EventCardType, Icons, Spheres } from '../../types/cards'
-import ImageBack from '../../images/cards/parting_gifts.png'
+import ImageBack from '../../images/cards/caught_the_dawn.png'
 
 const CaughtTheDawn: EventCardType = {
     type: CardTypes.EVENT,
@@ -8,8 +8,8 @@ const CaughtTheDawn: EventCardType = {
     name: 'Застали рассвет',
     text: [
         `Играется в битве`,
-        ``,
-        `${Actions.ACTION}: Переместите любое количество ресурсов из запаса ${Icons.LEADERSHIP} героя в запас любого другого героя`
+        `Играйте после того, как теневые карты уже получены, но атаки не совершенны`,
+        `${Actions.ACTION}: Каждый игрок может выбрать и сбросить одну невскрытую теневую карту с атакующего его противника`
     ],
     price: 2,
     image: ImageBack,

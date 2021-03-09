@@ -76,6 +76,14 @@ import OnlyForward from './events/OnlyForward'
 import Rearguard from './events/Rearguard'
 import PartingGifts from './events/PartingGIfts'
 import CaughtTheDawn from './events/CaughtTheDawn'
+import CampfireStories from './events/CampfireStories'
+import Vigilance from './events/Vigilance'
+import CommonCause from './events/CommonCause'
+import HeroicDeath from './events/HeroicDeath'
+import CovertAttack from './events/CovertAttack'
+import ForGondor from './events/ForGondor'
+import UnbendingDetermination from './events/UnbendingDetermination'
+import Lunch from './events/Lunch'
 
 
 export const TacticHeroesDeck: Array<ICard> = [
@@ -163,5 +171,13 @@ export const LeadershipEventDeck: Array<ICard> = [
     OnlyForward,
     Rearguard,
     PartingGifts,
-    CaughtTheDawn
+    CaughtTheDawn,
+    CampfireStories,
+    Vigilance,
+    CommonCause,
+    HeroicDeath,
+    CovertAttack,
+    ForGondor,
+    UnbendingDetermination,
+    Lunch
 ]
