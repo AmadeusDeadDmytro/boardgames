@@ -33,36 +33,6 @@ import QuickBlow from './events/QuickBlow'
 import ToTheEaglesNest from './events/ToTheEaglesNest'
 import SkillWithBlades from './events/SkillWithBlades'
 import CircularDefense from './events/CircularDefense'
-// ITEMS
-import SpearOfTheCitadel from './items/SpearOfTheCitadel'
-import ChainMail from './items/ChainMail'
-import RivendellBow from './items/RivendellBow'
-import RivendellBlade from './items/RivendellBlade'
-import KeepCounting from './items/KeepCounting'
-import DwarrowdelphAx from './items/DwarrowdelphAx'
-import BornInHeaven from './items/BornInHeaven'
-import Teaser from './items/Teaser'
-import GnomishAx from './items/GnomishAx'
-import BladeOfGondolin from './items/BladeOfGondolin'
-import EaglesSupport from './items/EaglesSupport'
-import HornOfGondor from './items/HornOfGondor'
-import CitadelArmor from './items/CitadelArmor'
-// ALLIES
-import RammasDefender from './allies/RammasDefender'
-import TrollHunter from './allies/TrollHunter'
-import EreborWarmaster from './allies/EreborWarmaster'
-import SentryBruinen from './allies/SentryBruinen'
-import VeteranOfNanduhirion from './allies/VeteranOfNanduhirion'
-import Beorn from './allies/Beorn'
-import Landraval from './allies/Landraval'
-import SwordFightingVeteran from './allies/SwordFightingVeteran'
-import GondorianSpearman from './allies/GondorianSpearman'
-import HorseArcher from './allies/HorseArcher'
-import WingedGuardian from './allies/WingedGuardian'
-import EaglesOfTheMistyMountains from './allies/EaglesOfTheMistyMountains'
-import DescendantOfThorondor from './allies/DescendantOfThorondor'
-import BeorningBeekeeper from './allies/BeorningBeekeeper'
-import FiledByTheLordOfTheWind from './allies/FiledByTheLordOfTheWind'
 import MutuallyBeneficialUnion from './events/MutuallyBeneficialUnion'
 import RichesOfGondor from './events/RichesOfGondor'
 import Teamwork from './events/Teamwork'
@@ -84,7 +54,48 @@ import CovertAttack from './events/CovertAttack'
 import ForGondor from './events/ForGondor'
 import UnbendingDetermination from './events/UnbendingDetermination'
 import Lunch from './events/Lunch'
+// ITEMS
+import SpearOfTheCitadel from './items/SpearOfTheCitadel'
+import ChainMail from './items/ChainMail'
+import RivendellBow from './items/RivendellBow'
+import RivendellBlade from './items/RivendellBlade'
+import KeepCounting from './items/KeepCounting'
+import DwarrowdelphAx from './items/DwarrowdelphAx'
+import BornInHeaven from './items/BornInHeaven'
+import Teaser from './items/Teaser'
+import GnomishAx from './items/GnomishAx'
+import BladeOfGondolin from './items/BladeOfGondolin'
+import EaglesSupport from './items/EaglesSupport'
+import HornOfGondor from './items/HornOfGondor'
+import CitadelArmor from './items/CitadelArmor'
+import ClearLeadership from './items/ClearLeadership'
+import PathOfFate from './items/PathOfFate'
+import BrokenSword from './items/BrokenSword'
+import NarviBelt from './items/NarviBelt'
+import DunadanMark from './items/DunadanMark'
+import DunadanStock from './items/DunadanStock'
+import DunadanMission from './items/DunadanMission'
+import StewardOfGondor from './items/StewardOfGondor'
+import DunadanWarning from './items/DunadanWarning'
+import DunadanLabel from './items/DunadanLabel'
+import CelebrianStone from './items/CelebrianStone'
 
+// ALLIES
+import RammasDefender from './allies/RammasDefender'
+import TrollHunter from './allies/TrollHunter'
+import EreborWarmaster from './allies/EreborWarmaster'
+import SentryBruinen from './allies/SentryBruinen'
+import VeteranOfNanduhirion from './allies/VeteranOfNanduhirion'
+import Beorn from './allies/Beorn'
+import Landraval from './allies/Landraval'
+import SwordFightingVeteran from './allies/SwordFightingVeteran'
+import GondorianSpearman from './allies/GondorianSpearman'
+import HorseArcher from './allies/HorseArcher'
+import WingedGuardian from './allies/WingedGuardian'
+import EaglesOfTheMistyMountains from './allies/EaglesOfTheMistyMountains'
+import DescendantOfThorondor from './allies/DescendantOfThorondor'
+import BeorningBeekeeper from './allies/BeorningBeekeeper'
+import FiledByTheLordOfTheWind from './allies/FiledByTheLordOfTheWind'
 
 export const TacticHeroesDeck: Array<ICard> = [
     Beregond,
@@ -180,4 +191,18 @@ export const LeadershipEventDeck: Array<ICard> = [
     ForGondor,
     UnbendingDetermination,
     Lunch
+]
+
+export const LeadershipItemDeck: Array<ICard> = [
+    ClearLeadership,
+    PathOfFate,
+    BrokenSword,
+    NarviBelt,
+    DunadanMark,
+    DunadanStock,
+    DunadanMission,
+    StewardOfGondor,
+    DunadanWarning,
+    DunadanLabel,
+    CelebrianStone
 ]

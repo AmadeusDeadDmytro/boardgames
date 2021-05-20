@@ -89,9 +89,11 @@ export enum Tags {
     RANGER = 'Рейнджер',
     ROHAN = 'Рохан',
     SCOUT = 'Скаут',
+    SIGNAL = 'Сигнал',
     SONG = 'Песня',
     STATUS = 'Состояние',
     THING = 'Существо',
+    TITLE = 'Титул',
     WARRIOR = 'Воин',
     WEAPON = 'Оружие',
     WOOD_ELF = 'Лесной эльф'
@@ -107,7 +109,9 @@ export enum Actions {
 export enum Icons {
     ATTACK = 'Attack',
     LEADERSHIP = 'Leadership',
+    LORE = 'Lore',
     SHIELD = 'Shield',
+    SPIRIT = 'Spirit',
     TACTICS = 'Tactics',
     WILLPOWER = 'Willpower'
 }

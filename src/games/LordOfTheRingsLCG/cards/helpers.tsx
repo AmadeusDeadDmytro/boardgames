@@ -3,6 +3,8 @@ import SwordBlack from '../images/icons/Sword_black.png'
 import Axes from '../images/icons/Axes.png'
 import Shield from '../images/icons/Shield.png'
 import Willpower from '../images/icons/Willpower.png'
+import Spirit from '../images/icons/Spirit_black.png'
+import Lore from '../images/icons/Lore_black.png'
 import Leadership from '../images/icons/Leadership_black.png'
 import { Actions, Icons, Spheres, Tags } from '../types/cards'
 import JsxParser from 'react-jsx-parser'
@@ -24,6 +26,8 @@ export const replaceTextByIcon = (text: string): string => {
     const iconShield = `<img src="${Shield}" style="height: 14px; display: inline;" alt=''/>`
     const iconLeadership = `<img src="${Leadership}" style="height: 14px; display: inline;" alt=''/>`
     const iconWillpower = `<img src="${Willpower}" style="height: 14px; display: inline;" alt=''/>`
+    const iconSpirit = `<img src="${Spirit}" style="height: 16px; display: inline;" alt=''/>`
+    const iconLore = `<img src="${Lore}" style="height: 14px; display: inline;" alt=''/>`
 
     return text
         .replaceAll('Tactics', iconTactics)
@@ -31,6 +35,8 @@ export const replaceTextByIcon = (text: string): string => {
         .replaceAll('Leadership', iconLeadership)
         .replaceAll('Shield', iconShield)
         .replaceAll('Willpower', iconWillpower)
+        .replaceAll('Spirit', iconSpirit)
+        .replaceAll('Lore', iconLore)
 }
 
 export const renderText = (text: string): JSX.Element => {

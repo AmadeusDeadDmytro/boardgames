@@ -1,9 +1,9 @@
 import { EventCardType } from '../../types/cards'
 
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import COLORS from '../../constants/Colors'
-import { renderText } from '../helpers'
+import { getSphereIcon, renderText } from '../helpers'
 
 //Icons
 import SwordTransparent from '../../images/icons/Sword-transparent.png' // 15% transparency
@@ -14,6 +14,7 @@ import Shield from '../../images/icons/Shield.png'
 import SwordBlack from '../../images/icons/Sword_black.png'
 
 const Template = ({ card }: {card: EventCardType}) => {
+    const [icons] = useState(getSphereIcon(card.sphere))
 
     return (
         <Card>
@@ -23,13 +24,13 @@ const Template = ({ card }: {card: EventCardType}) => {
                 </CardNameBlock>
                 <FillElement1/>
                 <CardIconBlock>
-                    <CardIcon src={Sword}/>
+                    <CardIcon src={icons[0]}/>
                 </CardIconBlock>
                 <CardPriceBlock>
                     {card.price}
                 </CardPriceBlock>
             </CardTop>
-            <CardBottom>
+            <CardBottom background={icons[1]}>
                 <CardAllTextsBlock>
                     <CardTagBlock>
                         {card.tags && card.tags.map((tag) => `${tag}. `)}
@@ -70,7 +71,7 @@ const CardTop = styled.div<{back: string}>`
     margin-top: 10px;
     position: relative;
 `
-const CardBottom = styled.div`
+const CardBottom = styled.div<{background: string}>`
     height: 180px;
     width: 100%;
     background-color: ${COLORS.LIGHT_ONE};
@@ -81,7 +82,7 @@ const CardBottom = styled.div`
     align-items: center;
     padding: 0 10px;
     border: 3px solid ${COLORS.LIGHT_TWO};
-    background-image: url(${SwordTransparent});
+  background-image: url(${({ background }) => background});
     background-repeat: no-repeat;
     background-position: center;
     background-size: 75px;
