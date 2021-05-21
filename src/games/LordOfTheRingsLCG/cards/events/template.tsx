@@ -69,11 +69,12 @@ const CardTop = styled.div<{back: string}>`
     background-position: 40px -10px;
     width: 100%;
     height: 240px;
-    margin-top: 10px;
+    margin-top: 0;
     position: relative;
+    border-radius: 10px;
 `
 const CardBottom = styled.div<{background: string}>`
-    height: 180px;
+    height: 190px;
     width: 100%;
     background-color: ${COLORS.LIGHT_ONE};
     border-radius: 0 0 10px 10px;
@@ -104,6 +105,7 @@ const CardNameBlock = styled.div`
     font-size: 19px;
     border: 3px solid ${COLORS.LIGHT_TWO};
     padding-left: 12px;
+    border-top-right-radius: 10px;
 `
 
 const CardTextBlock = styled.div`

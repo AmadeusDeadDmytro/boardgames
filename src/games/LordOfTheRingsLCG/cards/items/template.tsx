@@ -5,14 +5,6 @@ import styled from 'styled-components'
 import COLORS from '../../constants/Colors'
 import { getSphereIcon, renderText } from '../helpers'
 
-//Icons
-import SwordTransparent from '../../images/icons/Sword-transparent.png' // 15% transparency
-import Sword from '../../images/icons/Sword.png'
-import Willpower from '../../images/icons/Willpower.png'
-import Axes from '../../images/icons/Axes.png'
-import Shield from '../../images/icons/Shield.png'
-import SwordBlack from '../../images/icons/Sword_black.png'
-
 const Template = ({ card }: {card: EventCardType}) => {
     const [icons] = useState(getSphereIcon(card.sphere))
 
@@ -65,14 +57,14 @@ const CardTop = styled.div<{back: string}>`
     background-image: ${({ back }) => back && `url(${back})`};
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0px -10px;
+    background-position: 0px 0px;
     width: 100%;
     height: 240px;
-    margin-top: 10px;
+    margin-top: 0px;
     position: relative;
 `
 const CardBottom = styled.div<{background: string}>`
-    height: 180px;
+    height: 190px;
     width: 100%;
     background-color: ${COLORS.LIGHT_ONE};
     border-radius: 0 0 10px 10px;
@@ -82,7 +74,7 @@ const CardBottom = styled.div<{background: string}>`
     align-items: center;
     padding: 0 10px;
     border: 3px solid ${COLORS.LIGHT_TWO};
-  background-image: url(${({ background }) => background});
+    background-image: url(${({ background }) => background});
     background-repeat: no-repeat;
     background-position: center;
     background-size: 75px;

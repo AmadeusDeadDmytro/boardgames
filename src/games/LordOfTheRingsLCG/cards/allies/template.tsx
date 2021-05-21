@@ -1,20 +1,18 @@
 import { AllyCardType } from '../../types/cards'
 
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import COLORS from '../../constants/Colors'
-import { renderText } from '../helpers'
+import { getSphereIcon, renderText } from '../helpers'
 
 //Icons
-import SwordTransparent from '../../images/icons/Sword-transparent.png' // 15% transparency
-import Sword from '../../images/icons/Sword.png'
 import Willpower from '../../images/icons/Willpower.png'
 import Axes from '../../images/icons/Axes.png'
 import Shield from '../../images/icons/Shield.png'
 import Unique from '../../images/icons/Unique.png'
 
 const Template = ({ card }: {card: AllyCardType}) => {
-
+    const [icons] = useState(getSphereIcon(card.sphere))
 
     return (
         <Card>
@@ -39,10 +37,10 @@ const Template = ({ card }: {card: AllyCardType}) => {
                 </CharacteristicsBlock>
                 <FillElement1/>
                 <CardIconBlock>
-                    <CardIcon src={Sword}/>
+                    <CardIcon src={icons[0]}/>
                 </CardIconBlock>
             </CardTop>
-            <CardBottom>
+            <CardBottom background={icons[1]}>
                 <CardAllTextsBlock>
                     <CardNameBlock>
                         <CardName>
@@ -83,15 +81,17 @@ const CardTop = styled.div<{back: string}>`
     background-image: ${({ back }) => back && `url(${back})`};
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 40px -10px;
+    background-position: 40px 0px;
     width: 100%;
     border-left: 5px solid ${COLORS.LIGHT_TWO};
     height: 240px;
-    margin-top: 10px;
+    margin-top: 0px;
     position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 `
-const CardBottom = styled.div`
-    height: 180px;
+const CardBottom = styled.div<{background: string}>`
+    height: 190px;
     width: 100%;
     background-color: ${COLORS.LIGHT_ONE};
     border-radius: 0 0 10px 10px;
@@ -101,7 +101,7 @@ const CardBottom = styled.div`
     align-items: center;
     padding: 0 10px;
     border: 3px solid ${COLORS.LIGHT_TWO};
-    background-image: url(${SwordTransparent});
+    background-image: url(${({ background }) => background});
     background-repeat: no-repeat;
     background-position: center;
     background-size: 75px;

@@ -96,6 +96,20 @@ import EaglesOfTheMistyMountains from './allies/EaglesOfTheMistyMountains'
 import DescendantOfThorondor from './allies/DescendantOfThorondor'
 import BeorningBeekeeper from './allies/BeorningBeekeeper'
 import FiledByTheLordOfTheWind from './allies/FiledByTheLordOfTheWind'
+import Messenger from './allies/Messenger'
+import CitadelKeeper from './allies/CitadelKeeper'
+import LongbeardedOldman from './allies/LongbeardedOldman'
+import Erestor from './allies/Erestor'
+import DunadanWanderer from './allies/DunadanWanderer'
+import DunadanObserver from './allies/DunadanObserver'
+import WellaimedTook from './allies/WellaimedTook'
+import CitadelGuard from './allies/CitadelGuard'
+import Faramir from './allies/Faramir'
+import SonOfArnor from './allies/SonOfArnor'
+import BrockIronFist from './allies/BrockIronFist'
+import LongbeardOrcSlayer from './allies/LongbeardOrcSlayer'
+import ArcherOfTheSilverStream from './allies/ArcherOfTheSilverStream'
+import SnowStreamScout from './allies/SnowStreamScout'
 
 export const TacticHeroesDeck: Array<ICard> = [
     Beregond,
@@ -205,4 +219,21 @@ export const LeadershipItemDeck: Array<ICard> = [
     DunadanWarning,
     DunadanLabel,
     CelebrianStone
+]
+
+export const LeadershipAllyDeck: Array<ICard> = [
+    Messenger,
+    CitadelKeeper,
+    LongbeardedOldman,
+    Erestor,
+    DunadanWanderer,
+    DunadanObserver,
+    WellaimedTook,
+    CitadelGuard,
+    Faramir,
+    SonOfArnor,
+    BrockIronFist,
+    LongbeardOrcSlayer,
+    ArcherOfTheSilverStream,
+    SnowStreamScout
 ]

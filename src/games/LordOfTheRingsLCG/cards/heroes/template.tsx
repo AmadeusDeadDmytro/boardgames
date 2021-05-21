@@ -82,15 +82,17 @@ const CardTop = styled.div<{back: string}>`
     background-image: ${({ back }) => back && `url(${back})`};
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 40px -10px;
+    background-position: 40px 0px;
     width: 100%;
     border-left: 5px solid ${COLORS.LIGHT_TWO};
     height: 240px;
-    margin-top: 10px;
+    margin-top: 0px;
     position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 `
 const CardBottom = styled.div<{ background: string }>`
-    height: 180px;
+    height: 190px;
     width: 100%;
     background-color: ${COLORS.LIGHT_ONE};
     border-radius: 0 0 10px 10px;
