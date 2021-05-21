@@ -110,6 +110,12 @@ import BrockIronFist from './allies/BrockIronFist'
 import LongbeardOrcSlayer from './allies/LongbeardOrcSlayer'
 import ArcherOfTheSilverStream from './allies/ArcherOfTheSilverStream'
 import SnowStreamScout from './allies/SnowStreamScout'
+import Glorfindel from './heroes/Glorfindel'
+import Dwalin from './heroes/Dwalin'
+import Elanor from './heroes/Elanor'
+import Dungir from './heroes/Dungir'
+import Eovin from './heroes/Eovin'
+import FrodoBeggins from './heroes/FrodoBeggins'
 
 export const TacticHeroesDeck: Array<ICard> = [
     Beregond,
@@ -236,4 +242,13 @@ export const LeadershipAllyDeck: Array<ICard> = [
     LongbeardOrcSlayer,
     ArcherOfTheSilverStream,
     SnowStreamScout
+]
+
+export const SpiritHeroDeck: Array<ICard> = [
+    Glorfindel,
+    Dwalin,
+    Elanor,
+    Dungir,
+    Eovin,
+    FrodoBeggins
 ]

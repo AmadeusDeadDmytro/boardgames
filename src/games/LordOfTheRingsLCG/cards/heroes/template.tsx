@@ -1,12 +1,11 @@
-import { HeroCardType } from '../../types/cards'
+import { HeroCardType, Spheres } from '../../types/cards'
 
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import COLORS from '../../constants/Colors'
-import { renderText, getSphereIcon } from '../helpers'
+import { getSphereIcon, renderText } from '../helpers'
 
 //Icons
-import SwordTransparent from '../../images/icons/Sword-transparent.png' // 15% transparency
 import Willpower from '../../images/icons/Willpower.png'
 import Axes from '../../images/icons/Axes.png'
 import Shield from '../../images/icons/Shield.png'
@@ -37,7 +36,7 @@ const Template = ({ card }: {card: HeroCardType}) => {
                     <HealthBlock>{card.health}</HealthBlock>
                 </CharacteristicsBlock>
             </CardTop>
-            <CardBottom background={icons[1]}>
+            <CardBottom background={icons[1]} large={card.sphere === Spheres.SPIRIT}>
                 <CardAllTextsBlock>
                     <CardNameBlock>
                         <CardName>
@@ -82,7 +81,7 @@ const CardTop = styled.div<{back: string}>`
     background-image: ${({ back }) => back && `url(${back})`};
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 40px 0px;
+    background-position: 20px 0px;
     width: 100%;
     border-left: 5px solid ${COLORS.LIGHT_TWO};
     height: 240px;
@@ -91,7 +90,7 @@ const CardTop = styled.div<{back: string}>`
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 `
-const CardBottom = styled.div<{ background: string }>`
+const CardBottom = styled.div<{ background: string, large: boolean }>`
     height: 190px;
     width: 100%;
     background-color: ${COLORS.LIGHT_ONE};
@@ -105,7 +104,7 @@ const CardBottom = styled.div<{ background: string }>`
     background-image: url(${({ background }) => background ? background : ''});
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 75px;
+    background-size: ${({ large }) => large ? '110px' : '75px'};
     position: relative;
 `
 const CardNameBlock = styled.div`

@@ -12,6 +12,8 @@ import TacticsIcon from '../images/icons/Sword.png'
 import TacticsIconTransparent from '../images/icons/Sword-transparent.png'
 import LeadershipIcon from '../images/icons/Leadership.png'
 import LeadershipIconTransparent from '../images/icons/Leadership_transparent.png'
+import SpiritIcon from '../images/icons/Spirit.png'
+import SpiritIconTransparent from '../images/icons/Spirit-transparent.png'
 
 export const replaceTextByText = (array: Array<string>, text: string): string => {
     array.forEach(el => {
@@ -57,6 +59,8 @@ export const getSphereIcon = (text: string): Array<string> => {
             return [TacticsIcon, TacticsIconTransparent]
         case Spheres.LEADERSHIP:
             return [LeadershipIcon, LeadershipIconTransparent]
+        case Spheres.SPIRIT:
+            return [SpiritIcon, SpiritIconTransparent]
     }
     return []
 }

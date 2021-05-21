@@ -60,7 +60,8 @@ export type ICard = HeroCardType | EventCardType | ItemCardType | AllyCardType
 
 export enum Spheres {
     LEADERSHIP = 'Лидерство',
-    TACTICS = 'Tactics',
+    TACTICS = 'Тактика',
+    SPIRIT = 'Дух'
 }
 
 export enum CardTypes {
@@ -84,6 +85,7 @@ export enum Tags {
     HOBBIT = 'Хоббит',
     ITEM = 'Предмет',
     NOBLE = 'Благородный',
+    NOBLE_W = 'Благородная',
     NOLDOR = 'Нолдор',
     ORC = 'Орк',
     RANGER = 'Рейнджер',
@@ -94,6 +96,7 @@ export enum Tags {
     STATUS = 'Состояние',
     THING = 'Существо',
     TITLE = 'Титул',
+    UPON_APPEARANCE = 'При появлении',
     WARRIOR = 'Воин',
     WEAPON = 'Оружие',
     WOOD_ELF = 'Лесной эльф'
