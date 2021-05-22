@@ -1,4 +1,4 @@
-import { EventCardType } from '../../types/cards'
+import { EventCardType, Spheres } from '../../types/cards'
 
 import React, { useState } from 'react'
 import styled from 'styled-components'
@@ -7,12 +7,6 @@ import COLORS from '../../constants/Colors'
 import { getSphereIcon, renderText } from '../helpers'
 
 //Icons
-import SwordTransparent from '../../images/icons/Sword-transparent.png' // 15% transparency
-import Sword from '../../images/icons/Sword.png'
-import Willpower from '../../images/icons/Willpower.png'
-import Axes from '../../images/icons/Axes.png'
-import Shield from '../../images/icons/Shield.png'
-import SwordBlack from '../../images/icons/Sword_black.png'
 
 const Template = ({ card }: {card: EventCardType}) => {
     const [icons] = useState(getSphereIcon(card.sphere))
@@ -31,7 +25,7 @@ const Template = ({ card }: {card: EventCardType}) => {
                     {card.price}
                 </CardPriceBlock>
             </CardTop>
-            <CardBottom background={icons[1]}>
+            <CardBottom background={icons[1]} large={card.sphere === Spheres.SPIRIT}>
                 <CardAllTextsBlock>
                     <CardTagBlock>
                         {card.tags && card.tags.map((tag) => `${tag}. `)}
@@ -73,7 +67,7 @@ const CardTop = styled.div<{back: string}>`
     position: relative;
     border-radius: 10px;
 `
-const CardBottom = styled.div<{background: string}>`
+const CardBottom = styled.div<{background: string, large: boolean}>`
     height: 190px;
     width: 100%;
     background-color: ${COLORS.LIGHT_ONE};
@@ -87,7 +81,7 @@ const CardBottom = styled.div<{background: string}>`
     background-image: url(${({ background }) => background});
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 75px;
+    background-size: ${({ large }) => large ? '120px' : '75px'};
     position: relative;
     box-shadow: inset 0 0 11px 2px ${COLORS.BLUE_ONE};
 `

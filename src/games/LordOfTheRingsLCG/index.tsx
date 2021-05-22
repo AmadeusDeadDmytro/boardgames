@@ -6,7 +6,7 @@ import {
     LeadershipHeroDeck,
     LeadershipEventDeck,
     LeadershipItemDeck,
-    LeadershipAllyDeck, SpiritHeroDeck,
+    LeadershipAllyDeck, SpiritHeroDeck, SpiritEventDeck,
 } from './cards/Dealer'
 import HeroTemplate from './cards/heroes/template'
 import EventTemplate from './cards/events/template'
@@ -52,6 +52,9 @@ const LordOfTheRingLCG = () => {
                 return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
             })}
             {LeadershipEventDeck.map((card, index) => {
+                return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
+            })}
+            {SpiritEventDeck.map((card, index) => {
                 return <CardWrapper key={index}>{renderCard(card)}</CardWrapper>
             })}
             <div style={{width: '100%'}}></div>

@@ -16,6 +16,12 @@ import Teodred from './heroes/Teodred'
 import Aragorn from './heroes/Aragorn'
 import PrinceImrahil from './heroes/PrinceImrahil'
 import DainIronHeel from './heroes/DainIronHeel'
+import Glorfindel from './heroes/Glorfindel'
+import Dwalin from './heroes/Dwalin'
+import Elanor from './heroes/Elanor'
+import Dungir from './heroes/Dungir'
+import Eovin from './heroes/Eovin'
+import FrodoBeggins from './heroes/FrodoBeggins'
 // EVENTS
 import BehindStrongWalls from './events/BehindStrongWalls'
 import AimedShot from './events/AimedShot'
@@ -110,12 +116,16 @@ import BrockIronFist from './allies/BrockIronFist'
 import LongbeardOrcSlayer from './allies/LongbeardOrcSlayer'
 import ArcherOfTheSilverStream from './allies/ArcherOfTheSilverStream'
 import SnowStreamScout from './allies/SnowStreamScout'
-import Glorfindel from './heroes/Glorfindel'
-import Dwalin from './heroes/Dwalin'
-import Elanor from './heroes/Elanor'
-import Dungir from './heroes/Dungir'
-import Eovin from './heroes/Eovin'
-import FrodoBeggins from './heroes/FrodoBeggins'
+import SignalLights from './events/SignalLights'
+import BeatifulPlace from './events/BeatifulPlace'
+import Giltoniel from './events/Giltoniel'
+import OutOfSight from './events/OutOfSight'
+import ElrondsCouncil from './events/ElrondsCouncil'
+import NewFriendship from './events/NewFriendship'
+import IgnoringTheDrakness from './events/IgnoringTheDrakness'
+import IncredibleSpeed from './events/IncredibleSpeed'
+import WeAreNotSleeping from './events/WeAreNorSleeping'
+import CavalryThrow from './events/CavalryThrow'
 
 export const TacticHeroesDeck: Array<ICard> = [
     Beregond,
@@ -251,4 +261,17 @@ export const SpiritHeroDeck: Array<ICard> = [
     Dungir,
     Eovin,
     FrodoBeggins
+]
+
+export const SpiritEventDeck: Array<ICard> = [
+    SignalLights,
+    BeatifulPlace,
+    Giltoniel,
+    OutOfSight,
+    ElrondsCouncil,
+    NewFriendship,
+    IgnoringTheDrakness,
+    IncredibleSpeed,
+    WeAreNotSleeping,
+    CavalryThrow
 ]
