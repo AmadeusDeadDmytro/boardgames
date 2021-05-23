@@ -1,4 +1,6 @@
-import { Actions, CardTypes, EventCardType, Icons, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, CardTypes, EventCardType, Icons, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/unbending_determination.png'
 
 const UnbendingDetermination: EventCardType = {
@@ -7,9 +9,9 @@ const UnbendingDetermination: EventCardType = {
     isUnique: false,
     name: 'Железная решимость',
     text: [
-        `${Actions.ACTION}: Откройте всех персонажей в игре`
+        `${Actions.ACTION}: Откройте всех персонажей в игре`,
     ],
-    quote: `"Если туда ведет единственный путь, я должен его пройти. И буль что будет." - Фродо Бэггинс, Две Твердыни`,
+    quote: '"Если туда ведет единственный путь, я должен его пройти. И буль что будет." - Фродо Бэггинс, Две Твердыни',
     price: 5,
     image: ImageBack,
 }

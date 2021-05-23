@@ -1,4 +1,6 @@
-import { Actions, CardTypes, EventCardType, Icons, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, CardTypes, EventCardType, Icons, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/aimed_shot.png'
 
 const AimedShot: EventCardType = {
@@ -7,12 +9,10 @@ const AimedShot: EventCardType = {
     isUnique: false,
     name: 'Прицельный выстрел',
     text: [
-        `${Actions.ACTION}: Закройте персонажа под вашим контролем со способностью дальнобойный чтобы он немедленно провел атаку против противника в районе средоточения. Эта атака получает +1${Icons.ATTACK}`
+        `${Actions.ACTION}: Закройте персонажа под вашим контролем со способностью дальнобойный чтобы он немедленно провел атаку против противника в районе средоточения. Эта атака получает +1${Icons.ATTACK}`,
     ],
     price: 1,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default AimedShot
-
-

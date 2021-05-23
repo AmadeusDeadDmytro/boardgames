@@ -1,7 +1,6 @@
-import { EventCardType } from '../../types/cards'
-
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { EventCardType } from '../../types/cards'
 import COLORS from '../../constants/Colors'
 import { getSphereIcon, renderText } from '../helpers'
 
@@ -14,9 +13,9 @@ const Template = ({ card }: {card: EventCardType}) => {
                 <CardNameBlock>
                     {card.name}
                 </CardNameBlock>
-                <FillElement1/>
+                <FillElement1 />
                 <CardIconBlock>
-                    <CardIcon src={icons[0]}/>
+                    <CardIcon src={icons[0]} />
                 </CardIconBlock>
                 <CardPriceBlock>
                     {card.price}
@@ -28,9 +27,7 @@ const Template = ({ card }: {card: EventCardType}) => {
                         {card.tags && card.tags.map((tag) => `${tag}. `)}
                     </CardTagBlock>
                     <CardTextBlock>
-                        {card.text && card.text.map((text, index) => {
-                            return <CardText key={index}>{renderText(text)}</CardText>
-                        })}
+                        {card.text && card.text.map((text, index) => <CardText key={index}>{renderText(text)}</CardText>)}
                     </CardTextBlock>
                     <CardQuoteBlock>{card.quote}</CardQuoteBlock>
                 </CardAllTextsBlock>

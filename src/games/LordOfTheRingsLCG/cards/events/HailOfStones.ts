@@ -1,4 +1,6 @@
-import { Actions, CardTypes, EventCardType, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, CardTypes, EventCardType, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/hail_of_stones.png'
 
 const HailOfStones: EventCardType = {
@@ -7,12 +9,10 @@ const HailOfStones: EventCardType = {
     isUnique: false,
     name: 'Град камней',
     text: [
-        `${Actions.REACTION}: Закройте Х персонажей чтобы нанести Х повреждений противнику в районе средоточения`
+        `${Actions.REACTION}: Закройте Х персонажей чтобы нанести Х повреждений противнику в районе средоточения`,
     ],
     price: 1,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default HailOfStones
-
-

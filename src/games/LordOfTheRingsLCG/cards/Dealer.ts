@@ -1,4 +1,4 @@
-import { ICard } from '../types/cards'
+import { AdventureCardsType, PlayerCardsType } from '../types/cards'
 
 // HEROES
 import Beregond from './heroes/Beregond'
@@ -60,6 +60,16 @@ import CovertAttack from './events/CovertAttack'
 import ForGondor from './events/ForGondor'
 import UnbendingDetermination from './events/UnbendingDetermination'
 import Lunch from './events/Lunch'
+import SignalLights from './events/SignalLights'
+import BeatifulPlace from './events/BeatifulPlace'
+import Giltoniel from './events/Giltoniel'
+import OutOfSight from './events/OutOfSight'
+import ElrondsCouncil from './events/ElrondsCouncil'
+import NewFriendship from './events/NewFriendship'
+import IgnoringTheDrakness from './events/IgnoringTheDrakness'
+import IncredibleSpeed from './events/IncredibleSpeed'
+import WeAreNotSleeping from './events/WeAreNorSleeping'
+import CavalryThrow from './events/CavalryThrow'
 // ITEMS
 import SpearOfTheCitadel from './items/SpearOfTheCitadel'
 import ChainMail from './items/ChainMail'
@@ -85,7 +95,6 @@ import StewardOfGondor from './items/StewardOfGondor'
 import DunadanWarning from './items/DunadanWarning'
 import DunadanLabel from './items/DunadanLabel'
 import CelebrianStone from './items/CelebrianStone'
-
 // ALLIES
 import RammasDefender from './allies/RammasDefender'
 import TrollHunter from './allies/TrollHunter'
@@ -116,162 +125,164 @@ import BrockIronFist from './allies/BrockIronFist'
 import LongbeardOrcSlayer from './allies/LongbeardOrcSlayer'
 import ArcherOfTheSilverStream from './allies/ArcherOfTheSilverStream'
 import SnowStreamScout from './allies/SnowStreamScout'
-import SignalLights from './events/SignalLights'
-import BeatifulPlace from './events/BeatifulPlace'
-import Giltoniel from './events/Giltoniel'
-import OutOfSight from './events/OutOfSight'
-import ElrondsCouncil from './events/ElrondsCouncil'
-import NewFriendship from './events/NewFriendship'
-import IgnoringTheDrakness from './events/IgnoringTheDrakness'
-import IncredibleSpeed from './events/IncredibleSpeed'
-import WeAreNotSleeping from './events/WeAreNorSleeping'
-import CavalryThrow from './events/CavalryThrow'
+// ADVENTURES
+import ExceedingAllExpectations from './adventures/concentration_in_osgiliath/ExceedingAllExpectations'
+import RangerIthilien from './target/RangerIthilien'
 
-export const TacticHeroesDeck: Array<ICard> = [
-    Beregond,
-    Hama,
-    Elladan,
-    Boromir,
-    Talin,
-    Legolas,
-    Gimli,
-    BrandSonBain,
-]
-export const TacticEventsDeck: Array<ICard> = [
-    BehindStrongWalls,
-    AimedShot,
-    HeavyBlow,
-    HailOfStones,
-    HiddenFlow,
-    KazadKazad,
-    Fint,
-    FastLunge,
-    EaglesFly,
-    RainOfArrows,
-    ForestOfSpears,
-    MeneldorsFlight,
-    QuickBlow,
-    ToTheEaglesNest,
-    SkillWithBlades,
-    CircularDefense
-]
-export const TacticItemsDeck: Array<ICard> = [
-    SpearOfTheCitadel,
-    ChainMail,
-    RivendellBow,
-    RivendellBlade,
-    KeepCounting,
-    DwarrowdelphAx,
-    BornInHeaven,
-    Teaser,
-    GnomishAx,
-    BladeOfGondolin,
-    EaglesSupport,
-    HornOfGondor,
-    CitadelArmor
-]
+export const PlayerCards: PlayerCardsType = {
+    TacticHeroesDeck: [
+        Beregond,
+        Hama,
+        Elladan,
+        Boromir,
+        Talin,
+        Legolas,
+        Gimli,
+        BrandSonBain,
+    ],
+    TacticEventsDeck: [
+        BehindStrongWalls,
+        AimedShot,
+        HeavyBlow,
+        HailOfStones,
+        HiddenFlow,
+        KazadKazad,
+        Fint,
+        FastLunge,
+        EaglesFly,
+        RainOfArrows,
+        ForestOfSpears,
+        MeneldorsFlight,
+        QuickBlow,
+        ToTheEaglesNest,
+        SkillWithBlades,
+        CircularDefense,
+    ],
+    TacticItemsDeck: [
+        SpearOfTheCitadel,
+        ChainMail,
+        RivendellBow,
+        RivendellBlade,
+        KeepCounting,
+        DwarrowdelphAx,
+        BornInHeaven,
+        Teaser,
+        GnomishAx,
+        BladeOfGondolin,
+        EaglesSupport,
+        HornOfGondor,
+        CitadelArmor,
+    ],
+    TacticAllyDeck: [
+        RammasDefender,
+        TrollHunter,
+        EreborWarmaster,
+        SentryBruinen,
+        VeteranOfNanduhirion,
+        Beorn,
+        Landraval,
+        SwordFightingVeteran,
+        GondorianSpearman,
+        HorseArcher,
+        WingedGuardian,
+        EaglesOfTheMistyMountains,
+        DescendantOfThorondor,
+        BeorningBeekeeper,
+        FiledByTheLordOfTheWind,
+    ],
+    LeadershipHeroDeck: [
+        BoromirLeadership,
+        Elrohir,
+        Gloin,
+        Teodred,
+        Aragorn,
+        PrinceImrahil,
+        DainIronHeel,
+    ],
+    LeadershipEventDeck: [
+        MutuallyBeneficialUnion,
+        RichesOfGondor,
+        Teamwork,
+        FreshFootprints,
+        GraveMadeOfStones,
+        ReachTheEnd,
+        TakeTheInitiative,
+        TimelyAssistance,
+        DurinSong,
+        OnlyForward,
+        Rearguard,
+        PartingGifts,
+        CaughtTheDawn,
+        CampfireStories,
+        Vigilance,
+        CommonCause,
+        HeroicDeath,
+        CovertAttack,
+        ForGondor,
+        UnbendingDetermination,
+        Lunch,
+    ],
+    LeadershipItemDeck: [
+        ClearLeadership,
+        PathOfFate,
+        BrokenSword,
+        NarviBelt,
+        DunadanMark,
+        DunadanStock,
+        DunadanMission,
+        StewardOfGondor,
+        DunadanWarning,
+        DunadanLabel,
+        CelebrianStone,
+    ],
+    LeadershipAllyDeck: [
+        Messenger,
+        CitadelKeeper,
+        LongbeardedOldman,
+        Erestor,
+        DunadanWanderer,
+        DunadanObserver,
+        WellaimedTook,
+        CitadelGuard,
+        Faramir,
+        SonOfArnor,
+        BrockIronFist,
+        LongbeardOrcSlayer,
+        ArcherOfTheSilverStream,
+        SnowStreamScout,
+    ],
+    SpiritHeroDeck: [
+        Glorfindel,
+        Dwalin,
+        Elanor,
+        Dungir,
+        Eovin,
+        FrodoBeggins,
+    ],
+    SpiritEventDeck: [
+        SignalLights,
+        BeatifulPlace,
+        Giltoniel,
+        OutOfSight,
+        ElrondsCouncil,
+        NewFriendship,
+        IgnoringTheDrakness,
+        IncredibleSpeed,
+        WeAreNotSleeping,
+        CavalryThrow,
+        // TODO: Complete this list
+    ],
+}
+// TODO: SPIRIT ITEMS AND ALLYS
+// TODO: LORE CARDS
 
-export const TacticAllyDeck: Array<ICard> = [
-    RammasDefender,
-    TrollHunter,
-    EreborWarmaster,
-    SentryBruinen,
-    VeteranOfNanduhirion,
-    Beorn,
-    Landraval,
-    SwordFightingVeteran,
-    GondorianSpearman,
-    HorseArcher,
-    WingedGuardian,
-    EaglesOfTheMistyMountains,
-    DescendantOfThorondor,
-    BeorningBeekeeper,
-    FiledByTheLordOfTheWind
-]
-
-export const LeadershipHeroDeck: Array<ICard> = [
-    BoromirLeadership,
-    Elrohir,
-    Gloin,
-    Teodred,
-    Aragorn,
-    PrinceImrahil,
-    DainIronHeel
-]
-
-export const LeadershipEventDeck: Array<ICard> = [
-    MutuallyBeneficialUnion,
-    RichesOfGondor,
-    Teamwork,
-    FreshFootprints,
-    GraveMadeOfStones,
-    ReachTheEnd,
-    TakeTheInitiative,
-    TimelyAssistance,
-    DurinSong,
-    OnlyForward,
-    Rearguard,
-    PartingGifts,
-    CaughtTheDawn,
-    CampfireStories,
-    Vigilance,
-    CommonCause,
-    HeroicDeath,
-    CovertAttack,
-    ForGondor,
-    UnbendingDetermination,
-    Lunch
-]
-
-export const LeadershipItemDeck: Array<ICard> = [
-    ClearLeadership,
-    PathOfFate,
-    BrokenSword,
-    NarviBelt,
-    DunadanMark,
-    DunadanStock,
-    DunadanMission,
-    StewardOfGondor,
-    DunadanWarning,
-    DunadanLabel,
-    CelebrianStone
-]
-
-export const LeadershipAllyDeck: Array<ICard> = [
-    Messenger,
-    CitadelKeeper,
-    LongbeardedOldman,
-    Erestor,
-    DunadanWanderer,
-    DunadanObserver,
-    WellaimedTook,
-    CitadelGuard,
-    Faramir,
-    SonOfArnor,
-    BrockIronFist,
-    LongbeardOrcSlayer,
-    ArcherOfTheSilverStream,
-    SnowStreamScout
-]
-
-export const SpiritHeroDeck: Array<ICard> = [
-    Glorfindel,
-    Dwalin,
-    Elanor,
-    Dungir,
-    Eovin,
-    FrodoBeggins
-]
-
-export const SpiritEventDeck: Array<ICard> = [
-    SignalLights,
-    BeatifulPlace,
-    Giltoniel,
-    OutOfSight,
-    ElrondsCouncil,
-    NewFriendship,
-    IgnoringTheDrakness,
-    IncredibleSpeed,
-    WeAreNotSleeping,
-    CavalryThrow
-]
+export const AdventureCards: AdventureCardsType = {
+    concentration_in_osgiliath: {
+        adventureCards: [
+            ExceedingAllExpectations,
+        ],
+        cards: [
+            RangerIthilien,
+        ],
+    },
+}

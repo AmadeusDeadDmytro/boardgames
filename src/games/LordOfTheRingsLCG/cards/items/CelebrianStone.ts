@@ -1,4 +1,6 @@
-import { Actions, CardTypes, ItemCardType, Spheres, Tags, Icons } from '../../types/cards'
+import {
+    Actions, CardTypes, ItemCardType, Spheres, Tags, Icons,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/celebrian_stone.png'
 
 const CelebrianStone: ItemCardType = {
@@ -8,9 +10,9 @@ const CelebrianStone: ItemCardType = {
     name: 'Камень Келебриана',
     tags: [Tags.ARTIFACT, Tags.ITEM],
     text: [
-        `Прикладывается к герою. Ограничение`,
+        'Прикладывается к герою. Ограничение',
         `Владелец получает +2${Icons.WILLPOWER}`,
-        `Если владелец - Арагорн, он дополнительно получает символ ресурсов ${Icons.SPIRIT}`
+        `Если владелец - Арагорн, он дополнительно получает символ ресурсов ${Icons.SPIRIT}`,
     ],
     price: 2,
     image: ImageBack,

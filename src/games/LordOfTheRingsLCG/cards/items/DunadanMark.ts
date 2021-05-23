@@ -1,4 +1,6 @@
-import { Actions, CardTypes, ItemCardType, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, CardTypes, ItemCardType, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/danube_mark.png'
 
 const DunadanMark: ItemCardType = {
@@ -8,9 +10,9 @@ const DunadanMark: ItemCardType = {
     name: 'Дунаданский знак',
     tags: [Tags.SIGNAL],
     text: [
-        `Прикладывается к герою`,
-        `Владелец получает способность Защитник`,
-        `${Actions.ACTION}: Потратьте 1 ресурс из запаса владельца, чтобы передать эту карту другому герою`
+        'Прикладывается к герою',
+        'Владелец получает способность Защитник',
+        `${Actions.ACTION}: Потратьте 1 ресурс из запаса владельца, чтобы передать эту карту другому герою`,
     ],
     price: 1,
     image: ImageBack,

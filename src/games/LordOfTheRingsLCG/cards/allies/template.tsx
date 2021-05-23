@@ -1,11 +1,10 @@
-import { AllyCardType } from '../../types/cards'
-
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { AllyCardType } from '../../types/cards'
 import COLORS from '../../constants/Colors'
 import { getSphereIcon, renderText } from '../helpers'
 
-//Icons
+// Icons
 import Willpower from '../../images/icons/Willpower.png'
 import Axes from '../../images/icons/Axes.png'
 import Shield from '../../images/icons/Shield.png'
@@ -22,29 +21,29 @@ const Template = ({ card }: {card: AllyCardType}) => {
                     <StatsBlock>
                         <StatsCard>
                             <StatsText>{card.willpower}</StatsText>
-                            <StatsIcon src={Willpower}/>
+                            <StatsIcon src={Willpower} />
                         </StatsCard>
                         <StatsCard>
                             <StatsText>{card.attack}</StatsText>
-                            <StatsIcon src={Axes}/>
+                            <StatsIcon src={Axes} />
                         </StatsCard>
                         <StatsCard>
                             <StatsText>{card.defend}</StatsText>
-                            <StatsIcon src={Shield}/>
+                            <StatsIcon src={Shield} />
                         </StatsCard>
                     </StatsBlock>
                     <HealthBlock>{card.health}</HealthBlock>
                 </CharacteristicsBlock>
-                <FillElement1/>
+                <FillElement1 />
                 <CardIconBlock>
-                    <CardIcon src={icons[0]}/>
+                    <CardIcon src={icons[0]} />
                 </CardIconBlock>
             </CardTop>
             <CardBottom background={icons[1]}>
                 <CardAllTextsBlock>
                     <CardNameBlock>
                         <CardName>
-                            {card.isUnique &&  <UniqueImage src={Unique}/>}
+                            {card.isUnique && <UniqueImage src={Unique} />}
                             {card.name}
                         </CardName>
                     </CardNameBlock>
@@ -52,9 +51,7 @@ const Template = ({ card }: {card: AllyCardType}) => {
                         {card.tags && card.tags.map((tag) => `${tag}. `)}
                     </CardTagBlock>
                     <CardTextBlock>
-                        {card.text && card.text.map((text, index) => {
-                            return <CardText key={index}>{renderText(text)}</CardText>
-                        })}
+                        {card.text && card.text.map((text, index) => <CardText key={index}>{renderText(text)}</CardText>)}
                     </CardTextBlock>
                     <CardQuoteBlock>{card.quote}</CardQuoteBlock>
                 </CardAllTextsBlock>
@@ -250,7 +247,6 @@ const StatsCard = styled.div`
   align-items: center;
   justify-content: space-between;
 `
-
 
 const UniqueImage = styled.img`
   display: inline;

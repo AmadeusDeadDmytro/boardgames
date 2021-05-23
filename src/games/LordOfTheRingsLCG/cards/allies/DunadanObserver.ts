@@ -1,4 +1,6 @@
-import { Actions, AllyCardType, CardTypes, Spheres, Tags, Icons } from '../../types/cards'
+import {
+    Actions, AllyCardType, CardTypes, Spheres, Tags, Icons,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/dunadan_observer.png'
 
 const DunadanObserver: AllyCardType = {
@@ -8,16 +10,14 @@ const DunadanObserver: AllyCardType = {
     name: 'Дунаданский куратор',
     tags: [Tags.DUNADAN],
     text: [
-        `${Actions.REACTION}: Сбросьте эту карту, чтобы отменить теневой эффект`
+        `${Actions.REACTION}: Сбросьте эту карту, чтобы отменить теневой эффект`,
     ],
     price: 3,
     willpower: 1,
     attack: 1,
     defend: 1,
     health: 2,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default DunadanObserver
-
-

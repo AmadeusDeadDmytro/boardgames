@@ -1,4 +1,6 @@
-import { CardTypes, Icons, ItemCardType, Spheres, Tags } from '../../types/cards'
+import {
+    CardTypes, Icons, ItemCardType, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/broken_sword.png'
 
 const BrokenSword: ItemCardType = {
@@ -8,9 +10,9 @@ const BrokenSword: ItemCardType = {
     name: 'Сломанный меч',
     tags: [Tags.ARTIFACT],
     text: [
-        `Прикладывается к герою`,
+        'Прикладывается к герою',
         `Владелец получает символ ресурсов ${Icons.LEADERSHIP}`,
-        `Если владелец - Арагорн, каждый персонаж под вашим контролем получает +1 ${Icons.WILLPOWER}`
+        `Если владелец - Арагорн, каждый персонаж под вашим контролем получает +1 ${Icons.WILLPOWER}`,
     ],
     price: 3,
     image: ImageBack,

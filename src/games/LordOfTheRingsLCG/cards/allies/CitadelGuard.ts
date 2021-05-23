@@ -1,4 +1,6 @@
-import { Actions, AllyCardType, CardTypes, Spheres, Tags, Icons } from '../../types/cards'
+import {
+    Actions, AllyCardType, CardTypes, Spheres, Tags, Icons,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/citadel_guard.png'
 
 const CitadelGuard: AllyCardType = {
@@ -13,9 +15,7 @@ const CitadelGuard: AllyCardType = {
     attack: 1,
     defend: 0,
     health: 2,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default CitadelGuard
-
-

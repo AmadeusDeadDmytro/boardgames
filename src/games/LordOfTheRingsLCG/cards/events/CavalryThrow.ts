@@ -1,4 +1,6 @@
-import { Actions, CardTypes, EventCardType, Icons, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, CardTypes, EventCardType, Icons, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/cavalty_throw.png'
 
 const CavalryThrow: EventCardType = {
@@ -10,9 +12,7 @@ const CavalryThrow: EventCardType = {
         `${Actions.ACTION}: Сбросьте союзника с чертой ${Tags.ROHAN}, чтобы выбрать локацию и поместить на неё 3 жетона прогресса`,
     ],
     price: 1,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default CavalryThrow
-
-

@@ -1,4 +1,6 @@
-import { Actions, CardTypes, EventCardType, Icons, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, CardTypes, EventCardType, Icons, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/behind_strong_walls.png'
 
 const BehindStrongWalls: EventCardType = {
@@ -7,12 +9,10 @@ const BehindStrongWalls: EventCardType = {
     isUnique: false,
     name: 'За крепкими стенами',
     text: [
-      `${Actions.ACTION}: Откройте персонажа с чертой ${Tags.GONDOR}, объявленного защищающимся. Этот персонаж получает +1${Icons.SHIELD} до конца фазы`
+        `${Actions.ACTION}: Откройте персонажа с чертой ${Tags.GONDOR}, объявленного защищающимся. Этот персонаж получает +1${Icons.SHIELD} до конца фазы`,
     ],
     price: 1,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default BehindStrongWalls
-
-

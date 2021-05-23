@@ -1,4 +1,6 @@
-import { Actions, CardTypes, EventCardType, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, CardTypes, EventCardType, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/heavy_blow.png'
 
 const HeavyBlow: EventCardType = {
@@ -7,12 +9,10 @@ const HeavyBlow: EventCardType = {
     isUnique: false,
     name: 'Тяжелый удар',
     text: [
-        `${Actions.REACTION}: После того как персонаж с чертой ${Tags.GNOME} нанес Х повреждений противнику, нанесите дополнительно Х повреждений этому противнику (раз в фазу)`
+        `${Actions.REACTION}: После того как персонаж с чертой ${Tags.GNOME} нанес Х повреждений противнику, нанесите дополнительно Х повреждений этому противнику (раз в фазу)`,
     ],
     price: 1,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default HeavyBlow
-
-

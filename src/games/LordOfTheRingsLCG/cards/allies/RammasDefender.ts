@@ -1,4 +1,6 @@
-import { AllyCardType, CardTypes, Spheres, Tags } from '../../types/cards'
+import {
+    AllyCardType, CardTypes, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/rammas_defender.png'
 
 const RammasDefender: AllyCardType = {
@@ -12,9 +14,7 @@ const RammasDefender: AllyCardType = {
     attack: 1,
     defend: 4,
     health: 1,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default RammasDefender
-
-

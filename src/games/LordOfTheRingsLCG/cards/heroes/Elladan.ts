@@ -1,4 +1,6 @@
-import { Actions, CardTypes, HeroCardType, Icons, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, CardTypes, HeroCardType, Icons, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/elladan.png'
 
 const Elladan: HeroCardType = {
@@ -16,9 +18,7 @@ const Elladan: HeroCardType = {
     attack: 1,
     defend: 2,
     health: 4,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default Elladan
-
-

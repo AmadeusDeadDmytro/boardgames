@@ -1,4 +1,6 @@
-import { Actions, CardTypes, EventCardType, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, CardTypes, EventCardType, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/riches_of_gondor.png'
 
 const RichesOfGondor: EventCardType = {
@@ -7,7 +9,7 @@ const RichesOfGondor: EventCardType = {
     isUnique: false,
     name: 'Богатства Гондора',
     text: [
-        `${Actions.ACTION}: Выберите героя с чертой ${Tags.GONDOR}. Добавьте 1 ресурс в запас выбранного героя`
+        `${Actions.ACTION}: Выберите героя с чертой ${Tags.GONDOR}. Добавьте 1 ресурс в запас выбранного героя`,
     ],
     price: 0,
     image: ImageBack,

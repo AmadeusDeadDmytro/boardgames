@@ -1,4 +1,6 @@
-import { HeroCardType, Tags, CardTypes, Actions, Icons, Spheres } from '../../types/cards'
+import {
+    HeroCardType, Tags, CardTypes, Actions, Icons, Spheres,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/hama.png'
 
 const Hama: HeroCardType = {
@@ -15,9 +17,7 @@ const Hama: HeroCardType = {
     attack: 3,
     defend: 1,
     health: 4,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default Hama
-
-

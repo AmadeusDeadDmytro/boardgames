@@ -1,4 +1,6 @@
-import { Actions, AllyCardType, CardTypes, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, AllyCardType, CardTypes, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/gondorian_spearman.png'
 
 const GondorianSpearman: AllyCardType = {
@@ -8,18 +10,16 @@ const GondorianSpearman: AllyCardType = {
     name: 'Гондорский копейщик',
     tags: [Tags.GONDOR, Tags.WARRIOR],
     text: [
-        `Защитник`,
-        `${Actions.REACTION}: После того как Гондорский копейщик объявлен защищающимся, нанесите 1 повреждение атакующему противнику`
+        'Защитник',
+        `${Actions.REACTION}: После того как Гондорский копейщик объявлен защищающимся, нанесите 1 повреждение атакующему противнику`,
     ],
-    quote: `"Собралось больше тысячи. Поднятые их копья, походили на колышащийся лес." - Две Твердыни`,
+    quote: '"Собралось больше тысячи. Поднятые их копья, походили на колышащийся лес." - Две Твердыни',
     price: 2,
     willpower: 0,
     attack: 1,
     defend: 1,
     health: 1,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default GondorianSpearman
-
-

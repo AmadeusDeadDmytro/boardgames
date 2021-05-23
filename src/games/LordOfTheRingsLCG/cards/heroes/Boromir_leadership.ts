@@ -1,4 +1,6 @@
-import { HeroCardType, Tags, CardTypes, Spheres, Icons } from '../../types/cards'
+import {
+    HeroCardType, Tags, CardTypes, Spheres, Icons,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/boromir_leader.png'
 
 const BoromirLeadership: HeroCardType = {
@@ -15,9 +17,7 @@ const BoromirLeadership: HeroCardType = {
     attack: 3,
     defend: 2,
     health: 5,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default BoromirLeadership
-
-

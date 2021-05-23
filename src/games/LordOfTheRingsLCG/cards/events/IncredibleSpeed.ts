@@ -1,4 +1,6 @@
-import { Actions, CardTypes, EventCardType, Icons, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, CardTypes, EventCardType, Icons, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/incredible_speed.png'
 
 const IncredibleSpeed: EventCardType = {
@@ -10,9 +12,7 @@ const IncredibleSpeed: EventCardType = {
         `${Actions.ACTION}: До конца фазы персонажи с чертой ${Tags.ROHAN} получают +2${Icons.WILLPOWER}`,
     ],
     price: 3,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default IncredibleSpeed
-
-

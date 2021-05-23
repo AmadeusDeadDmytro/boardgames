@@ -1,4 +1,6 @@
-import { HeroCardType, Tags, CardTypes, Spheres } from '../../types/cards'
+import {
+    HeroCardType, Tags, CardTypes, Spheres,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/beregond.png'
 
 const Beregond: HeroCardType = {
@@ -16,9 +18,7 @@ const Beregond: HeroCardType = {
     attack: 1,
     defend: 4,
     health: 4,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default Beregond
-
-

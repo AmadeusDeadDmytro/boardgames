@@ -1,4 +1,5 @@
 import React from 'react'
+import JsxParser from 'react-jsx-parser'
 import SwordBlack from '../images/icons/Sword_black.png'
 import Axes from '../images/icons/Axes.png'
 import Shield from '../images/icons/Shield.png'
@@ -6,8 +7,9 @@ import Willpower from '../images/icons/Willpower.png'
 import Spirit from '../images/icons/Spirit_black.png'
 import Lore from '../images/icons/Lore_black.png'
 import Leadership from '../images/icons/Leadership_black.png'
-import { Actions, Icons, Spheres, Tags } from '../types/cards'
-import JsxParser from 'react-jsx-parser'
+import {
+    Actions, Icons, Spheres, Tags,
+} from '../types/cards'
 import TacticsIcon from '../images/icons/Sword.png'
 import TacticsIconTransparent from '../images/icons/Sword-transparent.png'
 import LeadershipIcon from '../images/icons/Leadership.png'
@@ -16,7 +18,7 @@ import SpiritIcon from '../images/icons/Spirit.png'
 import SpiritIconTransparent from '../images/icons/Spirit-transparent.png'
 
 export const replaceTextByText = (array: Array<string>, text: string): string => {
-    array.forEach(el => {
+    array.forEach((el) => {
         text = text.replaceAll(el, `<b><i>${el}</i></b>`)
     })
     return text
@@ -50,17 +52,17 @@ export const renderText = (text: string): JSX.Element => {
     text = replaceTextByText(actionsArr, text)
     text = replaceTextByIcon(text)
 
-    return <JsxParser jsx={text}/>
+    return <JsxParser jsx={text} />
 }
 
 export const getSphereIcon = (text: string): Array<string> => {
     switch (text) {
-        case Spheres.TACTICS:
-            return [TacticsIcon, TacticsIconTransparent]
-        case Spheres.LEADERSHIP:
-            return [LeadershipIcon, LeadershipIconTransparent]
-        case Spheres.SPIRIT:
-            return [SpiritIcon, SpiritIconTransparent]
+    case Spheres.TACTICS:
+        return [TacticsIcon, TacticsIconTransparent]
+    case Spheres.LEADERSHIP:
+        return [LeadershipIcon, LeadershipIconTransparent]
+    case Spheres.SPIRIT:
+        return [SpiritIcon, SpiritIconTransparent]
     }
     return []
 }

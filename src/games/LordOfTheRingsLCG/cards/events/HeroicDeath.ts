@@ -1,4 +1,6 @@
-import { Actions, CardTypes, EventCardType, Icons, Spheres } from '../../types/cards'
+import {
+    Actions, CardTypes, EventCardType, Icons, Spheres,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/heroic_death.png'
 
 const HeroicDeath: EventCardType = {
@@ -7,9 +9,9 @@ const HeroicDeath: EventCardType = {
     isUnique: false,
     name: 'Героическая смерть',
     text: [
-        `${Actions.REACTION}: После того как карта союзника покидает игру, игрок, контролировавший этого союзника, берет 2 карты из своей колоды`
+        `${Actions.REACTION}: После того как карта союзника покидает игру, игрок, контролировавший этого союзника, берет 2 карты из своей колоды`,
     ],
-    quote: `"Он пал, защищая хоббитов, пока я был на вершине холма." - Арагорн, Две Твердыни`,
+    quote: '"Он пал, защищая хоббитов, пока я был на вершине холма." - Арагорн, Две Твердыни',
     price: 1,
     image: ImageBack,
 }

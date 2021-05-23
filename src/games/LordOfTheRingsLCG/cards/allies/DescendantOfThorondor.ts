@@ -1,4 +1,6 @@
-import { Actions, AllyCardType, CardTypes, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, AllyCardType, CardTypes, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/descendant_of_thorondor.png'
 
 const DescendantOfThorondor: AllyCardType = {
@@ -8,17 +10,15 @@ const DescendantOfThorondor: AllyCardType = {
     name: 'Потомок Торондора',
     tags: [Tags.THING, Tags.EAGLE],
     text: [
-        `Не может иметь ограниченных довесков. `,
-        `${Actions.REACTION}: После того как Потомок Торондора входит в игруили покидает её, нанесите 2 повреждения одному из противниковв районе средоточения`
+        'Не может иметь ограниченных довесков. ',
+        `${Actions.REACTION}: После того как Потомок Торондора входит в игруили покидает её, нанесите 2 повреждения одному из противниковв районе средоточения`,
     ],
     price: 4,
     willpower: 1,
     attack: 2,
     defend: 1,
     health: 2,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default DescendantOfThorondor
-
-

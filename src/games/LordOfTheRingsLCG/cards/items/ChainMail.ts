@@ -1,4 +1,6 @@
-import { CardTypes, Icons, ItemCardType, Spheres, Tags } from '../../types/cards'
+import {
+    CardTypes, Icons, ItemCardType, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/chain_mail.png'
 
 const ChainMail: ItemCardType = {

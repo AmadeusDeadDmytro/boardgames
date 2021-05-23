@@ -1,4 +1,6 @@
-import { Actions, CardTypes, EventCardType, Icons, Spheres, Tags } from '../../types/cards'
+import {
+    Actions, CardTypes, EventCardType, Icons, Spheres, Tags,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/reach_the_end.png'
 
 const ReachTheEnd: EventCardType = {
@@ -7,7 +9,7 @@ const ReachTheEnd: EventCardType = {
     isUnique: false,
     name: 'Дойти до конца',
     text: [
-        `${Actions.ACTION}: Откройте всех персонажей с чертой ${Tags.GNOME}`
+        `${Actions.ACTION}: Откройте всех персонажей с чертой ${Tags.GNOME}`,
     ],
     price: 1,
     image: ImageBack,

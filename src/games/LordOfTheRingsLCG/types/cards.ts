@@ -54,9 +54,44 @@ export type AllyCardType = {
     quote?: string
 }
 
-export type ICard = HeroCardType | EventCardType | ItemCardType | AllyCardType
+export type AdventureCardType = {
+    type: CardTypes
+    title: string
+    adventure: string
+    description: string
+    text: string[]
+    image: string
+}
 
-////////////////////////////////////////////////////////////////////// ENUMS
+export type TargetCardType = {
+    type: CardTypes
+    isUnique: boolean
+    name: string
+    adventure: string
+    willpower: number
+    attack: number
+    defend: number
+    health: number
+    image: string
+    tags?: Array<Tags>
+    text?: Array<string>
+    shadowEffect?: Array<string>
+}
+
+export type ICard = HeroCardType | EventCardType | ItemCardType | AllyCardType | AdventureCardType | TargetCardType
+
+export type AdventureCardsType = {
+    [key: string]: {
+        adventureCards: Array<ICard>,
+        cards: Array<ICard>
+    }
+}
+
+export type PlayerCardsType = {
+    [key: string]: Array<ICard>
+}
+
+/// /////////////////////////////////////////////////////////////////// ENUMS
 
 export enum Spheres {
     LEADERSHIP = 'Лидерство',
@@ -65,13 +100,16 @@ export enum Spheres {
 }
 
 export enum CardTypes {
+    ADVENTURE = 'Приключение',
     ALLY = 'Союзник',
-    HERO = 'Герой',
     EVENT = 'Событие',
-    ITEM = 'Предмет'
+    HERO = 'Герой',
+    ITEM = 'Предмет',
+    TARGET = 'Цель'
 }
 
 export enum Tags {
+    ALLY = 'Союзник',
     ARCHER = 'Лучник',
     ARTIFACT = 'Артефакт',
     ARMOR = 'Броня',
@@ -90,6 +128,7 @@ export enum Tags {
     NOBLE_W = 'Благородная',
     NOLDOR = 'Нолдор',
     ORC = 'Орк',
+    PREPARATION = 'Подготовка',
     RANGER = 'Рейнджер',
     ROHAN = 'Рохан',
     SCOUT = 'Скаут',
@@ -105,6 +144,7 @@ export enum Tags {
 }
 
 export enum Actions {
+    APPEARANCE = 'При появлении',
     ACTION = 'Действие',
     ACTION_IN_BATTLE = 'Боевое действие',
     REACTION = 'Реакция',

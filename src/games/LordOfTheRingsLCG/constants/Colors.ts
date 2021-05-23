@@ -6,5 +6,5 @@ export default {
     LIGHT_THREE: '#dbd89f',
     BLUE_ONE: '#6b60ef',
     RED_ONE: '#e20000',
-    GRAY_ONE: '#545454'
+    GRAY_ONE: '#545454',
 }

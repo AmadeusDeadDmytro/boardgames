@@ -1,4 +1,6 @@
-import { HeroCardType, Tags, CardTypes, Spheres, Actions, Icons } from '../../types/cards'
+import {
+    HeroCardType, Tags, CardTypes, Spheres, Actions, Icons,
+} from '../../types/cards'
 import ImageBack from '../../images/cards/eovin.png'
 
 const Eovin: HeroCardType = {
@@ -8,16 +10,14 @@ const Eovin: HeroCardType = {
     name: 'Эовин',
     tags: [Tags.NOBLE_W, Tags.ROHAN],
     text: [
-        `${Actions.ACTION}: Сбросьте 1 карту с руки, чтобы дать Эовин +1${Icons.WILLPOWER} до конца фазы. Этот эффект может быть вызван один раз за раунд каждым игроком`
+        `${Actions.ACTION}: Сбросьте 1 карту с руки, чтобы дать Эовин +1${Icons.WILLPOWER} до конца фазы. Этот эффект может быть вызван один раз за раунд каждым игроком`,
     ],
     hazardLevel: 9,
     willpower: 4,
     attack: 1,
     defend: 1,
     health: 3,
-    image: ImageBack
+    image: ImageBack,
 }
 
 export default Eovin
-
-
