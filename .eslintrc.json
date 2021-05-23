@@ -25,6 +25,9 @@
         "eqeqeq": "warn",
         "no-else-return": "warn",
         "require-await": "warn",
-        "indent": ["warn", 4]
+        "indent": ["warn", 4],
+        "block-spacing": "warn",
+        "implicit-arrow-linebreak": "warn",
+        "arrow-body-style": ["warn", "as-needed"]
     }
 }

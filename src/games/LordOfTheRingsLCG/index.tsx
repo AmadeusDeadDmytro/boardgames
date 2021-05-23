@@ -35,7 +35,8 @@ const LordOfTheRingLCG = () => {
         <GameArea>
             {Object.keys(PlayerCards).map((key) => PlayerCards[key].map((card, index) => <CardWrapper key={index}>{renderCard(card)}</CardWrapper>))}
             <div style={{ width: '100%', padding: 40 }}>---------------------------------------------------------------------------------------------------------------------------------------------</div>
-            {Object.keys(AdventureCards).map((key) => AdventureCards[key].cards.map((card, index) => <CardWrapper key={index}>{renderCard(card)}</CardWrapper>))}
+            {Object.keys(AdventureCards).map((key) => AdventureCards[key].cards.map((card, index) => <CardWrapper
+                key={index}>{renderCard(card)}</CardWrapper>))}
         </GameArea>
     )
 }
