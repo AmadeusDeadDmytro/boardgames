@@ -75,10 +75,21 @@ export type TargetCardType = {
     image: string
     tags?: Array<Tags>
     text?: Array<string>
-    shadowEffect?: Array<string>
+    shadowEffect: Array<string>
 }
 
-export type ICard = HeroCardType | EventCardType | ItemCardType | AllyCardType | AdventureCardType | TargetCardType
+export type DangerCardType = {
+    type: CardTypes
+    isUnique: boolean
+    name: string
+    adventure: string
+    image: string
+    tags?: Array<Tags>
+    text?: Array<string>
+    shadowEffect: Array<string>
+}
+
+export type ICard = HeroCardType | EventCardType | ItemCardType | AllyCardType | AdventureCardType | TargetCardType | DangerCardType
 
 export type AdventureCardsType = {
     [key: string]: {
@@ -102,6 +113,7 @@ export enum Spheres {
 export enum CardTypes {
     ADVENTURE = 'Приключение',
     ALLY = 'Союзник',
+    DANGER = 'Опасность',
     EVENT = 'Событие',
     HERO = 'Герой',
     ITEM = 'Предмет',
@@ -132,6 +144,7 @@ export enum Tags {
     RANGER = 'Рейнджер',
     ROHAN = 'Рохан',
     SCOUT = 'Скаут',
+    SHADOW_EFFECT = 'Теневой эффект',
     SIGNAL = 'Сигнал',
     SONG = 'Песня',
     STATUS = 'Состояние',
@@ -153,10 +166,15 @@ export enum Actions {
 
 export enum Icons {
     ATTACK = 'Attack',
+    DANGER_POWER = 'Danger Power',
     LEADERSHIP = 'Leadership',
     LORE = 'Lore',
     SHIELD = 'Shield',
     SPIRIT = 'Spirit',
     TACTICS = 'Tactics',
     WILLPOWER = 'Willpower'
+}
+
+export enum Adventures {
+    CONCENTRATION_IN_OSGILIATH= 'Сосредоточение в Осгилиате'
 }

@@ -5,9 +5,6 @@ import COLORS from '../../constants/Colors'
 import { getSetIcon, renderText } from '../helpers'
 
 // Icons
-import Willpower from '../../images/icons/Willpower.png'
-import Axes from '../../images/icons/Axes.png'
-import Shield from '../../images/icons/Shield.png'
 import Unique from '../../images/icons/Unique.png'
 import ShadowEffect from '../../images/icons/shadow_effect.png'
 
@@ -19,27 +16,7 @@ const Template = ({ card }: {card: TargetCardType}) => (
                     {card.isUnique && <UniqueImage src={Unique} />}
                     {card.name}
                 </CardName>
-                <CardAdventure>
-                    {card.adventure.toUpperCase()}
-                </CardAdventure>
             </CardNameBlock>
-            <CharacteristicsBlock>
-                <StatsBlock>
-                    <StatsCard>
-                        <StatsText>{card.willpower}</StatsText>
-                        <StatsIcon src={Willpower} />
-                    </StatsCard>
-                    <StatsCard>
-                        <StatsText>{card.attack}</StatsText>
-                        <StatsIcon src={Axes} />
-                    </StatsCard>
-                    <StatsCard>
-                        <StatsText>{card.defend}</StatsText>
-                        <StatsIcon src={Shield} />
-                    </StatsCard>
-                </StatsBlock>
-                <HealthBlock>{card.health}</HealthBlock>
-            </CharacteristicsBlock>
             <SetIcon src={getSetIcon(card.adventure)}/>
         </CardTop>
         <CardBottom>
@@ -67,7 +44,7 @@ const Template = ({ card }: {card: TargetCardType}) => (
 const Card = styled.div`
     width: 320px;
     height: 450px;
-    background: ${COLORS.GRAY_TWO};
+    background: ${COLORS.DARK_ONE};
     border-radius: 20px;
     padding: 10px;
     display: flex;
@@ -79,18 +56,18 @@ const CardTop = styled.div<{back: string}>`
     background-image: ${({ back }) => back && `url(${back})`};
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -25px 10px;
+    background-position: 0 0;
     width: 100%;
-    height: 240px;
+    height: 220px;
     margin-top: 0;
     position: relative;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 `
 const CardBottom = styled.div`
-    height: 220px;
+    height: 210px;
     width: 100%;
-    background-color: ${COLORS.GRAY_THREE};
+    background-color: ${COLORS.LIGHT_THREE};
     border-radius: 0 0 10px 10px;
     display: flex;
     flex-direction: column;
@@ -101,11 +78,16 @@ const CardBottom = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    box-shadow: inset 0 0 11px 2px ${COLORS.RED_ONE};
 `
 const CardNameBlock = styled.div`
-    width: 98%;
+    width: 220px;
     text-align: center;
     margin: 0 auto;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 100px;
+    left: -90px;
 `
 const CardTagBlock = styled.i`
     display: block;
@@ -138,25 +120,12 @@ const CardName = styled.p`
     font-size: 20px;
     user-select: none;
     position: relative;
-    border: 3px solid ${COLORS.GRAY_ONE};
-    border-top: 0;
-    background: ${COLORS.GRAY_THREE}
-`
-const CardAdventure = styled.p`
-    line-height: 16px;
-    margin: 0;
-    font-family: 'Delius', cursive;
-    font-size: 12px;
-    user-select: none;
-    position: relative;
-    border: 3px solid ${COLORS.GRAY_ONE};
-    border-top: 0;
-    border-radius: 0 0 25px 25px;
+    border: 3px solid ${COLORS.DARK_ONE};
     background: ${COLORS.GRAY_THREE}
 `
 const CardText = styled.p`
-    margin: 0;
-    line-height: 12px;
+    margin: 0 0 5px 0;
+    line-height: 14px;
     font-size: 12px;
     user-select: none;
 `
@@ -177,55 +146,6 @@ const CardAllTextsBlock = styled.div`
   justify-content: space-between;
   height: 100%;
 `
-const CharacteristicsBlock = styled.div`
-  position: absolute;
-  left: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 10px;
-`
-const HealthBlock = styled.div`
-  font-family: 'Verdana', serif;
-  border-radius: 50%;
-  border: 3px solid ${COLORS.DARK_TWO};
-  width: 40px;
-  height: 40px;
-  color: ${COLORS.RED_ONE};
-  text-align: center;
-  line-height: 34px;
-  font-size: 22px;
-  user-select: none;
-  margin-top: 10px;
-  background-color: ${COLORS.DARK_ONE_TRANSPARENT};
-`
-const StatsBlock = styled.div`
-  background: ${COLORS.GRAY_THREE};
-  border: 3px solid ${COLORS.DARK_TWO};
-  border-top-width: 0;
-  width: 46px;
-  height: 120px;
-  padding: 3px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-`
-const StatsText = styled.span`
-  font-family: 'Verdana', serif;
-  font-style: italic;
-  font-size: 20px;
-  user-select: none;
-`
-const StatsIcon = styled.img`
-  width: 18px;
-`
-
-const StatsCard = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-
 const UniqueImage = styled.img`
   display: inline;
   width: 15px;
@@ -234,8 +154,8 @@ const UniqueImage = styled.img`
 `
 
 const ShadowIcon = styled.img`
-    max-width: 100%;
-    margin-top: -5px;
+  max-width: 100%;
+  margin-top: -5px;
 `
 
 const SetIcon = styled.img`

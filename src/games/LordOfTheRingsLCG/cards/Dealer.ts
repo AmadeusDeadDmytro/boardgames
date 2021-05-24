@@ -128,6 +128,9 @@ import SnowStreamScout from './allies/SnowStreamScout'
 // ADVENTURES
 import ExceedingAllExpectations from './adventures/concentration_in_osgiliath/ExceedingAllExpectations'
 import RangerIthilien from './target/RangerIthilien'
+import ConcentrationInOsgiliath from './danger/ConcentrationInOsgiliath'
+import DarkPursuit from './danger/DarkPursuit'
+import CutOff from './danger/CutOff'
 
 export const PlayerCards: PlayerCardsType = {
     TacticHeroesDeck: [
@@ -283,6 +286,16 @@ export const AdventureCards: AdventureCardsType = {
         ],
         cards: [
             RangerIthilien,
+            ConcentrationInOsgiliath,
+            ConcentrationInOsgiliath,
+            ConcentrationInOsgiliath,
+            DarkPursuit,
+            DarkPursuit,
+            CutOff,
+            CutOff,
+            CutOff,
+            CutOff
         ],
     },
+    // TODO: OTHER ADVENTURES
 }

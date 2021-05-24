@@ -6,6 +6,7 @@ import EventTemplate from './cards/events/template'
 import ItemTemplate from './cards/items/template'
 import AllyTemplate from './cards/allies/template'
 import TargetTemplate from './cards/target/template'
+import DangerTemplate from './cards/danger/template'
 import { CardTypes, ICard } from './types/cards'
 
 const LordOfTheRingLCG = () => {
@@ -26,6 +27,9 @@ const LordOfTheRingLCG = () => {
         case CardTypes.TARGET:
             // @ts-ignore
             return <TargetTemplate card={card} />
+        case CardTypes.DANGER:
+            // @ts-ignore
+            return <DangerTemplate card={card} />
         default:
             return null
         }

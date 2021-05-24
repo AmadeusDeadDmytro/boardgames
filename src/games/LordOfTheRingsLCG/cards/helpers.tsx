@@ -6,9 +6,10 @@ import Shield from '../images/icons/Shield.png'
 import Willpower from '../images/icons/Willpower.png'
 import Spirit from '../images/icons/Spirit_black.png'
 import Lore from '../images/icons/Lore_black.png'
+import DangerPower from '../images/icons/danger_power.png'
 import Leadership from '../images/icons/Leadership_black.png'
 import {
-    Actions, Icons, Spheres, Tags,
+    Actions, Adventures, Icons, Spheres, Tags,
 } from '../types/cards'
 import TacticsIcon from '../images/icons/Sword.png'
 import TacticsIconTransparent from '../images/icons/Sword-transparent.png'
@@ -16,6 +17,7 @@ import LeadershipIcon from '../images/icons/Leadership.png'
 import LeadershipIconTransparent from '../images/icons/Leadership_transparent.png'
 import SpiritIcon from '../images/icons/Spirit.png'
 import SpiritIconTransparent from '../images/icons/Spirit-transparent.png'
+import ConcentrationInOsgiliath from '../images/icons/concentration_in_osgiliath.png'
 
 export const replaceTextByText = (array: Array<string>, text: string): string => {
     array.forEach((el) => {
@@ -32,6 +34,7 @@ export const replaceTextByIcon = (text: string): string => {
     const iconWillpower = `<img src="${Willpower}" style="height: 14px; display: inline;" alt=''/>`
     const iconSpirit = `<img src="${Spirit}" style="height: 16px; display: inline;" alt=''/>`
     const iconLore = `<img src="${Lore}" style="height: 14px; display: inline;" alt=''/>`
+    const iconDanger = `<img src="${DangerPower}" style="height: 14px; display: inline;" alt=''/>`
 
     return text
         .replaceAll('Tactics', iconTactics)
@@ -41,6 +44,7 @@ export const replaceTextByIcon = (text: string): string => {
         .replaceAll('Willpower', iconWillpower)
         .replaceAll('Spirit', iconSpirit)
         .replaceAll('Lore', iconLore)
+        .replaceAll('Danger Power', iconDanger)
 }
 
 export const renderText = (text: string): JSX.Element => {
@@ -65,4 +69,12 @@ export const getSphereIcon = (text: string): Array<string> => {
         return [SpiritIcon, SpiritIconTransparent]
     }
     return []
+}
+
+export const getSetIcon = (text:string): string => {
+    switch (text) {
+    case Adventures.CONCENTRATION_IN_OSGILIATH:
+        return ConcentrationInOsgiliath
+    }
+    return ''
 }
