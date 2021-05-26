@@ -7,7 +7,9 @@ export default {
     LIGHT_THREE: '#dbd89f',
     BLUE_ONE: '#6b60ef',
     RED_ONE: '#e20000',
+    RED_TWO: '#400000',
     GRAY_ONE: '#545454',
     GRAY_TWO: '#474747',
     GRAY_THREE: '#d7d7d7',
+    BROWN_ONE: '#894e00',
 }

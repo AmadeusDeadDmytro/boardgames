@@ -131,6 +131,17 @@ import RangerIthilien from './target/RangerIthilien'
 import ConcentrationInOsgiliath from './danger/ConcentrationInOsgiliath'
 import DarkPursuit from './danger/DarkPursuit'
 import CutOff from './danger/CutOff'
+import RuinsOfOsgiliath from './location/RuinsOfOsgiliath'
+import FieldsOfPelennor from './location/FieldsOfPelennor'
+import Morgulduin from './location/Morgulduin'
+import WatchEminArnen from './location/WatchEminArnen'
+import CapturedWatchtower from './location/CapturedWatchtower'
+import UrukHaiVanguard from './enemy/UrukHaiVanguard'
+import WeinriderCommander from './enemy/WeinriderCommander'
+import Weinriders from './enemy/Weinriders'
+import MordorWolves from './enemy/MordorWolves'
+import SnagScouts from './enemy/SnagScouts'
+import SorcererKing from './enemy/SorcererKing'
 
 export const PlayerCards: PlayerCardsType = {
     TacticHeroesDeck: [
@@ -286,6 +297,7 @@ export const AdventureCards: AdventureCardsType = {
         ],
         cards: [
             RangerIthilien,
+            RangerIthilien,
             ConcentrationInOsgiliath,
             ConcentrationInOsgiliath,
             ConcentrationInOsgiliath,
@@ -294,7 +306,37 @@ export const AdventureCards: AdventureCardsType = {
             CutOff,
             CutOff,
             CutOff,
-            CutOff
+            CutOff,
+            RuinsOfOsgiliath,
+            RuinsOfOsgiliath,
+            RuinsOfOsgiliath,
+            FieldsOfPelennor,
+            FieldsOfPelennor,
+            Morgulduin,
+            Morgulduin,
+            WatchEminArnen,
+            CapturedWatchtower,
+            CapturedWatchtower,
+            CapturedWatchtower,
+            UrukHaiVanguard,
+            UrukHaiVanguard,
+            UrukHaiVanguard,
+            WeinriderCommander,
+            WeinriderCommander,
+            WeinriderCommander,
+            Weinriders,
+            Weinriders,
+            Weinriders,
+            Weinriders,
+            MordorWolves,
+            MordorWolves,
+            MordorWolves,
+            MordorWolves,
+            SnagScouts,
+            SnagScouts,
+            SnagScouts,
+            SnagScouts,
+            SorcererKing
         ],
     },
     // TODO: OTHER ADVENTURES

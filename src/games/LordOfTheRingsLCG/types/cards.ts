@@ -89,7 +89,39 @@ export type DangerCardType = {
     shadowEffect: Array<string>
 }
 
-export type ICard = HeroCardType | EventCardType | ItemCardType | AllyCardType | AdventureCardType | TargetCardType | DangerCardType
+export type LocationCardType = {
+    type: CardTypes
+    isUnique: boolean
+    name: string
+    adventure: string
+    image: string
+    tags?: Array<Tags>
+    text?: Array<string>
+    shadowEffect: Array<string>
+    dangerPower: number
+    searchDifficult: number
+    quote?: string
+    victoryText?: string
+}
+
+export type EnemyCardType = {
+    type: CardTypes
+    isUnique: boolean
+    name: string
+    adventure: string
+    attack: number
+    defend: number
+    health: number
+    image: string
+    tags?: Array<Tags>
+    text?: Array<string>
+    shadowEffect: Array<string>
+    dangerPower: number
+    collisionProbability: number
+    quote?: string
+}
+
+export type ICard = HeroCardType | EventCardType | ItemCardType | AllyCardType | AdventureCardType | TargetCardType | DangerCardType | LocationCardType | EnemyCardType
 
 export type AdventureCardsType = {
     [key: string]: {
@@ -114,9 +146,11 @@ export enum CardTypes {
     ADVENTURE = 'Приключение',
     ALLY = 'Союзник',
     DANGER = 'Опасность',
+    ENEMY = 'Противник',
     EVENT = 'Событие',
     HERO = 'Герой',
     ITEM = 'Предмет',
+    LOCATION = 'Локация',
     TARGET = 'Цель'
 }
 
@@ -128,14 +162,20 @@ export enum Tags {
     BEORNING = 'Беорнинг',
     DAIL = 'Дэйл',
     DARKNESS = 'Тьма',
+    DESECRATED = 'Оскверненный',
     DUNADAN = 'Дунадан',
     DUNGEON = 'Подземелье',
     EAGLE = 'Орел',
+    EAST_COAST = 'Восточный берег',
+    ESTERLING = 'Истерлинг',
+    GENERAL = 'Полководец',
     GIFT = 'Дар',
     GNOME = 'Гном',
     GONDOR = 'Гондор',
+    HIGHLANDS = 'Высокогорье',
     HOBBIT = 'Хоббит',
     ITEM = 'Предмет',
+    NAZGUL = 'Назгул',
     NOBLE = 'Благородный',
     NOBLE_W = 'Благородная',
     NOLDOR = 'Нолдор',
@@ -151,8 +191,10 @@ export enum Tags {
     THING = 'Существо',
     TITLE = 'Титул',
     UPON_APPEARANCE = 'При появлении',
+    URUK_HAI = 'Урук-Хай',
     WARRIOR = 'Воин',
     WEAPON = 'Оружие',
+    WEST_COAST = 'Западный берег',
     WOOD_ELF = 'Лесной эльф'
 }
 
