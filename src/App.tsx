@@ -3,26 +3,21 @@ import 'antd/dist/antd.css'
 import {
     BrowserRouter, Link, Route, Switch,
 } from 'react-router-dom'
+import GlobalStyles from './themes/globalStyles'
 
-import { Menu } from 'antd'
+
 import React from 'react'
-import LordOfTheRingLCG from './games/LordOfTheRingsLCG'
+import { HomePage } from './pages'
 
 const App = () => (
-    <BrowserRouter>
-        <Menu mode="horizontal">
-            <Menu.Item>
-                <Link to="/lord-of-the-ring-lcg">
-                Lord of the Rings LCG
-                </Link>
-            </Menu.Item>
-        </Menu>
-        <Switch>
-            <Route path="/lord-of-the-ring-lcg">
-                <LordOfTheRingLCG />
-            </Route>
-        </Switch>
-    </BrowserRouter>
+    <>
+        <GlobalStyles/>
+        <BrowserRouter>
+            <Switch>
+                <Route path="/" exact component={HomePage}/>
+            </Switch>
+        </BrowserRouter>
+    </>
 )
 
 export default App
