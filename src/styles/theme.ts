@@ -1,3 +1,13 @@
+interface IThemes {
+    [key: string]: {
+        primary: string,
+        secondary: string,
+        light: string,
+        dark: string,
+        medium: string
+    }
+}
+
 const Themes = {
     basic: {
         primary: '#D99D55',
@@ -8,4 +18,4 @@ const Themes = {
     }
 }
 
-export default Themes as any
+export default Themes as IThemes
