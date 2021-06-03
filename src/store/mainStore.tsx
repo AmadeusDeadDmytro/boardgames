@@ -7,9 +7,6 @@ class MainStore {
         theme: 'basic'
     }
 
-    constructor() {
-    }
-
     @computed get currentTheme(): string {
         return this.settings.theme
     }
