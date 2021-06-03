@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Colors from '../themes/colors'
+import Colors from '../styles/theme'
 
 const HomePage = () => {
     return (
