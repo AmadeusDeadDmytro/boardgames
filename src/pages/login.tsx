@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Theme from '../styles/theme'
 import { observer } from 'mobx-react'
 import { mainStore } from '../store/mainStore'
-import { Button, TextField } from '../components'
+import { Button, TextField, CenteredBlock } from '../components'
 
 const HomePage = () => {
     const { settings } = mainStore
@@ -11,9 +11,11 @@ const HomePage = () => {
     return (
         <div>
             <Title theme={settings.theme}>Вход</Title>
-            <TextField onChange={e => console.log(e.target.value)} label="Email" type="email" width={300}/>
-            <TextField onChange={e => console.log(e.target.value)} label="Пароль" type="password" width={300}/>
-            <Button className="mt-15" onClick={() => console.log('click')}>Подтвердить</Button>
+            <CenteredBlock>
+                <TextField onChange={e => console.log(e.target.value)} label="Email" type="email" width={300}/>
+                <TextField onChange={e => console.log(e.target.value)} label="Пароль" type="password" width={300}/>
+                <Button className="mt-15" onClick={() => console.log('click')}>Подтвердить</Button>
+            </CenteredBlock>
         </div>
     )
 }
