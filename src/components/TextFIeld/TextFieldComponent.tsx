@@ -28,7 +28,7 @@ export const Input = styled.input<{ theme: string, width: number }>`
     box-shadow: none;
     background: ${({ theme }) => Theme[theme].secondary};
     color: ${({ theme }) => Theme[theme].primary};  
-    padding: 2px;
+    padding: 2px 5px;
     border-radius: 4px;
     border: 2px solid ${({ theme }) => theme ? Theme[theme].primary : ''};
     transition: all .2s linear;
