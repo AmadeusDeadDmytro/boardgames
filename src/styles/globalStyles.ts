@@ -11,6 +11,10 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
     box-shadow: none;
     box-sizing: border-box;
+
+    .mt-15 {
+      margin-top: 15px;
+    }
   }
 `
 
