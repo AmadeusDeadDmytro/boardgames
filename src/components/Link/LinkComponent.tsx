@@ -10,7 +10,7 @@ const LinkComponent = ({ children, className, href }: LinkProps): ReactElement =
     const { settings } = mainStore
 
     return (
-        <SLink to={href} theme={settings.theme} className={className}>
+        <SLink to={'/' + href} theme={settings.theme} className={className}>
             {children}
         </SLink>
     )
