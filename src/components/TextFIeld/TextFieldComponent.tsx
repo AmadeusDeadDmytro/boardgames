@@ -5,13 +5,13 @@ import Theme from '../../styles/theme'
 import { mainStore } from '../../store/mainStore'
 import { TextFieldProps } from './TextFieldTypes'
 
-const TextFieldComponent = ({ onChange, label, type, width }: TextFieldProps): ReactElement => {
+const TextFieldComponent = ({ onChange, label, type, width, className }: TextFieldProps): ReactElement => {
     const { settings } = mainStore
 
     return (
         <>
             {label && <Label theme={settings.theme}>{label}</Label>}
-            <Input theme={settings.theme} onChange={onChange} type={type} width={width}/>
+            <Input theme={settings.theme} onChange={onChange} type={type} width={width} className={className}/>
         </>
     )
 }
