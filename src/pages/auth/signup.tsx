@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Theme from '../styles/theme'
+import Theme from '../../styles/theme'
 import { observer } from 'mobx-react'
-import { mainStore } from '../store/mainStore'
-import { Button, TextField, CenteredBlock, Text, Link } from '../components'
+import { mainStore } from '../../store/mainStore'
+import { Button, TextField, CenteredBlock, Text, Link } from '../../components'
 
 const HomePage = () => {
     const { settings } = mainStore
