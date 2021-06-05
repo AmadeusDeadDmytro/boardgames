@@ -3,5 +3,6 @@ export interface TextFieldProps {
     label?: string,
     type: 'text' | 'email' | 'password',
     width?: number,
-    className?: string
+    className?: string,
+    value: string
 }

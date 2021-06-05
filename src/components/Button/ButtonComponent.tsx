@@ -4,22 +4,31 @@ import { observer } from 'mobx-react'
 import Theme from '../../styles/theme'
 import { mainStore } from '../../store/mainStore'
 import { ButtonProps } from './ButtonTypes'
+import { AiOutlineLoading } from 'react-icons/all'
 
-const ButtonComponent = ({ children, onClick, className }: ButtonProps): ReactElement => {
+const ButtonComponent = ({ children, onClick, className, loading }: ButtonProps): ReactElement => {
     const { settings } = mainStore
 
     return (
-        <Button theme={settings.theme} onClick={onClick} className={className}>
-            {children}
-        </Button>
+        <SButton theme={settings.theme} onClick={onClick} className={className}>
+            {loading
+                ? (
+                    <div className="flex-center">
+                        <AiOutlineLoading className="loading absolute-center"/>
+                        <span className="invisible">{children}</span>
+                    </div>
+                )
+                : children
+            }
+        </SButton>
     )
 }
 
-export const Button = styled.button<{ theme: string }>`
+export const SButton = styled.button<{ theme: string }>`
   outline: none;
   box-shadow: none;
   background: ${({ theme }) => Theme[theme].secondary};
-  color: ${({ theme }) => Theme[theme].primary};  
+  color: ${({ theme }) => Theme[theme].primary};
   cursor: pointer;
   padding: 2px 5px;
   border-radius: 4px;
@@ -28,10 +37,14 @@ export const Button = styled.button<{ theme: string }>`
 
   &:hover {
     border: 2px solid ${({ theme }) => theme ? Theme[theme].secondary : ''};
-    color: ${({ theme }) => Theme[theme].secondary};  
+    color: ${({ theme }) => Theme[theme].secondary};
     background: ${({ theme }) => Theme[theme].primary};
     transition: all .2s linear;
   }
+`
+
+export const SIcon = styled.img`
+
 `
 
 

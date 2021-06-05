@@ -1,5 +1,5 @@
 {
-  "homepage": "https://amadeusdeaddmytro.github.io/boardgames/",
+  "homepage": "https://amadeusdeaddmytro.github.io/",
   "name": "boardgames",
   "version": "0.1.0",
   "private": true,
@@ -19,6 +19,7 @@
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "react-jsx-parser": "^1.28.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",

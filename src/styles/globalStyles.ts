@@ -21,6 +21,33 @@ const GlobalStyles = createGlobalStyle`
     .ml-5 {
       margin-left: 5px;
     }
+    
+    .flex-center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .invisible {
+      opacity: 0;
+    }
+    
+    .absolute-center {
+      position: absolute;
+    }
+    
+    .loading {
+      animation: rotating .5s linear infinite;
+    }
+    
+    @keyframes rotating {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
   }
 `
 

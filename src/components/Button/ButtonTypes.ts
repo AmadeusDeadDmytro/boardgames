@@ -1,5 +1,8 @@
+import { ReactElement } from 'react'
+
 export interface ButtonProps {
     onClick: () => void,
-    children?: any,
-    className?: string
+    children?: string,
+    className?: string,
+    loading?: boolean
 }

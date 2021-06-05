@@ -5,13 +5,13 @@ import Theme from '../../styles/theme'
 import { mainStore } from '../../store/mainStore'
 import { TextFieldProps } from './TextFieldTypes'
 
-const TextFieldComponent = ({ onChange, label, type, width, className }: TextFieldProps): ReactElement => {
+const TextFieldComponent = ({ onChange, label, type, width, className, value }: TextFieldProps): ReactElement => {
     const { settings } = mainStore
 
     return (
         <>
             {label && <Label theme={settings.theme}>{label}</Label>}
-            <Input theme={settings.theme} onChange={onChange} type={type} width={width} className={className}/>
+            <Input theme={settings.theme} onChange={onChange} type={type} width={width} className={className} value={value}/>
         </>
     )
 }
@@ -23,7 +23,6 @@ export const Label = styled.span`
 `
 
 export const Input = styled.input<{ theme: string, width: number }>`
-    border: none;
     outline: none;
     box-shadow: none;
     background: ${({ theme }) => Theme[theme].secondary};
@@ -40,7 +39,7 @@ export const Input = styled.input<{ theme: string, width: number }>`
     transition: all .2s linear;
 
     &:focus {
-        box-shadow: 0px 0px 6px 0px ${({ theme }) => theme ? Theme[theme].primary : ''};
+        box-shadow: 0 0 6px 0 ${({ theme }) => theme ? Theme[theme].primary : ''};
         transition: all .2s linear;
     }
 `
