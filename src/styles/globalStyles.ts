@@ -12,8 +12,14 @@ const GlobalStyles = createGlobalStyle`
     box-shadow: none;
     box-sizing: border-box;
 
+    .mt-10 {
+      margin-top: 10px;
+    }
     .mt-15 {
       margin-top: 15px;
+    }
+    .ml-5 {
+      margin-left: 5px;
     }
   }
 `

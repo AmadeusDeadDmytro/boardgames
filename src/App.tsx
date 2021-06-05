@@ -6,7 +6,7 @@ import {
 import GlobalStyles from './styles/globalStyles'
 
 import React from 'react'
-import { HomePage, LoginPage } from './pages'
+import { HomePage, LoginPage, SignupPage } from './pages'
 import { mainStore } from './store/mainStore'
 import { Provider } from 'mobx-react'
 
@@ -20,6 +20,9 @@ const App = () => (
                 </Switch>
                 <Switch>
                     <Route path="/login" exact component={LoginPage}/>
+                </Switch>
+                <Switch>
+                    <Route path="/signup" exact component={SignupPage}/>
                 </Switch>
             </BrowserRouter>
         </Provider>

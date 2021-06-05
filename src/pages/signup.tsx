@@ -10,12 +10,13 @@ const HomePage = () => {
 
     return (
         <div>
-            <Title theme={settings.theme}>Вход</Title>
+            <Title theme={settings.theme}>Регистрация</Title>
             <CenteredBlock>
+                <TextField onChange={e => console.log(e.target.value)} label="Никнейм" type="text" width={300}/>
                 <TextField onChange={e => console.log(e.target.value)} label="Email" type="email" width={300}/>
                 <TextField onChange={e => console.log(e.target.value)} label="Пароль" type="password" width={300}/>
                 <Button className="mt-15" onClick={() => console.log('click')}>Подтвердить</Button>
-                <Text className="mt-10">Нет аккаунта? <Link href="signup" className="ml-5">Зарегистрироваться</Link></Text>
+                <Text className="mt-10">Есть аккаунт? <Link href="login" className="ml-5">Войти</Link></Text>
             </CenteredBlock>
         </div>
     )
