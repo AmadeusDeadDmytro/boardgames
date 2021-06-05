@@ -5,9 +5,8 @@ import {
 } from 'react-router-dom'
 import GlobalStyles from './styles/globalStyles'
 
-
 import React from 'react'
-import { HomePage } from './pages'
+import { HomePage, LoginPage } from './pages'
 import { mainStore } from './store/mainStore'
 import { Provider } from 'mobx-react'
 
@@ -18,6 +17,9 @@ const App = () => (
             <BrowserRouter>
                 <Switch>
                     <Route path="/" exact component={HomePage}/>
+                </Switch>
+                <Switch>
+                    <Route path="/login" exact component={LoginPage}/>
                 </Switch>
             </BrowserRouter>
         </Provider>
