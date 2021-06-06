@@ -7,7 +7,7 @@ import GameCard from '../components/GameCard/GameCard'
 import LordOfTheRingImage from '../assets/images/gameCards/the-lord-of-the-rings-lcg-f.jpg'
 
 const HomePage = () => {
-    const { settings } = mainStore
+    const { settings, game } = mainStore
 
     return (
         <div>

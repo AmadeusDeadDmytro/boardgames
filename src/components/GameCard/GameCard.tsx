@@ -4,9 +4,7 @@ import { GameCardProps } from './GameCardType'
 import styled from 'styled-components'
 
 const GameCard = ({ image, onClick }: GameCardProps): ReactElement => (
-    <Container image={image} onClick={onClick}>
-            fds
-    </Container>
+    <Container image={image} onClick={onClick} />
 )
 
 const Container = styled.div<{ image: string }>`
