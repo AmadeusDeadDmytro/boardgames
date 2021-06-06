@@ -15,7 +15,7 @@ const TextComponent = ({ children, className }: TextProps): ReactElement => {
     )
 }
 
-export const Link = styled.p<{ theme: string }>`
+const Link = styled.p<{ theme: string }>`
   color: ${({ theme }) => Theme[theme].primary};
 `
 

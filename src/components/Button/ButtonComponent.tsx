@@ -24,7 +24,7 @@ const ButtonComponent = ({ children, onClick, className, loading }: ButtonProps)
     )
 }
 
-export const SButton = styled.button<{ theme: string }>`
+const SButton = styled.button<{ theme: string }>`
   outline: none;
   box-shadow: none;
   background: ${({ theme }) => Theme[theme].secondary};

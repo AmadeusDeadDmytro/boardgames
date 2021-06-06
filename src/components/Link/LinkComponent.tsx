@@ -16,7 +16,7 @@ const LinkComponent = ({ children, className, href }: LinkProps): ReactElement =
     )
 }
 
-export const SLink = styled(Link)<{ theme: string }>`
+const SLink = styled(Link)<{ theme: string }>`
   text-decoration: underline;
   color: ${({ theme }) => Theme[theme].medium};
   transition: all .2s linear;

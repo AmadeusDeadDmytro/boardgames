@@ -16,14 +16,14 @@ const TextFieldComponent = ({ onChange, label, type, width, className, value }: 
     )
 }
 
-export const Label = styled.span`
+const Label = styled.span`
     color: ${({ theme }) => Theme[theme].primary}; 
     margin-top: 10px;
     display: block;
     margin-bottom: 5px;
 `
 
-export const Input = styled.input<{ theme: string, width: number }>`
+const Input = styled.input<{ theme: string, width: number }>`
     outline: none;
     box-shadow: none;
     background: ${({ theme }) => Theme[theme].secondary};
