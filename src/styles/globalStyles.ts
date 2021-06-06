@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
     box-shadow: none;
     box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
 
     .mt-10 {
       margin-top: 10px;

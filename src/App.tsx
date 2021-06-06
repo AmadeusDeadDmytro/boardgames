@@ -1,11 +1,9 @@
-import 'antd/dist/antd.css'
-
 import {
-    BrowserRouter, Link, Route, Switch, useHistory
+    BrowserRouter, Route, Switch, useHistory, Redirect
 } from 'react-router-dom'
 import GlobalStyles from './styles/globalStyles'
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import { GamesPage, LoginPage, SignupPage } from './pages'
 import { mainStore } from './store/mainStore'
 import { Provider } from 'mobx-react'
@@ -16,8 +14,6 @@ const App = () => {
     const token = localStorage.getItem('token')
     if (!token) {
         history.push('login')
-    } else {
-        history.push('games')
     }
 
     return (
@@ -25,6 +21,11 @@ const App = () => {
             <GlobalStyles/>
             <Provider mainStore={mainStore}>
                 <BrowserRouter>
+                    <Switch>
+                        <Route path="/" >
+                            {token && <Redirect to="/games" />}
+                        </Route>
+                    </Switch>
                     <Switch>
                         <Route path="/games" exact component={GamesPage}/>
                     </Switch>

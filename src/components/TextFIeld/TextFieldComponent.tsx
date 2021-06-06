@@ -18,8 +18,9 @@ const TextFieldComponent = ({ onChange, label, type, width, className, value }: 
 
 export const Label = styled.span`
     color: ${({ theme }) => Theme[theme].primary}; 
-    margin-top: 3px;
+    margin-top: 10px;
     display: block;
+    margin-bottom: 5px;
 `
 
 export const Input = styled.input<{ theme: string, width: number }>`
@@ -36,7 +37,6 @@ export const Input = styled.input<{ theme: string, width: number }>`
     min-width: 100px;
     font-size: 14px;
     display: block;
-    transition: all .2s linear;
 
     &:focus {
         box-shadow: 0 0 6px 0 ${({ theme }) => theme ? Theme[theme].primary : ''};

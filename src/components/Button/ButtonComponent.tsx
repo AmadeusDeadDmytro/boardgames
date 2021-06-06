@@ -30,10 +30,11 @@ export const SButton = styled.button<{ theme: string }>`
   background: ${({ theme }) => Theme[theme].secondary};
   color: ${({ theme }) => Theme[theme].primary};
   cursor: pointer;
-  padding: 2px 5px;
+  padding: 4px 10px;
   border-radius: 4px;
   border: 2px solid ${({ theme }) => theme ? Theme[theme].primary : ''};
   transition: all .2s linear;
+  font-size: 16px;
 
   &:hover {
     border: 2px solid ${({ theme }) => theme ? Theme[theme].secondary : ''};
