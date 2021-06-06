@@ -4,11 +4,21 @@ import Theme from '../../styles/theme'
 import { observer } from 'mobx-react'
 import { mainStore } from '../../store/mainStore'
 import { Button, TextField, CenteredBlock, Text, Link } from '../../components'
+import { useMutation } from '@apollo/client'
+import { LOGIN_USER } from '../../appolo/mutation'
+import { useHistory } from 'react-router-dom'
+
+type FormType = {
+    email: string,
+    password: string,
+}
 
 const HomePage = () => {
     const { settings } = mainStore
+    const [loginUser] = useMutation(LOGIN_USER)
+    let history = useHistory()
 
-    const [form, setForm] = useState({
+    const [form, setForm] = useState<FormType>({
         email: '',
         password: ''
     })
@@ -17,13 +27,23 @@ const HomePage = () => {
         setForm(prev => ({...prev, [name]: value}))
     }
 
+    const handleSubmit = () => {
+        loginUser({variables: form})
+            .then((data) => {
+                const jwt = data.data.login.jwt
+                localStorage.setItem('token', jwt)
+                history.push('games')
+            })
+            .catch(e => console.error(e.message))
+    }
+
     return (
         <div>
             <Title theme={settings.theme}>Вход</Title>
             <CenteredBlock>
                 <TextField onChange={e => handleInput('email', e.target.value)} label="Email" type="email" width={300} value={form.email}/>
                 <TextField onChange={e => handleInput('password', e.target.value)} label="Пароль" type="password" width={300} value={form.password}/>
-                <Button className="mt-15" onClick={() => console.log('click')}>Подтвердить</Button>
+                <Button className="mt-15" onClick={handleSubmit}>Войти</Button>
                 <Text className="mt-10">Нет аккаунта? <Link href="signup" className="ml-5">Зарегистрироваться</Link></Text>
             </CenteredBlock>
         </div>

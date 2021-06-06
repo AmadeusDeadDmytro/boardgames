@@ -4,28 +4,47 @@ import Theme from '../../styles/theme'
 import { observer } from 'mobx-react'
 import { mainStore } from '../../store/mainStore'
 import { Button, TextField, CenteredBlock, Text, Link } from '../../components'
+import { useMutation } from '@apollo/client'
+import { REGISTER_USER } from '../../appolo/mutation'
+import { useHistory } from 'react-router-dom'
+
+type FormType = {
+    username: string,
+    email: string,
+    password: string,
+}
 
 const HomePage = () => {
     const { settings } = mainStore
+    const [registerUser] = useMutation(REGISTER_USER)
+    let history = useHistory()
 
-    const [form, setForm] = useState({
-        nickname: '',
+    const [form, setForm] = useState<FormType>({
+        username: '',
         email: '',
         password: ''
     })
 
     const handleInput = (name: string, value: string) => {
-        setForm(prev => ({...prev, [name]: value}))
+        setForm((prev: FormType): FormType => ({ ...prev, [name]: value }))
+    }
+
+    const handleSubmit = () => {
+        registerUser({ variables: form })
+            .then((data) => {
+                history.push('login')
+            })
+            .catch(e => console.error(e.message))
     }
 
     return (
         <div>
             <Title theme={settings.theme}>Регистрация</Title>
             <CenteredBlock>
-                <TextField onChange={e => handleInput('nickname', e.target.value)} label="Никнейм" type="text" width={300} value={form.nickname}/>
+                <TextField onChange={e => handleInput('username', e.target.value)} label="Имя" type="text" width={300} value={form.username}/>
                 <TextField onChange={e => handleInput('email', e.target.value)} label="Email" type="email" width={300} value={form.email}/>
                 <TextField onChange={e => handleInput('password', e.target.value)} label="Пароль" type="password" width={300} value={form.password}/>
-                <Button className="mt-15" onClick={() => console.log('click')} loading={false}>Подтвердить</Button>
+                <Button className="mt-15" onClick={handleSubmit} loading={false}>Подтвердить</Button>
                 <Text className="mt-10">Есть аккаунт? <Link href="login" className="ml-5">Войти</Link></Text>
             </CenteredBlock>
         </div>
