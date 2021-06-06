@@ -17,6 +17,7 @@ const HomePage = () => {
     const { settings } = mainStore
     const [loginUser] = useMutation(LOGIN_USER)
     let history = useHistory()
+    const [loading, setLoading] = useState(false)
 
     const [form, setForm] = useState<FormType>({
         email: '',
@@ -28,13 +29,18 @@ const HomePage = () => {
     }
 
     const handleSubmit = () => {
+        setLoading(true)
         loginUser({variables: form})
             .then((data) => {
                 const jwt = data.data.login.jwt
+                setLoading(false)
                 localStorage.setItem('token', jwt)
                 history.push('games')
             })
-            .catch(e => console.error(e.message))
+            .catch(e => {
+                setLoading(false)
+                console.error(e.message)
+            })
     }
 
     return (
@@ -43,7 +49,7 @@ const HomePage = () => {
             <CenteredBlock>
                 <TextField onChange={e => handleInput('email', e.target.value)} label="Email" type="email" width={300} value={form.email}/>
                 <TextField onChange={e => handleInput('password', e.target.value)} label="Пароль" type="password" width={300} value={form.password}/>
-                <Button className="mt-15" onClick={handleSubmit}>Войти</Button>
+                <Button className="mt-15" onClick={handleSubmit} loading={loading}>Войти</Button>
                 <Text className="mt-10">Нет аккаунта? <Link href="signup" className="ml-5">Зарегистрироваться</Link></Text>
             </CenteredBlock>
         </div>

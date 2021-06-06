@@ -18,6 +18,7 @@ const HomePage = () => {
     const { settings } = mainStore
     const [registerUser] = useMutation(REGISTER_USER)
     let history = useHistory()
+    const [loading, setLoading] = useState(false)
 
     const [form, setForm] = useState<FormType>({
         username: '',
@@ -30,11 +31,16 @@ const HomePage = () => {
     }
 
     const handleSubmit = () => {
+        setLoading(true)
         registerUser({ variables: form })
             .then((data) => {
+                setLoading(false)
                 history.push('login')
             })
-            .catch(e => console.error(e.message))
+            .catch(e => {
+                setLoading(false)
+                console.error(e.message)
+            })
     }
 
     return (
@@ -44,7 +50,7 @@ const HomePage = () => {
                 <TextField onChange={e => handleInput('username', e.target.value)} label="Имя" type="text" width={300} value={form.username}/>
                 <TextField onChange={e => handleInput('email', e.target.value)} label="Email" type="email" width={300} value={form.email}/>
                 <TextField onChange={e => handleInput('password', e.target.value)} label="Пароль" type="password" width={300} value={form.password}/>
-                <Button className="mt-15" onClick={handleSubmit} loading={false}>Подтвердить</Button>
+                <Button className="mt-15" onClick={handleSubmit} loading={loading}>Подтвердить</Button>
                 <Text className="mt-10">Есть аккаунт? <Link href="login" className="ml-5">Войти</Link></Text>
             </CenteredBlock>
         </div>
