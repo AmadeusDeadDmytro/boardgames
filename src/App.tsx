@@ -22,8 +22,8 @@ const App = () => {
             <Provider mainStore={mainStore}>
                 <BrowserRouter>
                     <Switch>
-                        <Route path="/" >
-                            {token && <Redirect to="/games" />}
+                        <Route path="/" exact>
+                            <Redirect to="/games" />
                         </Route>
                     </Switch>
                     <Switch>
@@ -33,7 +33,9 @@ const App = () => {
                         <Route path="/login" exact component={LoginPage}/>
                     </Switch>
                     <Switch>
-                        <Route path="/signup" exact component={SignupPage}/>
+                        <Route path="/signup">
+                            {token ? <Redirect to="/games"/> : <SignupPage/>}
+                        </Route>
                     </Switch>
                 </BrowserRouter>
             </Provider>
