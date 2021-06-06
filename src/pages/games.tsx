@@ -3,19 +3,26 @@ import styled from 'styled-components'
 import Theme from '../styles/theme'
 import { observer } from 'mobx-react'
 import { mainStore } from '../store/mainStore'
-import GameCard from '../components/GameCard/GameCard'
+import { GameCard, Modal } from '../components'
 import LordOfTheRingImage from '../assets/images/gameCards/the-lord-of-the-rings-lcg-f.jpg'
 import { Navbar } from '../modules'
 
 const HomePage = () => {
-    const { settings, game } = mainStore
+    const { settings, game, base } = mainStore
 
     return (
         <div>
+            {
+                base.modal && (
+                    <Modal theme={settings.theme} title="Режим игры">
+                        <div>modal</div>
+                    </Modal>
+                )
+            }
             <Navbar theme={settings.theme}/>
             <Title theme={settings.theme}>Выберите игру</Title>
             <Container>
-                <GameCard theme={settings.theme} image={LordOfTheRingImage} onClick={() => { console.log('start game') }}/>
+                <GameCard theme={settings.theme} image={LordOfTheRingImage} onClick={() => mainStore.setModal(true)} />
             </Container>
         </div>
     )

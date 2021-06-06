@@ -1,15 +1,23 @@
 import React from 'react'
-import { action, computed, observable, reaction } from 'mobx'
-import { ISettings, IGame } from './type'
+import { action, computed, makeObservable, observable, reaction } from 'mobx'
+import { ISettings, IGame, IBase } from './type'
 
 class MainStore {
+    constructor() {
+        makeObservable(this);
+    }
+
     @observable settings: ISettings = {
-        theme: 'basic'
+        theme: 'basic',
     }
 
     @observable game: IGame = {
         current: '',
         maxPlayers: 1
+    }
+
+    @observable base: IBase = {
+        modal: false
     }
 
     @computed get currentTheme(): string {
@@ -22,6 +30,10 @@ class MainStore {
 
     @action setTheme(theme: string) {
         this.settings.theme = theme
+    }
+
+    @action.bound setModal(state: boolean) {
+        this.base.modal = state
     }
 }
 

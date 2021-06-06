@@ -6,3 +6,7 @@ export interface IGame {
     current: string,
     maxPlayers: number
 }
+
+export interface IBase {
+    modal: boolean
+}
