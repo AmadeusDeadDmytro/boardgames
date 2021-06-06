@@ -21,7 +21,7 @@ const Container = styled.div<{ image: string, theme: string }>`
     &:hover {
       opacity: 1;
       transition: all .2s linear;
-      border: 2px solid ${({ theme }) => theme ? Themes[theme].primary : '#fff'};
+      border: 2px solid ${({ theme }) => Themes[theme].primary};
     }
 `
 

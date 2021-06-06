@@ -5,12 +5,14 @@ import { observer } from 'mobx-react'
 import { mainStore } from '../store/mainStore'
 import GameCard from '../components/GameCard/GameCard'
 import LordOfTheRingImage from '../assets/images/gameCards/the-lord-of-the-rings-lcg-f.jpg'
+import { Navbar } from '../modules'
 
 const HomePage = () => {
     const { settings, game } = mainStore
 
     return (
         <div>
+            <Navbar theme={settings.theme}/>
             <Title theme={settings.theme}>Выберите игру</Title>
             <Container>
                 <GameCard theme={settings.theme} image={LordOfTheRingImage} onClick={() => { console.log('start game') }}/>
