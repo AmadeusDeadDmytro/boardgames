@@ -42,7 +42,7 @@ const Container = styled.div<{ theme: string, active: boolean }>`
     justify-content: flex-end;
     padding: 0 15px;
     box-sizing: border-box;
-    border-bottom: 2px solid ${({ theme }) => Themes[theme].light};
+    border-bottom: 2px solid ${({ theme }) => Themes[theme].primary};
     transition: all .1s linear;
 `
 
@@ -53,15 +53,15 @@ const Logout = styled(RiLogoutBoxRLine)<{ theme: string }>`
 `
 
 const Toggle = styled(HiOutlineChevronDoubleDown)<{ theme: string, active: boolean }>`
-  font-size: 26px;
-  color: ${({ theme }) => Themes[theme].light};
-  position: absolute;
-  right: 0;
-  top: ${({ active }) => active ? '50px' : '0px'};
-  padding: 15px;
-  cursor: pointer;
-  transition: top .1s linear;
-  transform: rotate(${({ active }) => active ? '180deg' : '0deg'});
+    font-size: 26px;
+    color: ${({ theme }) => Themes[theme].light};
+    position: absolute;
+    right: 0;
+    top: ${({ active }) => active ? '50px' : '0px'};
+    padding: 15px;
+    cursor: pointer;
+    transition: top .1s linear;
+    transform: rotate(${({ active }) => active ? '180deg' : '0deg'});
 `
 
 export default observer(Navbar)
