@@ -13,7 +13,7 @@ const HomePage = () => {
         <div>
             <Title theme={settings.theme}>Выберите игру</Title>
             <Container>
-                <GameCard image={LordOfTheRingImage} onClick={() => { console.log('start game') }}/>
+                <GameCard theme={settings.theme} image={LordOfTheRingImage} onClick={() => { console.log('start game') }}/>
             </Container>
         </div>
     )

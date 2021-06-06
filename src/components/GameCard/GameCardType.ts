@@ -1,4 +1,5 @@
 export interface GameCardProps {
     image: string,
-    onClick: () => void
+    onClick: () => void,
+    theme: string
 }
