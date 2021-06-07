@@ -9,7 +9,9 @@ const GameModeModalContent = ({ }: PropTypes): ReactElement => {
 
     return (
         <>
-            <GameMode title="Соло игра" description="Попытаться пройти приключение в одиночку" theme={settings.theme} />
+            <GameMode title="Соло игра" description="Играть в одиночку" theme={settings.theme} />
+            <GameMode title="Игра с другом" description="Играть вместе с другом" theme={settings.theme} disable />
+            <GameMode title="Игра с ИскИном" description="Играть с ИИ в качестве напарника" theme={settings.theme} disable />
             {/* TODO: More game modes (friend, ai) */}
         </>
     )

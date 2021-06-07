@@ -4,5 +4,6 @@ export interface GameModeProps {
     title: string,
 	description: string,
 	children?: ReactElement,
-	theme: string
+	theme: string,
+	disable?: boolean
 }

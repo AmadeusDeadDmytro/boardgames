@@ -13,7 +13,11 @@ class MainStore {
 
     @observable game: IGame = {
         current: '',
-        maxPlayers: 1
+        preGameSettings: {
+            maxPlayers: 0,
+            gameMode: '',
+            adventure: ''
+        }
     }
 
     @observable base: IBase = {
@@ -24,9 +28,6 @@ class MainStore {
         return this.settings.theme
     }
 
-    @action setGameMaxPlayers(count: number) {
-        this.game.maxPlayers = count
-    }
 
     @action setTheme(theme: string) {
         this.settings.theme = theme
