@@ -6,6 +6,7 @@ import { mainStore } from '../store/mainStore'
 import { GameCard, Modal } from '../components'
 import LordOfTheRingImage from '../assets/images/gameCards/the-lord-of-the-rings-lcg-f.jpg'
 import { Navbar } from '../modules'
+import GameModeModalContent from '../modules/GameModeModalContent/GameModeModalContent'
 
 const HomePage = () => {
     const { settings, game, base } = mainStore
@@ -15,7 +16,7 @@ const HomePage = () => {
             {
                 base.modal && (
                     <Modal theme={settings.theme} title="Режим игры">
-                        <div>modal</div>
+                        <GameModeModalContent />
                     </Modal>
                 )
             }
