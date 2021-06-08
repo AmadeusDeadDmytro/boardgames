@@ -5,11 +5,11 @@ import { mainStore } from '../../store/mainStore'
 import Themes from '../../styles/theme'
 import { GameModeProps } from './GameModeTypes'
 
-const GameMode = ({ title, description, theme, disable }:GameModeProps): ReactElement => {
+const GameMode = ({ title, description, theme, disable, onClick }:GameModeProps): ReactElement => {
     const { settings } = mainStore
 
     return (
-        <Container theme={theme} disable={disable}>
+        <Container theme={theme} disable={disable} onClick={onClick}>
             <Title>{title}</Title>
             <Description>{description}</Description>
         </Container>

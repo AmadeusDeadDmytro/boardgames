@@ -3,18 +3,26 @@ import { observer } from 'mobx-react'
 import { ModalProps } from './ModalTypes'
 import styled from 'styled-components'
 import Themes from '../../styles/theme'
-import { VscChromeClose } from 'react-icons/all'
+import { VscChromeClose, IoChevronBackSharp } from 'react-icons/all'
 import { mainStore } from '../../store/mainStore'
 
-const Modal = ({ theme, children, title }: ModalProps): ReactElement => {
+const Modal = ({ theme, children, title, backClick, onClose }: ModalProps): ReactElement => {
     const { base } = mainStore
+
+    const handleClose = () => {
+        mainStore.setModal(false)
+        if (onClose) {
+            onClose()
+        }
+    }
 
     return (
         <CoreBlock>
             <Container theme={theme}>
                 <Title theme={theme}>
+                    {backClick && <Back theme={theme} onClick={() => backClick()}/>}
                     {title}
-                    <Close theme={theme} onClick={() => mainStore.setModal(false)}/>
+                    <Close theme={theme} onClick={handleClose}/>
                 </Title>
                 <Content theme={theme}>
                     {children}
@@ -26,6 +34,13 @@ const Modal = ({ theme, children, title }: ModalProps): ReactElement => {
 
 const Content = styled.div<{ theme: string }>`
     padding: 20px;
+`
+
+const Back = styled(IoChevronBackSharp)<{ theme: string }>`
+    position: absolute;
+    left: 10px;
+    color: ${({ theme }) => Themes[theme].dark};
+    cursor: pointer;
 `
 
 const Close = styled(VscChromeClose)<{ theme: string }>`

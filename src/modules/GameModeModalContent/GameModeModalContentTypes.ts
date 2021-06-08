@@ -1,1 +1,3 @@
-export type PropTypes = {}
+export type PropTypes = {
+    nextStep: () => void
+}

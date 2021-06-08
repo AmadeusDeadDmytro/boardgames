@@ -5,5 +5,6 @@ export interface GameModeProps {
 	description: string,
 	children?: ReactElement,
 	theme: string,
-	disable?: boolean
+	disable?: boolean,
+	onClick: () => void
 }
