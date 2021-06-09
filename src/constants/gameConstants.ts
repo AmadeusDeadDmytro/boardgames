@@ -12,7 +12,8 @@ type ModesType = {
     [key: string]: {
         name: string,
         description: string,
-        players: number
+        players: number,
+        disabled: boolean
     }
 }
 
@@ -28,16 +29,19 @@ export const MODES: ModesType = {
     solo: {
         name: "Соло игра",
         description: "Играть в одиночку",
-        players: 1
+        players: 1,
+        disabled: false
     },
     for_two: {
         name: "Игра с другом",
         description: "Играть вместе с другом",
-        players: 2
+        players: 2,
+        disabled: true
     },
     with_ai: {
         name: "Игра с ИскИном",
         description: "Играть с ИИ в качестве напарника",
-        players: 2
+        players: 2,
+        disabled: true
     }
 }

@@ -4,8 +4,7 @@ import Theme from '../styles/theme'
 import { observer } from 'mobx-react'
 import { mainStore } from '../store/mainStore'
 import { GameCard, Modal } from '../components'
-import { Navbar } from '../modules'
-import GameModeModalContent from '../modules/GameModeModalContent/GameModeModalContent'
+import { Navbar, GameModeModalContent, AdventureModalContent } from '../modules'
 import { GAMES } from '../constants/gameConstants'
 
 const HomePage = () => {
@@ -17,6 +16,10 @@ const HomePage = () => {
         case 1:
         {
             return <GameModeModalContent nextStep={() => setModalStep(2)}/>
+        }
+        case 2:
+        {
+            return <AdventureModalContent nextStep={() => setModalStep(2)}/>
         }
         default: {
             return <>empty</>

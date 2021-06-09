@@ -3,15 +3,14 @@ import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 import { mainStore } from '../../store/mainStore'
 import Themes from '../../styles/theme'
-import { GameModeProps } from './GameModeTypes'
+import { AdventureProps } from './AdventureType'
 
-const GameMode = ({ title, description, theme, disable, onClick }:GameModeProps): ReactElement => {
+const Adventure = ({ title, theme, disable, onClick }:AdventureProps): ReactElement => {
     const { settings } = mainStore
 
     return (
-        <Container theme={theme} disable={disable} onClick={onClick}>
+        <Container theme={theme} disable={disable} onClick={disable ? null : onClick}>
             <Title>{title}</Title>
-            <Description>{description}</Description>
         </Container>
     )
 }
@@ -41,4 +40,4 @@ const Description = styled.div`
 	font-style: italic;
 `
 
-export default observer(GameMode)
+export default observer(Adventure)

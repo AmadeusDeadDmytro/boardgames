@@ -30,6 +30,7 @@ const GameModeModalContent = ({ nextStep }: PropTypes): ReactElement => {
                                 description={MODES[mode].description}
                                 theme={settings.theme}
                                 onClick={() => handleClick(mode, MODES[mode].players)}
+                                disable={MODES[mode].disabled}
                             />
                         )
                     }
