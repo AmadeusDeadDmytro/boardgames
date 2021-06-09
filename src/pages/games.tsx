@@ -19,7 +19,7 @@ const HomePage = () => {
         }
         case 2:
         {
-            return <AdventureModalContent nextStep={() => setModalStep(2)}/>
+            return <AdventureModalContent />
         }
         default: {
             return <>empty</>

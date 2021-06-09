@@ -7,6 +7,7 @@ import React from 'react'
 import { GamesPage, LoginPage, SignupPage } from './pages'
 import { mainStore } from './store/mainStore'
 import { Provider } from 'mobx-react'
+import LOTR_GAME from './games/LordOfTheRingsLCG/pages/playground'
 
 const App = () => {
     let history = useHistory()
@@ -36,6 +37,12 @@ const App = () => {
                         <Route path="/signup">
                             {token ? <Redirect to="/games"/> : <SignupPage/>}
                         </Route>
+                    </Switch>
+                    <Switch>
+                        <Route path="/play-lotr" exact component={LOTR_GAME}/>
+                    </Switch>
+                    <Switch>
+                        <Redirect to="/" />
                     </Switch>
                 </BrowserRouter>
             </Provider>

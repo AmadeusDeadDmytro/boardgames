@@ -6,9 +6,12 @@ import { PropTypes } from './AdventureModalContentType'
 import { GAMES, MODES } from '../../constants/gameConstants'
 import styled from 'styled-components'
 import Theme from '../../styles/theme'
+import { useHistory } from 'react-router-dom'
 
 const AdventureModalContent = ({ nextStep }: PropTypes): ReactElement => {
     const { settings, game } = mainStore
+
+    let history = useHistory()
 
     const handleClick = (adventure: string) => {
         mainStore.setPreGameSettings({
@@ -17,6 +20,8 @@ const AdventureModalContent = ({ nextStep }: PropTypes): ReactElement => {
 
         if (nextStep) {
             nextStep()
+        } else {
+            history.push('/play-lotr')
         }
     }
 
