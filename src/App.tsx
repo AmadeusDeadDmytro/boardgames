@@ -42,7 +42,7 @@ const App = () => {
                         <Route path="/play-lotr" exact component={LOTR_GAME}/>
                     </Switch>
                     <Switch>
-                        <Redirect to="/" />
+                        <Redirect to="/games" />
                     </Switch>
                 </BrowserRouter>
             </Provider>
