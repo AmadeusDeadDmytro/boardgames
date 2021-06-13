@@ -17,7 +17,8 @@ class MainStore {
             maxPlayers: 0,
             gameMode: '',
             adventure: ''
-        }
+        },
+        log: []
     }
 
     @observable base: IBase = {
@@ -46,6 +47,10 @@ class MainStore {
             ...this.game.preGameSettings,
             ...settings
         }
+    }
+
+    @action addLog(log: string) {
+        this.game.log.push(log)
     }
 }
 

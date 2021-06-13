@@ -10,7 +10,8 @@ export type PreGameSettingsType = {
 
 export interface IGame {
     current: string,
-    preGameSettings: PreGameSettingsType
+    preGameSettings: PreGameSettingsType,
+    log: string[]
 }
 
 export interface IBase {
