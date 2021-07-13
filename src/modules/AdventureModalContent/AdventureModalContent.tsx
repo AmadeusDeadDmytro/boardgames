@@ -21,7 +21,7 @@ const AdventureModalContent = ({ nextStep }: PropTypes): ReactElement => {
         if (nextStep) {
             nextStep()
         } else {
-            history.push('/play-lotr')
+            history.push('/lord_of_the_ring')
         }
     }
 

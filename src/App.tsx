@@ -11,11 +11,14 @@ import LOTR_GAME from './games/LordOfTheRingsLCG/pages/playground'
 
 const App = () => {
     let history = useHistory()
+    const { game } = mainStore
 
     const token = localStorage.getItem('token')
     if (!token) {
         history.push('login')
     }
+
+    const gamesOrGame = () => game.current ? `/${game.current}` : '/games'
 
     return (
         <>
@@ -35,14 +38,14 @@ const App = () => {
                     </Switch>
                     <Switch>
                         <Route path="/signup">
-                            {token ? <Redirect to="/games"/> : <SignupPage/>}
+                            {token ? <Redirect to={game.current ? `/${game.current}` : '/games'}/> : <SignupPage/>}
                         </Route>
                     </Switch>
                     <Switch>
-                        <Route path="/play-lotr" exact component={LOTR_GAME}/>
+                        <Route path="/lord_of_the_ring" exact component={LOTR_GAME}/>
                     </Switch>
                     <Switch>
-                        <Redirect to="/games" />
+                        <Redirect to={game.current ? `/${game.current}` : '/games'} />
                     </Switch>
                 </BrowserRouter>
             </Provider>

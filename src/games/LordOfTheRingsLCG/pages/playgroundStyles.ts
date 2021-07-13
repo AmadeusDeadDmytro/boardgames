@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Theme from '../../../styles/theme'
+import cardBack from '../images/other/card_back.jpeg'
 
 export const LogContainer = styled.div<{ theme: string }>`
     position: absolute;
@@ -32,4 +33,31 @@ export const LogButton = styled.div<{ theme: string }>`
     border-left: 1px solid ${({ theme }) => Theme[theme].medium};
     background-color: ${({ theme }) => Theme[theme].dark};
     z-index: 3;
+`
+
+export const PlayerDeck = styled.div<{ theme: string }>`
+    background-image: url(${cardBack});
+    height: 140px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 130px;
+    right: 20px;
+    cursor: pointer;
+`
+
+export const PlayerDeckCountText = styled.span<{ theme: string }>`
+    background-color: ${({ theme }) => Theme[theme].dark};
+    color: ${({ theme }) => Theme[theme].medium};
+    width: 25px;
+    height: 25px;
+    display: block;
+    border-bottom-right-radius: 50%;
+`
+
+export const GameArea = styled.div<{ theme: string }>`
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 `
