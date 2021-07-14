@@ -1,11 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 import Theme from '../../../styles/theme'
 import cardBack from '../images/other/card_back.jpeg'
+import cardBackAdventure from '../images/other/card_back_a.jpeg'
 
 export const LogContainer = styled.div<{ theme: string }>`
     position: absolute;
     bottom: 0;
-    transition: all .2s linear;
+    transition: all 0.2s linear;
     width: 400px;
     height: 100px;
     border-top: 1px solid ${({ theme }) => Theme[theme].medium};
@@ -56,8 +57,48 @@ export const PlayerDeckCountText = styled.span<{ theme: string }>`
     border-bottom-right-radius: 50%;
 `
 
+export const AdventureDeck = styled.div<{ theme: string }>`
+    background-image: url(${cardBackAdventure});
+    height: 140px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    cursor: pointer;
+`
+
+export const AdventureDeckCountText = styled.span<{ theme: string }>`
+    background-color: ${({ theme }) => Theme[theme].dark};
+    color: ${({ theme }) => Theme[theme].medium};
+    width: 25px;
+    height: 25px;
+    display: block;
+    border-bottom-right-radius: 50%;
+`
+
 export const GameArea = styled.div<{ theme: string }>`
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+`
+
+export const HeroBlock = styled.div<{ theme: string }>`
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    cursor: pointer;
+`
+
+export const Hero = styled.div<{ theme: string, offset: number }>`
+    transform: scale(0.4);
+    position: absolute;
+    left: ${({ offset }) => offset}px;
+    bottom: 0;
+    
+    &:hover {
+        transform: scale(0.8);
+        z-index: 999;
+    }
 `

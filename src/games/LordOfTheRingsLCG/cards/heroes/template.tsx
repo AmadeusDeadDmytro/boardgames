@@ -65,7 +65,7 @@ const Template = ({ card }: {card: HeroCardType}) => {
 
 const Card = styled.div`
     width: 320px;
-    height: 450px;
+    height: 430px;
     background: ${COLORS.DARK_ONE};
     border-radius: 20px;
     padding: 10px;
@@ -103,6 +103,7 @@ const CardBottom = styled.div<{ background: string, large: boolean }>`
     background-position: center;
     background-size: ${({ large }) => (large ? '110px' : '75px')};
     position: relative;
+    box-sizing: border-box;
 `
 const CardNameBlock = styled.div`
     width: 86%;

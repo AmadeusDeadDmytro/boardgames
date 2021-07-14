@@ -19,5 +19,7 @@ export const prepareHeroes = (allCards: PlayerCardsType) => {
     const result = []
     const heroes = [...allCards.TacticHeroesDeck]
     result.push(heroes[0])
+    result.push(heroes[1])
+    result.push(heroes[2])
     return result
 }
